@@ -186,7 +186,7 @@ function handleFormSubmit(form, successMessage) {
 
     // Show loading state
     const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
+    const originalText = submitBtn.innerHTML;
     const isModelingForm = form.id === 'modelingForm';
     
     submitBtn.innerHTML = isModelingForm ? 
@@ -194,19 +194,35 @@ function handleFormSubmit(form, successMessage) {
         '<i class="fas fa-spinner fa-spin"></i> Slanje...';
     submitBtn.disabled = true;
 
-    // Simulate form submission
-    setTimeout(() => {
-        form.reset();
+    // Send to Web3Forms
+    fetch(form.action, {
+        method: form.method,
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showNotification(successMessage, 'success');
+            form.reset();
+            
+            // Reset textarea height
+            const textarea = form.querySelector('textarea');
+            if (textarea) {
+                textarea.style.height = 'auto';
+            }
+        } else {
+            showNotification('Došlo je do greške pri slanju poruke. Pokušajte ponovo.', 'error');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showNotification('Došlo je do greške pri slanju poruke. Pokušajte ponovo.', 'error');
+    })
+    .finally(() => {
+        // Restore button
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-        showNotification(successMessage, 'success');
-        
-        // Reset textarea height
-        const textarea = form.querySelector('textarea');
-        if (textarea) {
-            textarea.style.height = 'auto';
-        }
-    }, 2000);
+    });
 }
 
 function initAnimations() {
