@@ -361,27 +361,11 @@ function showNotification(message, type = 'info') {
         </div>
     `;
     
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        background: ${getNotificationColor(type)};
-        color: white;
-        padding: 15px 20px;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        z-index: 10000;
-        max-width: 400px;
-        transform: translateX(400px);
-        opacity: 0;
-        transition: all 0.3s ease;
-    `;
-    
     document.body.appendChild(notification);
     
+    // Показываем уведомление
     setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-        notification.style.opacity = '1';
+        notification.classList.add('show');
     }, 100);
     
     const autoRemove = setTimeout(() => {
@@ -393,18 +377,10 @@ function showNotification(message, type = 'info') {
         clearTimeout(autoRemove);
         removeNotification(notification);
     });
-    
-    notification.addEventListener('click', (e) => {
-        if (e.target === notification) {
-            clearTimeout(autoRemove);
-            removeNotification(notification);
-        }
-    });
 }
 
 function removeNotification(notification) {
-    notification.style.transform = 'translateX(400px)';
-    notification.style.opacity = '0';
+    notification.classList.remove('show');
     setTimeout(() => {
         if (notification.parentNode) {
             notification.parentNode.removeChild(notification);
