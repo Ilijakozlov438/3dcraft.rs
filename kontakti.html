@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakti - 3DCraft</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo"><i class="fas fa-cube"></i>3DCraft</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="index.html#features">Prednosti</a></li>
+                    <li><a href="index.html#services">Usluge</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="modeliranje.html">3D Modeliranje</a></li>
+                    <li><a href="kontakti.html" class="active">Kontakti</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 150px 0 80px;">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Kontaktirajte nas</h1>
+                    <p>Imate pitanja ili želite da započnete projekt? Tu smo da vam pomognemo. Javite nam se putem bilo kog od naših kanala komunikacije.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Kontakt 3D štampanje">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pišite nam</h2>
+                <p>Popunite formu ispod i mi ćemo vam se javiti u najkraćem mogućem roku</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Informacije za kontakt</h3>
+                    <p>Rado ćemo odgovoriti na sva vaša pitanja i pomoći vam da realizujete vaš 3D projekt.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Adresa</h4>
+                                <p>Beograd, Zemun<br>Makedonska 1A</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p>+381 63 7797857</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>3dcraft.rs@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Radno vreme</h4>
+                                <p>09:00 - 17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="67e61521-ab90-4917-a017-bfb080c92718">
+                        <div class="form-group">
+                            <label for="name">Vaše ime</label>
+                            <input type="text" id="name" class="form-control" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Poruka</label>
+                            <textarea id="message" class="form-control" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Pošaljite poruku</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="features" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lokacija</h2>
+                <p>Pronađite nas lako u Zemunu</p>
+            </div>
+            <div style="border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); height: 400px; background: var(--light); display: flex; align-items: center; justify-content: center;">
+                <div style="padding: 40px; text-align: center; max-width: 500px;">
+                    <div style="font-size: 48px; color: var(--primary); margin-bottom: 20px;">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; color: var(--dark);">Beograd, Zemun</h3>
+                    <p style="color: var(--secondary); margin-bottom: 25px;">Makedonska 1A<br>Lako dostupna lokacija sa dobrom parking ponudom</p>
+                    <a href="https://maps.google.com" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-directions"></i> Prikaži na mapi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="services" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Često postavljana pitanja</h2>
+                <p>Odgovori na najčešća pitanja naših klijenata</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <h3>Koliko traje 3D štampanje?</h3>
+                    <p>Vreme štampanja zavisi od kompleksnosti i veličine modela. Prosti modeli mogu biti gotovi za nekoliko sati, dok složeniji projekti mogu trajati i nekoliko dana.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h3>Kako se određuje cena?</h3>
+                    <p>Cena zavisi od količine materijala, vremena štampanja i kompleksnosti modela. Na osnovu vašeg projekta damo vam preciznu ponudu.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-upload"></i>
+                    </div>
+                    <h3>Koje formate fajlova prihvatate?</h3>
+                    <p>Radimo sa svim popularnim 3D formatima: STL, OBJ, 3MF, STEP. Takođe možemo da vam pomognemo sa konverzijom ako je potrebno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Spremni za saradnju?</h2>
+            <p>Kontaktirajte nas danas i dobijte besplatnu konsultaciju za vaš 3D projekt</p>
+            <a href="#contact" class="btn">Zakažite sastanak</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>3DCraft</h3>
+                    <p>Profesionalna 3D štampanje za poslovanje i privatne klijenate. Pretvaramo vaše ideje u stvarnost.</p>
+                    <div class="social-links">
+                    <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                    <a href="https://www.instagram.com/3dcraft.rs/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/craft3d_chanel"><i class="fab fa-telegram-plane"></i></a>
+                    <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+                    <a href="https://share.google/lUP7ozNil4j3jXnT8"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontaktirajte nas</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Beograd, Zemun, Makedonska 1A</li>
+                        <li><i class="fas fa-phone"></i> 063 7797857</li>
+                        <li><i class="fas fa-envelope"></i> 3dcraft.rs@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Radno vreme: 09:00 - 17:00</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Brzi linkovi</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Početna</a></li>
+                        <li><a href="index.html#features"><i class="fas fa-chevron-right"></i> Prednosti</a></li>
+                        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Usluge</a></li>
+                        <li><a href="index.html#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="kontakti.html"><i class="fas fa-chevron-right"></i> Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Naše usluge</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-check"></i> 3D štampanje</li>
+                        <li><i class="fas fa-check"></i> 3D modeliranje</li>
+                        <li><i class="fas fa-check"></i> Prototipiranje</li>
+                        <li><i class="fas fa-check"></i> Malo serijsko proizvodstvo</li>
+                        <li><i class="fas fa-check"></i> Konsultacije</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 3DCraft. Sva prava zadržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="magic.js"></script>
+    <style>
+        
+        .contact-form {
+            background: white;
+            border: 1px solid #eaeaea;
+        }
+        
+        .features-grid .feature-card {
+            text-align: left;
+        }
+        
+        .feature-card .feature-icon {
+            margin: 0 0 25px 0;
+        }
+    </style>
+</body>
+</html>
