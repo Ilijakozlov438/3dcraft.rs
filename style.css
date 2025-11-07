@@ -882,3 +882,59 @@ body.menu-open {
         transform: translateY(0);
     }
 }
+
+.hero-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.hero-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-social-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .hero-social-links {
+        gap: 12px;
+    }
+    
+    .hero-social-links a {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-social-links {
+        gap: 10px;
+    }
+    
+    .hero-social-links a {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .hero-social-links a i {
+        font-size: 18px;
+    }
+}
