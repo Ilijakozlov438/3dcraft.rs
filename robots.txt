@@ -1,0 +1,42 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://3dcraft.rs/sitemap.xml
+
+# Crawl delay (optional - adjust based on your server capacity)
+# Crawl-delay: 1
+
+# Allow social media bots specifically
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+# Allow search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block AI training bots (optional)
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
