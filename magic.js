@@ -202,6 +202,12 @@ function handleFormSubmit(form, successMessage) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
+            // Google Analytics event
+            gtag('event', 'conversion_event_page_view', {
+                'event_category': 'Contact Form',
+                'event_label': 'Form Submission Success'
+            });
+            
             showNotification(successMessage, 'success');
             form.reset();
             
