@@ -176,11 +176,21 @@ function handleFormSubmit(form, successMessage) {
             field.classList.add('error');
         } else {
             field.classList.remove('error');
+            
+            // Additional validation for phone number
+            if (field.type === 'tel' && field.value.trim()) {
+                const phoneRegex = /^[\+]?[0-9\s\-\(\)]{6,}$/;
+                if (!phoneRegex.test(field.value.trim())) {
+                    isValid = false;
+                    field.classList.add('error');
+                    showNotification('Molimo vas unesite ispravan broj telefona.', 'error');
+                }
+            }
         }
     });
 
     if (!isValid) {
-        showNotification('Molimo vas popunite sva obavezna polja.', 'error');
+        showNotification('Molimo vas popunite sva obavezna polja ispravno.', 'error');
         return;
     }
 
@@ -202,13 +212,13 @@ function handleFormSubmit(form, successMessage) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            // Google Analytics event
-            gtag('event', 'conversion_event_page_view', {
-                'event_category': 'Contact Form',
-                'event_label': 'Form Submission Success'
-            });
-            
             showNotification(successMessage, 'success');
+            
+            // Редирект на страницу благодарности через 2 секунды
+            setTimeout(function() {
+                window.location.href = 'hvala.html';
+            }, 2000);
+            
             form.reset();
             
             // Reset textarea height

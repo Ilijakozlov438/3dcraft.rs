@@ -938,3 +938,22 @@ body.menu-open {
         font-size: 18px;
     }
 }
+
+/* Phone input specific styles */
+input[type="tel"] {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Placeholder styling for phone field */
+input[type="tel"]::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Mobile optimization for phone input */
+@media (max-width: 768px) {
+    input[type="tel"] {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
