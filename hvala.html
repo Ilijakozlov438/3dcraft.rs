@@ -183,8 +183,7 @@
     </footer>
 
     <script src="magic.js"></script>
-    <script>
-    // Додатни JS за страницу захвалности
+<script>
     document.addEventListener('DOMContentLoaded', function() {
         // Анимација иконке захвалности
         const thankYouIcon = document.querySelector('.thank-you-icon');
@@ -195,22 +194,6 @@
                     thankYouIcon.style.transform = 'scale(1)';
                 }, 300);
             }, 500);
-        }
-
-        // Праћење конверзије за Google Analytics - АКТИВАЦИЯ ПРИ ВХОДЕ НА СТРАНИЦУ
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'conversion', {
-                'send_to': 'AW-17674171292',
-                'value': 1.0,
-                'currency': 'RSD'
-            });
-            
-            // Дополнительное событие для отслеживания
-            gtag('event', 'page_view', {
-                'page_title': 'Hvala Page',
-                'page_location': window.location.href,
-                'send_to': 'AW-17674171292'
-            });
         }
 
         // Аутоматско скроловање до секције захвалности
@@ -242,10 +225,9 @@
         }
     });
 
-    // Додатна функција за приказ времена одзива
     function showResponseTime() {
         const now = new Date();
-        const responseTime = new Date(now.getTime() + 24 * 60 * 60 * 1000); // +24 часа
+        const responseTime = new Date(now.getTime() + 24 * 60 * 60 * 1000);
         const options = { 
             weekday: 'long', 
             year: 'numeric', 
