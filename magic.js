@@ -177,13 +177,15 @@ function handleFormSubmit(form, successMessage) {
         } else {
             field.classList.remove('error');
             
-            // Additional validation for phone number
+            // Additional validation for Serbian phone numbers
             if (field.type === 'tel' && field.value.trim()) {
-                const phoneRegex = /^[\+]?[0-9\s\-\(\)]{6,}$/;
-                if (!phoneRegex.test(field.value.trim())) {
+                const phoneRegex = /^(\+381|0)6[0-9][0-9]{6,7}$/;
+                const cleanPhone = field.value.trim().replace(/[-\s\(\)]/g, '');
+                
+                if (!phoneRegex.test(cleanPhone)) {
                     isValid = false;
                     field.classList.add('error');
-                    showNotification('Molimo vas unesite ispravan broj telefona.', 'error');
+                    showNotification('Molimo vas unesite ispravan srpski broj telefona (npr. +38163123456 ili 063123456).', 'error');
                 }
             }
         }
