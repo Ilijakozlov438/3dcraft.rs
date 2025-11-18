@@ -85,133 +85,103 @@
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo"><i class="fas fa-cube"></i>3DCraft</a>
-                
-                <!-- Desktop Menu -->
                 <ul class="nav-links">
                     <li><a href="index.html#home">Početna</a></li>
                     <li><a href="index.html#features">Prednosti</a></li>
                     <li><a href="index.html#services">Usluge</a></li>
-                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</ax></li>
                     <li><a href="modeliranje.html">3D Modeliranje</a></li>
                     <li><a href="kontakti.html">Kontakti</a></li>
                 </ul>
-
-                <!-- Mobile Menu Button -->
-                <div class="mobile-menu-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-overlay">
-        <div class="mobile-nav">
-            <a href="index.html" class="logo"><i class="fas fa-cube"></i>3DCraft</a>
-            <ul class="mobile-nav-links">
-                <li><a href="index.html#home">Početna</a></li>
-                <li><a href="index.html#features">Prednosti</a></li>
-                <li><a href="index.html#services">Usluge</a></li>
-                <li><a href="index.html#portfolio">Portfolio</a></li>
-                <li><a href="modeliranje.html">3D Modeliranje</a></li>
-                <li><a href="kontakti.html">Kontakti</a></li>
-            </ul>
-            <div class="mobile-contact-info">
-                <a href="tel:+381637797857" class="mobile-phone">
-                    <i class="fas fa-phone"></i> +381 63 7797857
-                </a>
-                <a href="mailto:3dcraft.rs@gmail.com" class="mobile-email">
-                    <i class="fas fa-envelope"></i> 3dcraft.rs@gmail.com
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <main>
+    <!-- Main Content (NEW THANK YOU CONTENT) -->
+    <main class="thank-you-main">
         <!-- Thank You Section -->
-        <section class="thank-you-hero" id="thank-you">
-            <div class="container">
-                <div class="thank-you-content">
-                    <!-- Animated Checkmark -->
-                    <div class="success-animation">
-                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-                            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                        </svg>
-                    </div>
+        <section class="thank-you-hero">
+            <div class="thank-you-content">
+                <!-- Animated Checkmark -->
+                <div class="success-animation">
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                </div>
+                
+                <div class="thank-you-text">
+                    <h1>Hvala vam na vašoj poruci!</h1>
+                    <p class="lead">Vaša poruka je uspešno primljena. Kontaktiraćemo vas u najkraćem mogućem roku.</p>
+                    <p class="subtext">Obraćamo pažnju na svaku poruku i trudimo se da odgovorimo u roku od 24 sata.</p>
                     
-                    <div class="thank-you-text">
-                        <h1>Hvala vam na vašoj poruci!</h1>
-                        <p class="lead">Vaša poruka je uspešno primljena. Kontaktiraćemo vas u najkraćem mogućem roku.</p>
-                        <p class="subtext">Obraćamo pažnju na svaku poruku i trudimo se da odgovorimo u roku od 24 sata.</p>
-                        
-                        <!-- Response Time Info -->
-                        <div class="response-time-card">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <strong>Očekivani odgovor do:</strong>
-                                <span id="response-time"></span>
-                            </div>
+                    <!-- Response Time Info -->
+                    <div class="response-time-card">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Očekivani odgovor do:</strong>
+                            <span id="response-time"></span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Quick Contact Card -->
-                    <div class="quick-contact-card">
-                        <h3>Ukoliko imate hitna pitanja:</h3>
-                        <div class="contact-methods">
-                            <a href="tel:+381637797857" class="contact-method">
-                                <div class="method-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="method-info">
-                                    <span class="method-label">Pozovite nas</span>
-                                    <span class="method-value">+381 63 7797857</span>
-                                </div>
-                                <i class="fas fa-chevron-right"></i>
-                            </a>
-                            
-                            <a href="https://wa.me/381637797857" target="_blank" class="contact-method">
-                                <div class="method-icon whatsapp">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                                <div class="method-info">
-                                    <span class="method-label">WhatsApp</span>
-                                    <span class="method-value">Brza poruka</span>
-                                </div>
-                                <i class="fas fa-chevron-right"></i>
-                            </a>
-                            
-                            <a href="mailto:3dcraft.rs@gmail.com" class="contact-method">
-                                <div class="method-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="method-info">
-                                    <span class="method-label">Email</span>
-                                    <span class="method-value">3dcraft.rs@gmail.com</span>
-                                </div>
-                                <i class="fas fa-chevron-right"></i>
-                            </a>
-                        </div>
+                <!-- Quick Contact Card -->
+                <div class="quick-contact-card">
+                    <h3>Ukoliko imate hitna pitanja:</h3>
+                    <div class="contact-methods">
+                        <a href="tel:+381637797857" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Pozovite nas</span>
+                                <span class="method-value">+381 63 7797857</span>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                        
+                        <a href="https://wa.me/381637797857" target="_blank" class="contact-method">
+                            <div class="method-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">WhatsApp</span>
+                                <span class="method-value">Brza poruka</span>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                        
+                        <a href="mailto:3dcraft.rs@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">3dcraft.rs@gmail.com</span>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Process Steps -->
-        <section class="process-steps">
+        <section class="thank-you-process-steps">
             <div class="container">
-                <div class="section-header">
+                <div class="thank-you-section-header">
                     <h2>Šta sleduje?</h2>
                     <p>Evo šta možete očekivati nakon što ste nam poslali poruku</p>
                 </div>
                 
-                <div class="steps-container">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <div class="step-icon">
+                <div class="thank-you-steps-container">
+                    <div class="thank-you-step">
+                        <div class="thank-you-step-number">1</div>
+                        <div class="thank-you-step-content">
+                            <div class="thank-you-step-icon">
                                 <i class="fas fa-envelope-open-text"></i>
                             </div>
                             <h3>Potvrda prijema</h3>
@@ -219,10 +189,10 @@
                         </div>
                     </div>
                     
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <div class="step-icon">
+                    <div class="thank-you-step">
+                        <div class="thank-you-step-number">2</div>
+                        <div class="thank-you-step-content">
+                            <div class="thank-you-step-icon">
                                 <i class="fas fa-user-check"></i>
                             </div>
                             <h3>Pregled poruke</h3>
@@ -230,10 +200,10 @@
                         </div>
                     </div>
                     
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <div class="step-icon">
+                    <div class="thank-you-step">
+                        <div class="thank-you-step-number">3</div>
+                        <div class="thank-you-step-content">
+                            <div class="thank-you-step-icon">
                                 <i class="fas fa-reply"></i>
                             </div>
                             <h3>Odgovor</h3>
@@ -245,29 +215,29 @@
         </section>
 
         <!-- Quick Actions -->
-        <section class="quick-actions">
+        <section class="thank-you-quick-actions">
             <div class="container">
-                <div class="actions-grid">
-                    <div class="action-card">
-                        <div class="action-icon">
+                <div class="thank-you-actions-grid">
+                    <div class="thank-you-action-card">
+                        <div class="thank-you-action-icon">
                             <i class="fas fa-cube"></i>
                         </div>
                         <h3>Pogledajte naše usluge</h3>
                         <p>Saznajte više o našim mogućnostima 3D štampe i modeliranja</p>
-                        <a href="index.html#services" class="btn btn-outline">Usluge</a>
+                        <a href="index.html#services" class="btn">Usluge</a>
                     </div>
                     
-                    <div class="action-card">
-                        <div class="action-icon">
+                    <div class="thank-you-action-card">
+                        <div class="thank-you-action-icon">
                             <i class="fas fa-images"></i>
                         </div>
                         <h3>Naš portfolio</h3>
                         <p>Pogledajte naše prethodne radove i projekte</p>
-                        <a href="index.html#portfolio" class="btn btn-outline">Portfolio</a>
+                        <a href="index.html#portfolio" class="btn">Portfolio</a>
                     </div>
                     
-                    <div class="action-card">
-                        <div class="action-icon">
+                    <div class="thank-you-action-card">
+                        <div class="thank-you-action-icon">
                             <i class="fas fa-phone"></i>
                         </div>
                         <h3>Kontaktirajte nas</h3>
@@ -351,7 +321,7 @@
                 </div>
             </div>
             
-            <div class="footer-bottom">
+            <div class="copyright">
                 <p>&copy; 2025 3DCraft. Sva prava zadržana.</p>
             </div>
         </div>
