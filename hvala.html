@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hvala - 3DCraft</title>
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://3dcraft.rs/hvala.html">
+
     <!-- Theme Color -->
     <meta name="theme-color" content="#4a6cf7">
 
     <!-- Favicon main -->
     <link rel="icon" type="image/svg+xml" href="slike/favicon.svg">
 
-    <!-- Favicon Aditional -->
+    <!-- Favicon Additional -->
     <link rel="apple-touch-icon" sizes="180x180" href="slike/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="slike/favicon_32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="slike/favicon_16x16.png">
     <link rel="icon" type="image/x-icon" href="slike/favicon.ico">
 
-        <!-- Structured Data / JSON-LD -->
+    <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -46,38 +49,44 @@
     }
     </script>
 
-        <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics & Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW1CXMP24K"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-KW1CXMP24K');
-    </script>
-
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17674171292">
-    </script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
     gtag('config', 'AW-17674171292');
     </script>
-        <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="dmfNfQ1UC3axuBxFDXp42YPXIk1BVEnqMZJqJJiS6Xc" />
-    
-        <!-- Connection to external stylesheets -->
+
+    <!-- Conversion Tracking -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        gtag('event', 'form_submit_success', {
+            'send_to': 'G-KW1CXMP24K',
+            'event_category': 'Form',
+            'event_label': 'Contact Form'
+        });
+        
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17674171292',
+            'event_category': 'form_submit_success'
+        });
+    });
+    </script>
+
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo"><i class="fas fa-cube"></i>3DCraft</a>
+                
+                <!-- Desktop Menu -->
                 <ul class="nav-links">
                     <li><a href="index.html#home">Početna</a></li>
                     <li><a href="index.html#features">Prednosti</a></li>
@@ -86,102 +95,185 @@
                     <li><a href="modeliranje.html">3D Modeliranje</a></li>
                     <li><a href="kontakti.html">Kontakti</a></li>
                 </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
+
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </nav>
         </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay">
+        <div class="mobile-nav">
+            <a href="index.html" class="logo"><i class="fas fa-cube"></i>3DCraft</a>
+            <ul class="mobile-nav-links">
+                <li><a href="index.html#home">Početna</a></li>
+                <li><a href="index.html#features">Prednosti</a></li>
+                <li><a href="index.html#services">Usluge</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="modeliranje.html">3D Modeliranje</a></li>
+                <li><a href="kontakti.html">Kontakti</a></li>
+            </ul>
+            <div class="mobile-contact-info">
+                <a href="tel:+381637797857" class="mobile-phone">
+                    <i class="fas fa-phone"></i> +381 63 7797857
+                </a>
+                <a href="mailto:3dcraft.rs@gmail.com" class="mobile-email">
+                    <i class="fas fa-envelope"></i> 3dcraft.rs@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
     <main>
         <!-- Thank You Section -->
-        <section class="hero" id="thank-you">
+        <section class="thank-you-hero" id="thank-you">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <div class="thank-you-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h1>Хвала вам на вашој поруци!</h1>
-                        <p>Ваша порука је успешно примљена. Контактираћемо вас у најкраћем могућем року.</p>
-                        <p>Обраћамо пажњу на сваку поруку и трудимо се да одговоримо у року од 24 сата.</p>
+                <div class="thank-you-content">
+                    <!-- Animated Checkmark -->
+                    <div class="success-animation">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="thank-you-text">
+                        <h1>Hvala vam na vašoj poruci!</h1>
+                        <p class="lead">Vaša poruka je uspešno primljena. Kontaktiraćemo vas u najkraćem mogućem roku.</p>
+                        <p class="subtext">Obraćamo pažnju na svaku poruku i trudimo se da odgovorimo u roku od 24 sata.</p>
                         
-                        <!-- <div class="thank-you-actions">
-                            <a href="index.html" class="btn btn-primary">Повратак на почетну</a>
-                            <a href="kontakti.html" class="btn">Контактирајте нас поново</a>
-                        </div> -->
-                        
-                        <div class="thank-you-info">
-                            <div class="contact-info-card">
-                                <h3>Уколико имате хитна питања:</h3>
-                                <div class="contact-details">
-                                    <div class="contact-item">
-                                        <div class="contact-icon">
-                                            <i class="fas fa-phone"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Телефон</h4>
-                                            <p>+381 63 7797857</p>
-                                        </div>
-                                    </div>
-                                    <div class="contact-item">
-                                        <div class="contact-icon">
-                                            <i class="fas fa-envelope"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Email</h4>
-                                            <p>3dcraft.rs@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        <!-- Response Time Info -->
+                        <div class="response-time-card">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Očekivani odgovor do:</strong>
+                                <span id="response-time"></span>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Contact Card -->
+                    <div class="quick-contact-card">
+                        <h3>Ukoliko imate hitna pitanja:</h3>
+                        <div class="contact-methods">
+                            <a href="tel:+381637797857" class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-info">
+                                    <span class="method-label">Pozovite nas</span>
+                                    <span class="method-value">+381 63 7797857</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            
+                            <a href="https://wa.me/381637797857" target="_blank" class="contact-method">
+                                <div class="method-icon whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="method-info">
+                                    <span class="method-label">WhatsApp</span>
+                                    <span class="method-value">Brza poruka</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            
+                            <a href="mailto:3dcraft.rs@gmail.com" class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-info">
+                                    <span class="method-label">Email</span>
+                                    <span class="method-value">3dcraft.rs@gmail.com</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- What's Next Section -->
-        <section class="features">  
+        <!-- Process Steps -->
+        <section class="process-steps">
             <div class="container">
-                <div class="section-title">
-                    <h2>Шта следи?</h2>
-                    <p>Ево шта можете очекивати након што сте нам послали поруку</p>
+                <div class="section-header">
+                    <h2>Šta sleduje?</h2>
+                    <p>Evo šta možete očekivati nakon što ste nam poslali poruku</p>
                 </div>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-envelope-open-text"></i>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <h3>Potvrda prijema</h3>
+                            <p>Odmah smo primili vašu poruku i radimo na njoj.</p>
                         </div>
-                        <h3>Потврда пријема</h3>
-                        <p>Одмах смо примили вашу поруку и радимо на њој.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-user-check"></i>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h3>Pregled poruke</h3>
+                            <p>Naš tim će pažljivo pregledati vašu poruku i proceniti vaše potrebe.</p>
                         </div>
-                        <h3>Преглед поруке</h3>
-                        <p>Наш тим ће пажљиво прегледати вашу поруку и проценити ваше потребе.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-reply"></i>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-reply"></i>
+                            </div>
+                            <h3>Odgovor</h3>
+                            <p>Kontaktiraćemo vas u najkraćem mogućem roku sa odgovorom ili ponudom.</p>
                         </div>
-                        <h3>Одговор</h3>
-                        <p>Контактираћемо вас у најкраћем могућем року са одговором или понудом.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Quick Actions -->
-        <section class="cta">
+        <section class="quick-actions">
             <div class="container">
-                <h2>Желите да почнете са пројектом одмах?</h2>
-                <p>Погледајте наше услуге и портфолио да бисте добили идеју о томе како можемо да вам помогнемо</p>
-                <div class="cta-actions">
-                    <a href="index.html#services" class="btn">Наше услуге</a>
-                    <a href="index.html#portfolio" class="btn btn-primary">Портфолио</a>
+                <div class="actions-grid">
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Pogledajte naše usluge</h3>
+                        <p>Saznajte više o našim mogućnostima 3D štampe i modeliranja</p>
+                        <a href="index.html#services" class="btn btn-outline">Usluge</a>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <h3>Naš portfolio</h3>
+                        <p>Pogledajte naše prethodne radove i projekte</p>
+                        <a href="index.html#portfolio" class="btn btn-outline">Portfolio</a>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Kontaktirajte nas</h3>
+                        <p>Imate još pitanja? Rado ćemo vam odgovoriti</p>
+                        <a href="kontakti.html" class="btn btn-primary">Kontakt</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -191,9 +283,9 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
+                <div class="footer-section">
                     <h3>3DCraft</h3>
-                    <p>Profesionalna 3D štampanje za poslovanje i privatne klijente. Pretvaramo vaše ideje u stvarnost.</p>
+                    <p>Profesionalna 3D štampa za poslovne i privatne klijente. Pretvaramo vaše ideje u stvarnost.</p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
@@ -212,99 +304,147 @@
                         </a>
                     </div>
                 </div>
-                <div class="footer-column">
-                    <h3>Контактирајте нас</h3>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Beograd, Zemun, Makedonska 1A</li>
-                        <li><i class="fas fa-phone"></i> 063 7797857</li>
-                        <li><i class="fas fa-envelope"></i> 3dcraft.rs@gmail.com</li>
-                        <li><i class="fas fa-clock"></i> Radno vreme: 09:00 - 17:00</li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Beograd, Zemun<br>Makedonska 1A</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+381637797857">063 7797857</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:3dcraft.rs@gmail.com">3dcraft.rs@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Radno vreme:<br>09:00 - 17:00</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>Брзи линкови</h3>
+                
+                <div class="footer-section">
+                    <h3>Navigacija</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Почетна</a></li>
-                        <li><a href="index.html#features"><i class="fas fa-chevron-right"></i> Предности</a></li>
-                        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Услуге</a></li>
-                        <li><a href="index.html#portfolio"><i class="fas fa-chevron-right"></i> Портфолио</a></li>
-                        <li><a href="kontakti.html"><i class="fas fa-chevron-right"></i> Контакт</a></li>
+                        <li><a href="index.html">Početna</a></li>
+                        <li><a href="index.html#features">Prednosti</a></li>
+                        <li><a href="index.html#services">Usluge</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="modeliranje.html">3D Modeliranje</a></li>
+                        <li><a href="kontakti.html">Kontakt</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>Наше услуге</h3>
+                
+                <div class="footer-section">
+                    <h3>Usluge</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-check"></i> 3D штампање</li>
-                        <li><i class="fas fa-check"></i> 3D моделирање</li>
-                        <li><i class="fas fa-check"></i> Прототиповање</li>
-                        <li><i class="fas fa-check"></i> Мало серијско производство</li>
-                        <li><i class="fas fa-check"></i> Консултације</li>
+                        <li><i class="fas fa-check"></i> 3D štampanje</li>
+                        <li><i class="fas fa-check"></i> 3D modeliranje</li>
+                        <li><i class="fas fa-check"></i> Prototipovanje</li>
+                        <li><i class="fas fa-check"></i> Malo serijsko proizvodstvo</li>
+                        <li><i class="fas fa-check"></i> Konsultacije</li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 3DCraft. Сва права задржана.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 3DCraft. Sva prava zadržana.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/381637797857" target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="magic.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Анимација иконке захвалности
-        const thankYouIcon = document.querySelector('.thank-you-icon');
-        if (thankYouIcon) {
-            setTimeout(() => {
-                thankYouIcon.style.transform = 'scale(1.1)';
-                setTimeout(() => {
-                    thankYouIcon.style.transform = 'scale(1)';
-                }, 300);
-            }, 500);
-        }
-
-        // Аутоматско скроловање до секције захвалности
-        setTimeout(() => {
-            const thankYouSection = document.getElementById('thank-you');
-            if (thankYouSection) {
-                const headerHeight = document.getElementById('header').offsetHeight;
-                const targetPosition = thankYouSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Calculate response time
+            function calculateResponseTime() {
+                const now = new Date();
+                const responseTime = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+                const options = { 
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                };
+                return responseTime.toLocaleDateString('sr-RS', options);
             }
-        }, 100);
 
-        // Приказ времена одзива на страници
-        const responseTimeElement = document.createElement('p');
-        responseTimeElement.className = 'response-time';
-        responseTimeElement.innerHTML = `<strong>Очекивани одговор до:</strong> ${showResponseTime()}`;
-        responseTimeElement.style.textAlign = 'center';
-        responseTimeElement.style.marginTop = '20px';
-        responseTimeElement.style.fontSize = '16px';
-        responseTimeElement.style.opacity = '0.8';
-        
-        const thankYouText = document.querySelector('.hero-text');
-        if (thankYouText) {
-            thankYouText.appendChild(responseTimeElement);
+            // Display response time
+            document.getElementById('response-time').textContent = calculateResponseTime();
+
+            // Mobile menu functionality
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileOverlay = document.querySelector('.mobile-overlay');
+            const body = document.body;
+
+            mobileMenuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mobileOverlay.classList.toggle('active');
+                body.classList.toggle('no-scroll');
+            });
+
+            // Close mobile menu when clicking on links
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                    body.classList.remove('no-scroll');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerHeight = document.getElementById('header').offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Add loading animation
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 100);
+        });
+
+        // Intersection Observer for animations
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            // Observe elements for animation
+            document.querySelectorAll('.step, .action-card').forEach(el => {
+                observer.observe(el);
+            });
         }
-    });
-
-    function showResponseTime() {
-        const now = new Date();
-        const responseTime = new Date(now.getTime() + 24 * 60 * 60 * 1000);
-        const options = { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit'
-        };
-        
-        return responseTime.toLocaleDateString('sr-RS', options);
-    }
-</script>
+    </script>
 </body>
 </html>
