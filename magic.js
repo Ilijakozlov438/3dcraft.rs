@@ -169,6 +169,11 @@ function handleFormSubmit(form, successMessage) {
     const requiredFields = form.querySelectorAll('[required]');
     let isValid = true;
 
+    // Сбросить предыдущие ошибки
+    requiredFields.forEach(field => {
+        field.classList.remove('error');
+    });
+
     // Simple validation
     requiredFields.forEach(field => {
         if (!field.value.trim()) {
@@ -186,6 +191,7 @@ function handleFormSubmit(form, successMessage) {
                     isValid = false;
                     field.classList.add('error');
                     showNotification('Molimo vas unesite ispravan srpski broj telefona (npr. +38163123456 ili 063123456).', 'error');
+                    return; // Прерываем выполнение для этого поля
                 }
             }
         }
@@ -193,7 +199,7 @@ function handleFormSubmit(form, successMessage) {
 
     if (!isValid) {
         showNotification('Molimo vas popunite sva obavezna polja ispravno.', 'error');
-        return;
+        return; // Прерываем выполнение если есть ошибки
     }
 
     // Show loading state
@@ -216,7 +222,7 @@ function handleFormSubmit(form, successMessage) {
         if (data.success) {
             showNotification(successMessage, 'success');
             
-            // Редирект на страницу благодарности через 2 секунды
+            // Редирект на страницу благодарности через 2 секунды - ТОЛЬКО ПРИ УСПЕХЕ
             setTimeout(function() {
                 window.location.href = 'hvala.html';
             }, 2000);
