@@ -50,30 +50,40 @@
     </script>
 
     <!-- Google Analytics & Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW1CXMP24K"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-KW1CXMP24K');
-    gtag('config', 'AW-17674171292');
-    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KW1CXMP24K"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KW1CXMP24K');
+gtag('config', 'AW-17674171292');
 
-    <!-- Conversion Tracking -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        gtag('event', 'form_submit_success', {
-            'send_to': 'G-KW1CXMP24K',
-            'event_category': 'Form',
-            'event_label': 'Contact Form'
-        });
-        
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17674171292',
-            'event_category': 'form_submit_success'
-        });
+// Функция для отправки конверсии
+function trackConversion() {
+    // GA4 событие
+    gtag('event', 'form_submit_success', {
+        'send_to': 'G-KW1CXMP24K',
+        'event_category': 'Form',
+        'event_label': 'Contact Form',
+        'value': 1
     });
-    </script>
+    
+    // Google Ads конверсия
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17674171292/form_submit_success',
+        'value': 1,
+        'currency': 'EUR'
+    });
+    
+    console.log('Conversion events sent');
+}
+
+// Отправляем конверсию при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+    // Ждем немного чтобы gtag точно загрузился
+    setTimeout(trackConversion, 1000);
+});
+</script>
 
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
