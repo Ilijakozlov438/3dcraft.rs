@@ -431,3 +431,48 @@ function getNotificationColor(type) {
     };
     return colors[type] || '#3b82f6';
 }
+
+// Portfolio enhancements
+document.addEventListener('DOMContentLoaded', function() {
+    // Add badges to portfolio items based on category
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    
+    portfolioCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        let badgeText = '';
+        
+        if (title.includes('zubčanik') || title.includes('alat')) {
+            badgeText = 'Funkcionalni';
+        } else if (title.includes('kućište')) {
+            badgeText = 'Prototip';
+        } else if (title.includes('tablica') || title.includes('privezak')) {
+            badgeText = 'Dekorativni';
+        }
+        
+        if (badgeText) {
+            const badge = document.createElement('div');
+            badge.className = 'portfolio-badge';
+            badge.textContent = badgeText;
+            card.appendChild(badge);
+        }
+    });
+    
+    // Add loading animation
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, observerOptions);
+    
+    portfolioCards.forEach(card => {
+        card.style.animationPlayState = 'paused';
+        observer.observe(card);
+    });
+});
