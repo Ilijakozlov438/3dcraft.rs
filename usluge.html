@@ -30,7 +30,15 @@
     
     <!-- Connection to external stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/responsive.css"> 
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/whatsapp.css">
+
+    <link rel="stylesheet" href="styles/usluge.css">
 </head>
 <body>
     <header id="header">
@@ -54,7 +62,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero usluge-hero">
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
@@ -88,84 +96,82 @@
             </div>
         </section>
 
-        <!-- Services Details -->
-        <section class="features">
+        <section class="features service-details-section">
             <div class="container">
                 <div class="section-title">
                     <h2>Detaljne usluge</h2>
                     <p>Sve što vam je potrebno za realizaciju vaših projekata</p>
                 </div>
-                <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature-card service-detail">
                         <div class="feature-icon">
                             <i class="fas fa-print"></i>
                         </div>
                         <h3>3D Štampanje</h3>
                         <p>Profesionalna FDM 3D štampa sa visokom preciznošću do 0.1mm. Koristimo kvalitetne materijale PLA, PETG, ABS za postizanje optimalnih rezultata.</p>
-                        <ul style="text-align: left; margin-top: 15px;">
+                        <ul class="feature-list">
                             <li>Maksimalna veličina: 260x260x290mm</li>
                             <li>Preciznost: 0.1-0.3mm</li>
-                            <li>Materijali: PLA, PETG, ABS, TPU</li>
+                            <li>Materijali: PLA, PETG, ASA, TPU</li>
                             <li>Brzina izrade: 1-7 dana</li>
                         </ul>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card service-detail">
                         <div class="feature-icon">
                             <i class="fas fa-cube"></i>
                         </div>
                         <h3>3D Modeliranje</h3>
                         <p>Izrada 3D modela po vašim specifikacijama. Pretvaramo vaše ideje, skice ili tehničke crteže u precizne 3D modele spremne za štampu.</p>
-                        <ul style="text-align: left; margin-top: 15px;">
+                        <ul class="feature-list">
                             <li>Modeliranje od nule</li>
                             <li>Optimizacija postojećih modela</li>
                             <li>Konverzija 2D u 3D</li>
                             <li>Tehnička dokumentacija</li>
                         </ul>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card service-detail">
                         <div class="feature-icon">
                             <i class="fas fa-vial"></i>
                         </div>
                         <h3>Prototipiranje</h3>
                         <p>Brzo izrada funkcionalnih prototipova za testiranje i validaciju dizajna. Idealno za startupe, inovatore i proizvođače.</p>
-                        <ul style="text-align: left; margin-top: 15px;">
+                        <ul class="feature-list">
                             <li>Brzi prototipovi</li>
                             <li>Funkcionalno testiranje</li>
                             <li>Iterativni razvoj</li>
                             <li>Konzultacije o dizajnu</li>
                         </ul>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card service-detail">
                         <div class="feature-icon">
                             <i class="fas fa-industry"></i>
                         </div>
                         <h3>Serijska Proizvodnja</h3>
                         <p>Mala i srednja serijska proizvodnja delova i proizvoda. Idealno za limitirane serije, zamenske delove ili testiranje tržišta.</p>
-                        <ul style="text-align: left; margin-top: 15px;">
+                        <ul class="feature-list">
                             <li>Serije od 10-1000+ komada</li>
                             <li>Kontrola kvaliteta</li>
                             <li>Pakovanje i isporuka</li>
                             <li>Povoljnije cene za veće količine</li>
                         </ul>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card service-detail">
                         <div class="feature-icon">
                             <i class="fas fa-tools"></i>
                         </div>
                         <h3>Post-Processing</h3>
                         <p>Dorada i završna obrada štampanih delova za profesionalan izgled. Uključuje brušenje i glačanje, montaža i montažu.</p>
-                        <ul style="text-align: left; margin-top: 15px;">
+                        <ul class="feature-list">
                             <li>Brušenje i glačanje</li>
                             <li>Montaža i sklapanje</li>
                         </ul>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card service-detail">
                         <div class="feature-icon">
                             <i class="fas fa-headset"></i>
                         </div>
                         <h3>Konsultacije</h3>
                         <p>Stručne konsultacije o 3D štampi, dizajnu i materijalima. Pomagamo vam da odaberete optimalno rešenje za vaš projekat.</p>
-                        <ul style="text-align: left; margin-top: 15px;">
+                        <ul class="feature-list">
                             <li>Analiza projekta</li>
                             <li>Preporuke materijala</li>
                             <li>Optimizacija troškova</li>
@@ -177,49 +183,52 @@
         </section>
 
         <!-- Materials Section -->
-        <section class="services">
+        <section class="services materials-section">
             <div class="container">
                 <div class="section-title">
                     <h2>Materijali koje koristimo</h2>
                     <p>Kvalitetni materijali za različite potrebe i primene</p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card">
+                <div class="services-grid materials-grid">
+                    <div class="service-card material-card">
+                        <div class="material-badge">Najpopularniji</div>
                         <div class="service-image">
                             <img src="slikeWEBP/CEV_2.webp" alt="PLA Materijal" loading="eager">
                         </div>
                         <div class="service-content">
                             <h3>PLA</h3>
                             <p>Biodegradabilni materijal idealan za prototipove i dekorativne predmete. Lako se štampa, mirise prijatno tokom štampe.</p>
-                            <ul style="margin-top: 10px;">
+                            <ul class="material-list">
                                 <li><strong>Primena:</strong> Prototipovi, modeli, dekoracija</li>
                                 <li><strong>Prednosti:</strong> Lako štampanje, ekološki</li>
                                 <li><strong>Mane:</strong> Niska otpornost na toplotu</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card material-card">
+                        <div class="material-badge">Visoka čvrstina</div>
                         <div class="service-image">
                             <img src="slikeWEBP/BENU.webp" alt="PETG Materijal" loading="eager">
                         </div>
                         <div class="service-content">
                             <h3>PETG</h3>
                             <p>Izuzetno čvrst i otporan materijal, kombinuje prednosti PLA i ABS. Otporan na udarce i hemikalije.</p>
-                            <ul style="margin-top: 10px;">
+                            <ul class="material-list">
                                 <li><strong>Primena:</strong> Funkcionalni delovi, kućišta</li>
                                 <li><strong>Prednosti:</strong> Čvrstina, otpornost</li>
                                 <li><strong>Mane:</strong> Zahteva više iskustva u štampi</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card material-card">
+                        <div class="material-badge">Industrijski</div>
                         <div class="service-image">
                             <img src="slikeWEBP/SERIJSKA.webp" alt="ABS Materijal" loading="eager">
                         </div>
                         <div class="service-content">
-                            <h3>ABS</h3>
+                            <h3>ASA</h3>
                             <p>Čvrst i otporan materijal sa dobrom otpornošću na toplotu. Koristi se za funkcionalne delove koji treba da izdrže opterećenje.</p>
-                            <ul style="margin-top: 10px;">
+                            <ul class="material-list">
                                 <li><strong>Primena:</strong> Funkcionalni delovi, automobilska industrija</li>
                                 <li><strong>Prednosti:</strong> Čvrstina, otpornost na toplotu</li>
                                 <li><strong>Mane:</strong> Zahteva radnu ploču sa grejanjem</li>
@@ -231,49 +240,49 @@
         </section>
 
         <!-- Process Section -->
-        <section class="portfolio" style="background: white;">
+        <section class="portfolio">
             <div class="container">
                 <div class="section-title">
                     <h2>Naš proces rada</h2>
                     <p>Kako funkcioniše saradnja sa nama</p>
                 </div>
                 <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature-card process-step">
                         <div class="feature-icon">
                             <i class="fas fa-comments"></i>
                         </div>
                         <h3>Konsultacije</h3>
                         <p>Razgovaramo o vašim potrebama, analiziramo projekat i dajemo preporuke za optimalno rešenje.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card process-step">
                         <div class="feature-icon">
                             <i class="fas fa-file-alt"></i>
                         </div>
                         <h3>Ponuda</h3>
                         <p>Pripremamo detaljnu ponudu sa rokovima izrade, cenom i specifikacijama materijala.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card process-step">
                         <div class="feature-icon">
                             <i class="fas fa-cube"></i>
                         </div>
                         <h3>Priprema</h3>
                         <p>Pripremamo 3D model za štampu, optimiziramo ga i postavljamo na štampač.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card process-step">
                         <div class="feature-icon">
                             <i class="fas fa-print"></i>
                         </div>
                         <h3>Štampanje</h3>
                         <p>Izvodimo štampanje uz kontinuiranu kontrolu kvaliteta tokom celog procesa.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card process-step">
                         <div class="feature-icon">
                             <i class="fas fa-check-circle"></i>
                         </div>
                         <h3>Kontrola Kvaliteta</h3>
                         <p>Detaljno proveravamo svaki deo pre predaje, obezbeđujući visok kvalitet.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card process-step">
                         <div class="feature-icon">
                             <i class="fas fa-shipping-fast"></i>
                         </div>
@@ -285,7 +294,7 @@
         </section>
 
         <!-- CTA -->
-        <section class="cta">
+        <section class="cta usluge-cta">
             <div class="container">
                 <h2>Spremni za saradnju?</h2>
                 <p>Pošaljite nam detalje vašeg projekta i dobijte besplatnu procenu</p>

@@ -105,7 +105,15 @@
 
     <!-- Connection to external stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/whatsapp.css">
+
+    <link rel="stylesheet" href="styles/modeliranje.css">
 </head>
 <body>
     <!-- Header -->
@@ -130,7 +138,7 @@
     
     <main>
         <!-- Hero Section -->
-        <section class="hero" style="padding: 150px 0 80px;">
+        <section class="hero">
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
@@ -163,212 +171,293 @@
                 </div>
             </div>
         </section>
+
+        <!-- Process Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Naš proces modeliranja</h2>
+                    <p>Korak po korak do savršenog 3D modela</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Konzultacije</h3>
+                        <p>Razgovaramo o vašoj ideji, analiziramo zahteve i definišemo specifikacije projekta.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h3>Dizajn</h3>
+                        <p>Kreiramo 3D model koristeći najsavremenije softvere i tehnike modeliranja.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Revizija</h3>
+                        <p>Prikazujemo vam model za odobravanje i vršimo potrebne izmene po vašim željama.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3>Optimizacija</h3>
+                        <p>Optimiziramo model za štampanje, proveravamo greške i pripremamo za proizvodnju.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="portfolio">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Cene 3D Modeliranja</h2>
+                    <p>Transparentne cene za sve vrste 3D modeliranja</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="slike/Card_GODEX.png" alt="Osnovno modeliranje" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Osnovno modeliranje</h3>
+                                <div class="portfolio-price">od 1.000 RSD</div>
+                            </div>
+                            <p class="portfolio-description">Jednostavni 3D modeli sa osnovnim geometrijama, idealni za početnike i jednostavne projekte</p>
+                            <div class="portfolio-details">
+                                <span class="detail-item"><i class="fas fa-clock"></i> 1-2 dana</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="slike/REISI_RENDER.jpg" alt="Napredno modeliranje" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Napredno modeliranje</h3>
+                                <div class="portfolio-price">Od 5.000 RSD</div>
+                            </div>
+                            <p class="portfolio-description">Složeni 3D modeli sa detaljima, koji možda imaju nekoliko složenih elemenata</p>
+                            <div class="portfolio-details">
+                                <span class="detail-item"><i class="fas fa-clock"></i> Od 3-5 dana</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="slikeWEBP/SCETCH2.webp" alt="Kompletan paket" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Kompletan paket</h3>
+                                <div class="portfolio-price">Od 12.000 RSD</div>
+                            </div>
+                            <p class="portfolio-description">Potpuno rešenje - od modeliranja do optimizacije za štampu, uključujući kompletan paket usluga</p>
+                            <div class="portfolio-details">
+                                <span class="detail-item"><i class="fas fa-clock"></i>Od 5 dana</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Sample Section -->
+        <section class="features" style="background: linear-gradient(135deg, var(--primary), #6a11cb); color: white;">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="color: white;">Besplatan Uzorak</h2>
+                    <p style="color: rgba(255,255,255,0.9);">Na zahtev, šaljemo besplatan uzorak vašeg modela za procenu kvaliteta</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                        <div class="feature-icon" style="background: rgba(255,255,255,0.2);">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3 style="color: white;">Besplatno dostavljamo</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Dostavljamo vam fizički uzorak vašeg modela besplatno kako biste ocenili kvalitet</p>
+                    </div>
+                    <div class="feature-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                        <div class="feature-icon" style="background: rgba(255,255,255,0.2);">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 style="color: white;">Kvalitet potvrđen</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Uverite se u kvalitet našeg rada pre nego što naručite kompletan projekat</p>
+                    </div>
+                    <div class="feature-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                        <div class="feature-icon" style="background: rgba(255,255,255,0.2);">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 style="color: white;">Bez obaveza</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Besplatni uzorak vam ne nameće nikakve obaveze za buduću saradnju</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirements Section -->
+        <section class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Šta nam treba za izradu modela</h2>
+                    <p>Da bismo pripremili kvalitetan model za 3D štampu, potrebni su nam sledeći materijali</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="slikeWEBP/SCETCH.webp" alt="Crteži i skice" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h3>Crteži i skice</h3>
+                            <p>2D crteži, tehničke dokumentacije ili ručne skice sa dimenzijama i merama</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="slikeWEBP/METRIC.webp" alt="Reference slike" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h3>Reference slike</h3>
+                            <p>Fotografije iz različitih uglova ili slični postojeći proizvodi za referencu</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="slikeWEBP/SCETCH2.webp" alt="Specifikacije" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h3>Specifikacije</h3>
+                            <p>Tačne dimenzije, namena proizvoda i funkcionalni zahtevi modela</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- File Formats Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Podržani formati</h2>
+                    <p>Prihvatamo različite formate fajlova za modeliranje</p>
+                </div>
+                <div class="file-formats-grid">
+                    <div class="format-category">
+                        <h3><i class="fas fa-file-image"></i> 2D Formati</h3>
+                        <div class="format-list">
+                            <span class="format-item">JPG</span>
+                            <span class="format-item">PNG</span>
+                            <span class="format-item">PDF</span>
+                            <span class="format-item">AI</span>
+                            <span class="format-item">DWG</span>
+                            <span class="format-item">DXF</span>
+                            <span class="format-item">SVG</span>
+                        </div>
+                    </div>
+                    <div class="format-category">
+                        <h3><i class="fas fa-cube"></i> 3D Formati</h3>
+                        <div class="format-list">
+                            <span class="format-item">STL</span>
+                            <span class="format-item">OBJ</span>
+                            <span class="format-item">3MF</span>
+                            <span class="format-item">STEP</span>
+                            <span class="format-item">STP</span>
+                            <span class="format-item">IGES</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>Spremni da započnete projekt?</h2>
+                <p>Pošaljite nam vaše ideje i dobijte besplatnu konsultaciju za 3D modeliranje</p>
+                <a href="#contact" class="btn btn-primary">Zatražite ponudu</a>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Zatražite ponudu za modeliranje</h2>
+                    <p>Opišite nam vaš projekt i mi ćemo vam poslati detaljnu ponudu</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Šta nam treba za ponudu?</h3>
+                        <p>Da bismo vam dali najprecizniju ponudu, molimo vas da nam dostavite što više informacija o vašem projektu:</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div>
+                                    <h4>Opis projekta</h4>
+                                    <p>Detaljan opis šta želite da modeliramo</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-ruler"></i>
+                                </div>
+                                <div>
+                                    <h4>Dimenzije</h4>
+                                    <p>Približne veličine i mere</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                                <div>
+                                    <h4>Reference</h4>
+                                    <p>Slike, crteži ili skice (opciono)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="67e61521-ab90-4917-a017-bfb080c92718">
+                            <input type="hidden" name="subject" value="New Contact Form Submission from Website">
+                            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                            <input type="checkbox" name="botcheck" id="botcheck" class="hidden" style="display: none;">
+                            
+                            <div class="form-group">
+                                <label for="name">Vaše ime</label>
+                                <input type="text" id="name" class="form-control" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" class="form-control" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Poruka</label>
+                                <textarea id="message" class="form-control" name="message" placeholder="Opišite vaš projekt, dimenzije i specifične zahteve..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Pošaljite poruku</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <!-- Process Section -->
-    <section class="features" style="padding: 80px 0;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Naš proces modeliranja</h2>
-                <p>Korak po korak do savršenog 3D modela</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Konzultacije</h3>
-                    <p>Razgovaramo o vašoj ideji, analiziramo zahteve i definišemo specifikacije projekta.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-pencil-alt"></i>
-                    </div>
-                    <h3>Dizajn</h3>
-                    <p>Kreiramo 3D model koristeći najsavremenije softvere i tehnike modeliranja.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h3>Revizija</h3>
-                    <p>Prikazujemo vam model za odobravanje i vršimo potrebne izmene po vašim željama.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-print"></i>
-                    </div>
-                    <h3>Optimizacija</h3>
-                    <p>Optimiziramo model za štampanje, proveravamo greške i pripremamo za proizvodnju.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-gift"></i>
-                    </div>
-                    <h3>Saljemo gratis uzorak</h3>
-                    <p>Na zahtev, šaljemo besplatan uzorak vašeg modela za procenu kvaliteta.<br>(Kontaktirajte nas za više informacija.)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  <!-- Requirements Section -->
-<section class="portfolio" style="padding: 80px 0;">
-    <div class="container">
-        <div class="section-title">
-            <h2>Šta nam treba za izradu modela</h2>
-            <p>Da bismo pripremili kvalitetan model za 3D štampu, potrebni su nam sledeći materijali</p>
-        </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="slikeWEBP/SCETCH.webp" alt="Crteži i skice" loading="eager">
-                <div class="portfolio-overlay">
-                    <h3>Crteži i skice</h3>
-                    <p>2D crteži, tehničke dokumentacije ili ručne skice sa dimenzijama</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="slikeWEBP/METRIC.webp" alt="Reference slike" loading="eager">
-                <div class="portfolio-overlay">
-                    <h3>Reference slike</h3>
-                    <p>Fotografije iz različitih uglova ili slični postojeći proizvodi</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="slikeWEBP/SCETCH2.webp" alt="Specifikacije" loading="eager">
-                <div class="portfolio-overlay">
-                    <h3>Specifikacije</h3>
-                    <p>Tačne dimenzije, namena proizvoda i funkcionalni zahtevi</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Additional Requirements List -->
-        <div class="features" style="padding: 50px 0 0 0; background: none;">
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-ruler-combined"></i>
-                    </div>
-                    <h3>Precizne mere</h3>
-                    <p>Tačne dimenzije u milimetrima, tolerancije i kritične mere koje moraju biti poštovane</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <h3>Namena modela</h3>
-                    <p>Informacije da li je u pitanju prototip, funkcionalni deo ili dekorativni predmet</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <h3>Materijal za štampu</h3>
-                    <p>Željeni materijal (PLA, HP ASA, PETG, TPU) koji utiče na dizajn modela</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- File Formats -->
-        <div class="section-title" style="margin-top: 60px;">
-            <h3>Podržani formati fajlova</h3>
-            <p>Možete nam poslati materijale u sledećim formatima</p>
-        </div>
-        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-            <div class="feature-card" style="padding: 25px 20px;">
-                <div class="feature-icon" style="width: 60px; height: 60px; font-size: 24px;">
-                    <i class="fas fa-file-image"></i>
-                </div>
-                <h4>2D Formati</h4>
-                <p style="font-size: 14px;">JPG, PNG, PDF, AI<br>DWG, DXF, SVG</p>
-            </div>
-            <div class="feature-card" style="padding: 25px 20px;">
-                <div class="feature-icon" style="width: 60px; height: 60px; font-size: 24px;">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <h4>3D Formati</h4>
-                <p style="font-size: 14px;">STL, OBJ, 3MF<br>STEP, IGES</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Spremni da započnete projekt?</h2>
-            <p>Pošaljite nam vaše ideje i dobijte besplatnu konsultaciju za 3D modeliranje</p>
-            <a href="#contact" class="btn btn-primary">Zatražite ponudu</a>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section class="contact" id="contact" style="padding: 80px 0;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Zatražite ponudu za modeliranje</h2>
-                <p>Opišite nam vaš projekt i mi ćemo vam poslati detaljnu ponudu</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Šta nam treba za ponudu?</h3>
-                    <p>Da bismo vam dali najprecizniju ponudu, molimo vas da nam dostavite što više informacija o vašem projektu:</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Opis projekta</h4>
-                                <p>Detaljan opis šta želite da modeliramo</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-ruler"></i>
-                            </div>
-                            <div>
-                                <h4>Dimenzije</h4>
-                                <p>Približne veličine i mere</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-image"></i>
-                            </div>
-                            <div>
-                                <h4>Reference</h4>
-                                <p>Slike, crteži ili skice (opciono)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="67e61521-ab90-4917-a017-bfb080c92718">
-                        <input type="hidden" name="subject" value="New Contact Form Submission from Website">
-                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                        <input type="checkbox" name="botcheck" id="botcheck" class="hidden" style="display: none;">
-                        
-                        <div class="form-group">
-                            <label for="name">Vaše ime</label>
-                            <input type="text" id="name" class="form-control" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Telefon</label>
-                            <input type="tel" id="phone" class="form-control" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Poruka</label>
-                            <textarea id="message" class="form-control" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Pošaljite poruku</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
@@ -438,11 +527,5 @@
     </a>
 
     <script src="magic.js"></script>
-    <style>
-        .nav-links a[href="modeliranje.html"] {
-            color: var(--primary);
-            font-weight: 600;
-        }
-    </style>
 </body>
 </html>
