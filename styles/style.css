@@ -728,3 +728,97 @@ input[type="tel"]::placeholder {
     }
 }
 
+/* WhatsApp CTA Section */
+.whatsapp-cta-section {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    padding: 60px 0;
+    color: white;
+}
+
+.whatsapp-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.whatsapp-cta-text h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.whatsapp-cta-text p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.whatsapp-cta-button {
+    flex-shrink: 0;
+}
+
+.whatsapp-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: #25D366;
+    padding: 18px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+.whatsapp-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    color: #128C7E;
+}
+
+.whatsapp-cta-btn i {
+    font-size: 24px;
+}
+
+/* Mobile responsive for WhatsApp CTA */
+@media (max-width: 768px) {
+    .whatsapp-cta-section {
+        padding: 40px 0;
+    }
+    
+    .whatsapp-cta-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .whatsapp-cta-text h3 {
+        font-size: 24px;
+    }
+    
+    .whatsapp-cta-text p {
+        font-size: 16px;
+    }
+    
+    .whatsapp-cta-btn {
+        padding: 16px 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-cta-text h3 {
+        font-size: 22px;
+    }
+    
+    .whatsapp-cta-btn {
+        padding: 14px 25px;
+        font-size: 15px;
+        white-space: normal;
+        text-align: center;
+    }
+}
