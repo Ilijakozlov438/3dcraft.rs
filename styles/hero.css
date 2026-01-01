@@ -1,0 +1,307 @@
+.hero-block {
+            width: 100%;
+            min-height: 90vh;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(39, 174, 96, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 80% 20%, rgba(41, 128, 185, 0.1) 0%, transparent 20%),
+                linear-gradient(135deg, #0c1b25 0%, #152533 50%, #1a2a3a 100%);
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-block .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-block .hero-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .hero-block .hero-text {
+            flex: 1;
+            min-width: 300px;
+            color: #fff;
+        }
+
+        .hero-block .hero-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            background: linear-gradient(90deg, #27ae60, #2ecc71, #27ae60);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: gradientShift 5s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-block .hero-description {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            color: #d1e0eb;
+            max-width: 95%;
+        }
+
+        .hero-block .hero-social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .hero-block .hero-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+
+        .hero-block .hero-social a:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: #27ae60;
+        }
+
+        .hero-block .hero-social a:nth-child(1):hover { background: #E4405F; }
+        .hero-block .hero-social a:nth-child(2):hover { background: #0088cc; }
+        .hero-block .hero-social a:nth-child(3):hover { background: #4285F4; }
+        .hero-block .hero-social a:nth-child(4):hover { background: #7360F2; }
+        .hero-block .hero-social a:nth-child(5):hover { background: #25D366; }
+        .hero-block .hero-social a:nth-child(6):hover { background: #27ae60; }
+
+        /* Изображение */
+        .hero-block .hero-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .hero-block .image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-block .image-wrapper:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .hero-block .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-block .image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Декоративные элементы CSS */
+        .hero-block::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(39, 174, 96, 0.08) 0%, transparent 70%);
+            top: 10%;
+            left: 5%;
+            z-index: 1;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .hero-block::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(52, 152, 219, 0.06) 0%, transparent 70%);
+            bottom: 10%;
+            right: 5%;
+            z-index: 1;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+
+        /* 3D элементы из CSS */
+        .hero-block .cube {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: rgba(39, 174, 96, 0.2);
+            transform: rotate(15deg);
+            animation: rotateCube 20s linear infinite;
+            z-index: 1;
+            border: 1px solid rgba(39, 174, 96, 0.3);
+        }
+
+        .hero-block .cube:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+        }
+
+        .hero-block .cube:nth-child(2) {
+            bottom: 30%;
+            right: 15%;
+            width: 50px;
+            height: 50px;
+            animation-delay: -5s;
+        }
+
+        .hero-block .cube:nth-child(3) {
+            top: 50%;
+            left: 5%;
+            width: 30px;
+            height: 30px;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(30px) rotate(240deg); }
+        }
+
+        @keyframes rotateCube {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Адаптивность */
+        @media (max-width: 1100px) {
+            .hero-block .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-block .hero-description {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-block {
+                padding: 60px 0;
+            }
+            
+            .hero-block .hero-wrapper {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .hero-block .hero-text {
+                order: 1;
+            }
+            
+            .hero-block .hero-image {
+                order: 2;
+                max-width: 80%;
+            }
+            
+            .hero-block .hero-description {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-block .hero-social {
+                justify-content: center;
+            }
+            
+            .hero-block .image-wrapper {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-block .hero-title {
+                font-size: 2.3rem;
+            }
+            
+            .hero-block .hero-description {
+                font-size: 1.05rem;
+            }
+            
+            .hero-block .hero-social a {
+                width: 48px;
+                height: 48px;
+                font-size: 1.3rem;
+            }
+            
+            .hero-block .hero-image {
+                max-width: 95%;
+            }
+            
+            .hero-block .cube {
+                display: none;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-block .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-block .hero-social a {
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Стили для демонстрации (не входят в hero-секцию) */
+        .demo-section {
+            padding: 60px 20px;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-section h2 {
+            color: #1a2a3a;
+            margin-bottom: 20px;
+        }
+        
+        .demo-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }

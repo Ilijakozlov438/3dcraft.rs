@@ -30,24 +30,41 @@
     
     <!-- Connection to external stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <link rel="stylesheet" href="styles/style.css">
-    
-    <link rel="stylesheet" href="styles/footer.css">
+    <!-- Styles по структуре сайта -->
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/whatsappCTA.css">
+    <link rel="stylesheet" href="styles/features.css">
+    <link rel="stylesheet" href="styles/advantages.css">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+    <link rel="stylesheet" href="styles/cta.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/whatsapp.css">
 
-    <link rel="stylesheet" href="styles/portfolio_part.css">
+    <!-- JavaScript по структуре сайта -->
+    <script src="js/header.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/whatsappCTA.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/advantages.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/whatsapp.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/CTA.js"></script>
+    <script src="js/contact.js"></script>
+
+    <link rel="stylesheet" href="styles/portfolio/add_works.css">
 </head>
 <body>
-<header id="header">
+    <header id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo"><i class="fas fa-cube"></i>3DCraft</a>
                 <ul class="nav-links">
                     <li><a href="index.html">Početna</a></li>
-                    <li><a href="index.html#features">Prednosti</a></li>
                     <li><a href="usluge.html">Usluge</a></li>
                     <li><a href="portfolio.html" class="active">Portfolio</a></li>
                     <li><a href="modeliranje.html">3D Modeliranje</a></li>
@@ -60,350 +77,582 @@
             </nav>
         </div>
     </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>Naši radovi u 3D štampi</h1>
-                        <p>Pogledajte primere naših najboljih projekata - od prototipova do serijske proizvodnje, svaki deo je napravljen sa preciznošću i pažnjom prema detaljima.</p>
-                        <div class="hero-social-links">
-                            <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://t.me/craft3d_chanel" target="_blank" aria-label="Telegram">
-                                <i class="fab fa-telegram-plane"></i>
-                            </a>
-                            <a href="https://share.google/lUP7ozNil4j3jXnT8" target="_blank" aria-label="Google">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" aria-label="Viber">
-                                <i class="fab fa-viber"></i>
-                            </a>
-                            <a href="https://wa.me/381637797857" target="_blank" aria-label="Whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="tel:+381637797857" aria-label="Telefon" title="+381 63 7797857">
-                                <i class="fas fa-phone"></i>
-                            </a>
-                        </div>
+    
+    <!-- Hero Section -->
+    <section class="hero-block" id="home" aria-label="Hero section">
+        <!-- Декоративные CSS-элементы -->
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-text">
+                    <h1 class="hero-title">Naši radovi</h1>
+                    <p class="hero-description">Pogledajte primere naših najboljih projekata - od prototipova do serijske proizvodnje, svaki deo je napravljen sa preciznošću i pažnjom prema detaljima.</p>
+                    
+                    <div class="hero-social" aria-label="Social media links">
+                        <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://share.google.com/lUP7ozNil4j3jXnT8" target="_blank" rel="noopener noreferrer" aria-label="Google">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" rel="noopener noreferrer" aria-label="Viber">
+                            <i class="fab fa-viber"></i>
+                        </a>
+                        <a href="https://wa.me/381637797857" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+381637797857" aria-label="Telefon" title="+381 63 7797857">
+                            <i class="fas fa-phone"></i>
+                        </a>
                     </div>
-                    <div class="hero-image">
-                        <img src="slike/3d-pecat_new.jpg" alt="3D štampa" fetchpriority="high">
+                </div>
+                
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <!-- Замените src на ваше изображение -->
+                        <img src="slike/3d-pecat_new.jpg" alt="3D печать и моделирование">
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="whatsapp-cta-section">
+    <!-- WhatsApp CTA Section -->
+    <section class="whatsapp-cta-section">
+        <div class="whatsapp-decor whatsapp-1">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="whatsapp-decor whatsapp-2">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        
         <div class="container">
             <div class="whatsapp-cta-content">
                 <div class="whatsapp-cta-text">
-                    <h3>Treba vam pomoć?</h3>
-                    <p>Mi smo spremni da odgovore na sva vaša pitanja na WhatsApp-u</p>
+                    <h3>Interesuju vas naše usluge?</h3>
+                    <p>Kontaktirajte nas na WhatsApp-u i saznajte više o svim mogućnostima koje nudimo</p>
                 </div>
                 <div class="whatsapp-cta-button">
                     <a href="https://wa.me/381637797857?text=Zdravo! Interesuju me vaše usluge. Možete li mi dati više informacija?" 
-                       class="whatsapp-cta-btn">
+                       class="whatsapp-cta-btn" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
                        <i class="fab fa-whatsapp"></i>
-                       Besplatna konsultacija
+                       Saznajte više
                     </a>
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
 
-        <!-- Portfolio Grid -->
-        <section class="portfolio">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Naši radovi</h2>
-                    <p>Primeri realizovanih projekata uz pomoć 3D štampe</p>
+    <main>
+        <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <!-- Декоративные элементы -->
+        <div class="decor-cube"></div>
+        <div class="decor-cube"></div>
+        
+        <div class="container">
+            <div class="section-title">
+                <h2>Naši radovi</h2>
+                <p>Primeri realizovanih projekata uz pomoć 3D štampe</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slikeWEBP/TABLICA.webp" alt="Tablica" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Tablica</h3>
+                            <div class="portfolio-price">2.500 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Detaljna tablica za kancelariju sa personalizovanim tekstom i dugotrajnim materijalom</p>
+                    </div>
                 </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slikeWEBP/TABLICA.webp" alt="Tablica" loading="lazy">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Tablica</h3>
-                                <div class="portfolio-price">2.500 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Detaljna tablica za kancelariju sa personalizovanim tekstom i dugotrajnim materijalom</p>
-                        </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slikeWEBP/ZUBCANIK.webp" alt="Zubčanik" loading="lazy">
                     </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slikeWEBP/ZUBCANIK.webp" alt="Zubčanik" loading="lazy">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Zubčanik</h3>
+                            <div class="portfolio-price">1.500 RSD</div>
                         </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Zubčanik</h3>
-                                <div class="portfolio-price">1.500 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Funkcionalni zubčanik za bicikl od otpornog PETG materijala</p>
-                        </div>
+                        <p class="portfolio-description">Funkcionalni zubčanik za bicikl od otpornog PETG materijala</p>
                     </div>
+                </div>
 
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slikeWEBP/PRIVEZAK.webp" alt="Privezak" loading="lazy">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Privezak</h3>
-                                <div class="portfolio-price">7.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Jedinstveni privezak za ključeve sa custom dizajnom, serija 100 komada</p>
-                        </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slikeWEBP/PRIVEZAK.webp" alt="Privezak" loading="lazy">
                     </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slikeWEBP/KUCISTA_TEHNIKA.webp" alt="Kućišta za Radio Tehniku" loading="lazy">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Privezak</h3>
+                            <div class="portfolio-price">7.000 RSD</div>
                         </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Kućište za radio</h3>
-                                <div class="portfolio-price">1.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Kućišta za Radio Tehniku, izradili smo po STL fajlovima</p>
-                        </div>
+                        <p class="portfolio-description">Jedinstveni privezak za ključeve sa custom dizajnom, serija 100 komada</p>
                     </div>
+                </div>
 
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slikeWEBP/RUN_TABLA.webp" alt="Tablica za medalje" loading="lazy">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Tablica za medalje</h3>
-                                <div class="portfolio-price">3.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Dostojanstven način da predstavite svoja dostignuća i uspomene</p>
-                        </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slikeWEBP/KUCISTA_TEHNIKA.webp" alt="Kućišta za Radio Tehniku" loading="lazy">
                     </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slikeWEBP/KLJUC_BICIKL.webp" alt="Alat za Bicikl" loading="lazy">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Kućište za radio</h3>
+                            <div class="portfolio-price">1.000 RSD</div>
                         </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Alat za Bicikl</h3>
-                                <div class="portfolio-price">2.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Neophodan alat za montažu, demontažu i popravku svog bicikla</p>
-                        </div>
+                        <p class="portfolio-description">Kućišta za Radio Tehniku, izradili smo po STL fajlovima</p>
                     </div>
+                </div>
 
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slikeWEBP/CEV_2.webp" alt="Cev" loading="lazy">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Cev za Hidroponiku</h3>
-                                <div class="portfolio-price">4.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Cev za hidroponiku, prilagođena za vaše potrebe</p>
-                        </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slikeWEBP/RUN_TABLA.webp" alt="Tablica za medalje" loading="lazy">
                     </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slikeWEBP/SERIJSKA.webp" alt="Serija" loading="lazy">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Tablica za medalje</h3>
+                            <div class="portfolio-price">3.000 RSD</div>
                         </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Serijska proizvodnja</h3>
-                                <div class="portfolio-price">8.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Serija od perli, 1000 kom. </p>
-                        </div>
+                        <p class="portfolio-description">Dostojanstven način da predstavite svoja dostignuća i uspomene</p>
                     </div>
+                </div>
 
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slikeWEBP/BENU.webp" alt="ključevi" loading="lazy">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Ključevi za papirni držači u WC-u</h3>
-                                <div class="portfolio-price">2.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Serija ključeva za menedžera BENU, 20 kom. <br>Sa našim modelovanjem </p>
-                        </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slikeWEBP/KLJUC_BICIKL.webp" alt="Alat za Bicikl" loading="lazy">
                     </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slike/deo_za_stampac.jpg" alt="Deo za štampač" loading="lazy">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Alat za Bicikl</h3>
+                            <div class="portfolio-price">2.000 RSD</div>
                         </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Rezervni Deo za štampač</h3>
-                                <div class="portfolio-price">2.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Izradili smo Rezervni deo za štampač koji se pokvario<br>Sa našim dodatnim Modelovanjem</p>
-                        </div>
+                        <p class="portfolio-description">Neophodan alat za montažu, demontažu i popravku svog bicikla</p>
                     </div>
+                </div>
 
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slike/MERE2.jpg" alt="Osigurač" loading="lazy">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Rezervni Osigurač za automobil</h3>
-                                <div class="portfolio-price">2.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Izradili smo Rezervni deo za automobil koji se pokvario. Sa našim potpunim Modelovanjem i revers-inženjeringom</p>
-                        </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slikeWEBP/CEV_2.webp" alt="Cev" loading="lazy">
                     </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slike/ZUBE.jpg" alt="Ortodont Zube" loading="lazy">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Cev za Hidroponiku</h3>
+                            <div class="portfolio-price">4.000 RSD</div>
                         </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Ortodont Zube</h3>
-                                <div class="portfolio-price">7.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Ortodontski model zuba izrađen za precizno pravljenje vakuumskih formi i kapa. Idealan za dentalne prototipe i prilagođene tretmane.</p>
-                        </div>
+                        <p class="portfolio-description">Cev za hidroponiku, prilagođena za vaše potrebe</p>
                     </div>
+                </div>
 
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="slike/HOOK.jpg" alt="Hook iz igracke" loading="lazy">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slikeWEBP/SERIJSKA.webp" alt="Serija" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Serijska proizvodnja</h3>
+                            <div class="portfolio-price">8.000 RSD</div>
                         </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-header">
-                                <h3>Pudge hook u pravom životu!</h3>
-                                <div class="portfolio-price">6.000 RSD</div>
-                            </div>
-                            <p class="portfolio-description">Radili smo 3D štampu legendarnog Pudge hook-a iz Dota 2.</p>
-                        </div>
-                    </div>  
+                        <p class="portfolio-description">Serija od perli, 1000 kom.</p>
+                    </div>
+                </div>
 
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slikeWEBP/BENU.webp" alt="Ključevi za papirni držači u WC-u" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Ključevi za papirni držači u WC-u</h3>
+                            <div class="portfolio-price">2.000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Serija ključeva za menedžera BENU, 20 kom. Sa našim modelovanjem</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/deo_za_stampac.jpg" alt="Deo za štampač" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Rezervni Deo za štampač</h3>
+                            <div class="portfolio-price">2.000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Izradili smo Rezervni deo za štampač koji se pokvario. Sa našim dodatnim Modelovanjem</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/MERE2.jpg" alt="Osigurač" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Rezervni Osigurač za automobil</h3>
+                            <div class="portfolio-price">2.000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Izradili smo Rezervni deo za automobil koji se pokvario. Sa našim potpunim Modelovanjem i revers-inženjeringom</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/ZUBE.jpg" alt="Ortodont Zube" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Ortodont Zube</h3>
+                            <div class="portfolio-price">7.000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Ortodontski model zuba izrađen za precizno pravljenje vakuumskih formi i kapa. Idealan za dentalne prototipe i prilagođene tretmane.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/HOOK.jpg" alt="Hook iz igracke" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Pudge hook u pravom životu!</h3>
+                            <div class="portfolio-price">6.000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Radili smo 3D štampu legendarnog Pudge hook-a iz Dota 2.</p>
+                    </div>
+                </div>
+
+                <!-- Medved iz neuronske mreže -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/panda.jpg" alt="3D štampa medveda iz neuronske mreže" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Medved generisan neuronskom mrežom</h3>
+                            <div class="portfolio-price">2000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">3D štampa medveda prema slici iz AI. Kompletna obrada modela za štampu, ispravljanje geometrije, dodavanje potpornih elemenata.</p>
+                    </div>
+                </div>
+
+                <!-- Svetiljka-manastir Gračanica -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/gracanica.jpg" alt="Svetiljka manastir Gračanica" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Lampa "Manastir Gračanica"</h3>
+                            <div class="portfolio-price">Po dogovoru</div>
+                        </div>
+                        <p class="portfolio-description">3D model u vidu manastira. Optimizacija za štampu, unutrašnja struktura za pravilno prolazak svetlosti, instalacija LED modula.</p>
+                    </div>
+                </div>
+
+                <!-- Kutijica od figurice -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/cat.jpg" alt="Kutijica od 3D štampane figurice" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Figurica-kutijica (600.000 poligona~)</h3>
+                            <div class="portfolio-price">4000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Figurica sa 600.000~ poligona pretvorena u kutijicu. Ručna obrada poligonalne mreže, optimizacija modela, adaptacija za čistu 3D štampu.</p>
+                    </div>
+                </div>
+
+                <!-- Zupčanici za satove -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/sati.jpg" alt="Mikro 3D štampa zupčanika za satove" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Mikro 3D štampa zupčanika za satove</h3>
+                            <div class="portfolio-price">1200 RSD</div>
+                        </div>
+                        <p class="portfolio-description">SLA štampa satovskih zupčanika. Debljina zuba 500 mikrona, unutrašnjeg dela 200 mikrona. Priprema za mikro-štampu, proračun tolerancija.</p>
+                    </div>
+                </div>
+
+                <!-- Podstavak za kafemašinu -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/kafa.jpg" alt="Prilagođeni podstavak za kafemašinu" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Prilagođeni podstavak za kafemašinu</h3>
+                            <div class="portfolio-price">3000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Podstavak za kafemašinu od ASA materijala. Visoka krutost i stabilnost, otpornost na toplotu i vlagu, ne deformiše se.</p>
+                    </div>
+                </div>
+
+                <!-- Replika podloške -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/lezaj.jpg" alt="Replika podloške od PA Bridge" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Replika lezaja od PA Bridge (Nylon)</h3>
+                            <div class="portfolio-price">3000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Precizna replika istrošene podloške od PA Bridge materijala. Visoka otpornost na habanje, mehanička čvrstoća, stabilnost dimenzija.</p>
+                    </div>
+                </div>
+
+                <!-- Minijaturni stolovi i stolice -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/wwh.jpg" alt="Minijaturni stolovi i stolice" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Minijaturni stolovi i stolice (do 15 mm)</h3>
+                            <div class="portfolio-price">3500 RSD</div>
+                        </div>
+                        <p class="portfolio-description">3D modeliranje i štampa minijaturnih stolova i stolica za prezentacije. Visok detalj, očuvanje oblika i proporcija.</p>
+                    </div>
+                </div>
+
+                <!-- Modeli manastira -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="slike/tumane.jpg" alt="3D modeli manastira" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>3D modeli manastira Tumane i Dečani</h3>
+                            <div class="portfolio-price">Po dogovoru</div>
+                        </div>
+                        <p class="portfolio-description">Detaljno 3D modeliranje manastira Tumane i Dečani. Visoka preciznost, poštovanje proporcija, optimizacija za 3D štampu.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="additional-works">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Još naših realizacija</h2>
-                    <p>Projekti koji demonstriraju raznovrsnost naše 3D štampe</p>
-                </div>
-                
-                <div class="works-grid">
-                    <div class="work-item">
-                        <div class="work-icon">
-                            <i class="fas fa-medkit"></i>
-                        </div>
-                        <h3>Medicinski uređaji</h3>
-                        <p>Proizvodnja personalizovanih medicinskih pomagala, proteza i anatomskih modela za edukaciju</p>
+        <!-- Additional Works Section -->
+    <section class="additional-works-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Još naših realizacija</h2>
+            <p>Projekti koji demonstriraju raznovrsnost naše 3D štampe</p>
+        </div>
+        
+        <div class="works-grid">
+            <div class="work-card">
+                <div class="work-card-inner">
+                    <div class="work-icon">
+                        <i class="fas fa-medkit"></i>
+                        <div class="icon-bg"></div>
                     </div>
-                    
-                    <div class="work-item">
-                        <div class="work-icon">
-                            <i class="fas fa-puzzle-piece"></i>
-                        </div>
-                        <h3>Igracke i puzzle</h3>
-                        <p>Edukativne igračke, puzzle i razvojni materijali za decu svih uzrasta</p>
-                    </div>
-                    
-                    <div class="work-item">
-                        <div class="work-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h3>Enterijer i dekoracija</h3>
-                        <p>Ukrasni predmeti, držači, organizatori i druge stvari za dom i kancelariju</p>
-                    </div>
-                    
-                    <div class="work-item">
-                        <div class="work-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Alati i pribor</h3>
-                        <p>Specijalni alati, držači i pomagala za radionicu i DIY projekte</p>
-                    </div>
-                    
-                    <div class="work-item">
-                        <div class="work-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>Robotske komponente</h3>
-                        <p>Delovi za robote, dronove i druge mehatroničke uređaje</p>
-                    </div>
-                    
-                    <div class="work-item">
-                        <div class="work-icon">
-                            <i class="fas fa-gift"></i>
-                        </div>
-                        <h3>Pokloni i suveniri</h3>
-                        <p>Personalizovani pokloni, trofeji, plakete i suveniri za sve prilike</p>
-                    </div>
-                </div>
-                
-                <div class="works-description">
-                    <div class="description-box">
-                        <h3><i class="fas fa-lightbulb"></i> Vaša ideja + naša tehnologija = realizacija</h3>
-                        <p>Naš tim stručnjaka spaja kreativnost sa najnovijim tehnologijama 3D štampe kako bi vaše ideje pretvorili u realne, funkcionalne proizvode. Bez obzira da li je u pitanju prototip, mali serijski proizvod ili kompleksan inženjerski zadatak, mi imamo rešenje.</p>
-                        
-                        <div class="capabilities">
-                            <h4><i class="fas fa-check-circle"></i> Šta sve možemo:</h4>
-                            <ul>
-                                <li><strong>Prototipovanje</strong> - brzo testiranje ideja</li>
-                                <li><strong>Serijska proizvodnja</strong> - od 10 do 1000+ komada</li>
-                                <li><strong>Modelovanje po vašim skicama</strong> - pretvaramo zamisao u 3D model</li>
-                                <li><strong>Reverse engineering</strong> - rekonstrukcija postojećih delova</li>
-                                <li><strong>Funkcionalni delovi</strong> - mehanički, toplotno otporni, fleksibilni</li>
-                            </ul>
-                        </div>
+                    <h3>Medicinski uređaji</h3>
+                    <p>Proizvodnja personalizovanih medicinskih pomagala, proteza i anatomskih modela za edukaciju</p>
+                    <div class="work-tags">
+                        <span class="tag">Medicina</span>
+                        <span class="tag">Personalizovano</span>
                     </div>
                 </div>
             </div>
-        </section>
+            
+            <div class="work-card">
+                <div class="work-card-inner">
+                    <div class="work-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Igracke i puzzle</h3>
+                    <p>Edukativne igračke, puzzle i razvojni materijali za decu svih uzrasta</p>
+                    <div class="work-tags">
+                        <span class="tag">Edukativno</span>
+                        <span class="tag">Za decu</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="work-card">
+                <div class="work-card-inner">
+                    <div class="work-icon">
+                        <i class="fas fa-home"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Enterijer i dekoracija</h3>
+                    <p>Ukrasni predmeti, držači, organizatori i druge stvari za dom i kancelariju</p>
+                    <div class="work-tags">
+                        <span class="tag">Dekoracija</span>
+                        <span class="tag">Organizacija</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="work-card">
+                <div class="work-card-inner">
+                    <div class="work-icon">
+                        <i class="fas fa-tools"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Alati i pribor</h3>
+                    <p>Specijalni alati, držači i pomagala za radionicu i DIY projekte</p>
+                    <div class="work-tags">
+                        <span class="tag">Alati</span>
+                        <span class="tag">DIY</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="work-card">
+                <div class="work-card-inner">
+                    <div class="work-icon">
+                        <i class="fas fa-robot"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Robotske komponente</h3>
+                    <p>Delovi za robote, dronove i druge mehatroničke uređaje</p>
+                    <div class="work-tags">
+                        <span class="tag">Roboti</span>
+                        <span class="tag">Tehnologija</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="work-card">
+                <div class="work-card-inner">
+                    <div class="work-icon">
+                        <i class="fas fa-gift"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Pokloni i suveniri</h3>
+                    <p>Personalizovani pokloni, trofeji, plakete i suveniri za sve prilike</p>
+                    <div class="work-tags">
+                        <span class="tag">Pokloni</span>
+                        <span class="tag">Personalizovano</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="works-description">
+            <div class="description-card">
+                <div class="description-header">
+                    <div class="description-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Vaša ideja + naša tehnologija = realizacija</h3>
+                </div>
+                <p class="description-text">Naš tim stručnjaka spaja kreativnost sa najnovijim tehnologijama 3D štampe kako bi vaše ideje pretvorili u realne, funkcionalne proizvode. Bez obzira da li je u pitanju prototip, mali serijski proizvod ili kompleksan inženjerski zadatak, mi imamo rešenje.</p>
+                
+                <div class="capabilities">
+                    <div class="capabilities-header">
+                        <div class="capabilities-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Šta sve možemo:</h4>
+                    </div>
+                    <div class="capabilities-grid">
+                        <div class="capability-item">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <strong>Prototipovanje</strong>
+                                <span>Brzo testiranje ideja</span>
+                            </div>
+                        </div>
+                        <div class="capability-item">
+                            <i class="fas fa-industry"></i>
+                            <div>
+                                <strong>Serijska proizvodnja</strong>
+                                <span>Od 10 do 1000+ komada</span>
+                            </div>
+                        </div>
+                        <div class="capability-item">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <div>
+                                <strong>Modelovanje po vašim skicama</strong>
+                                <span>Pretvaramo zamisao u 3D model</span>
+                            </div>
+                        </div>
+                        <div class="capability-item">
+                            <i class="fas fa-code-branch"></i>
+                            <div>
+                                <strong>Reverse engineering</strong>
+                                <span>Rekonstrukcija postojećih delova</span>
+                            </div>
+                        </div>
+                        <div class="capability-item">
+                            <i class="fas fa-cogs"></i>
+                            <div>
+                                <strong>Funkcionalni delovi</strong>
+                                <span>Mehanički, toplotno otporni, fleksibilni</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="description-footer">
+                    <a href="#contact" class="cta-button">
+                        <span>Započnite svoj projekat</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Декоративные элементы -->
+    <div class="decor-shape decor-shape-1"></div>
+    <div class="decor-shape decor-shape-2"></div>
+    <div class="decor-shape decor-shape-3"></div>
+    </section>
 
-        <!-- CTA -->
-        <section class="cta">
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="decor-shape decor-shape-1"></div>
+            <div class="decor-shape decor-shape-2"></div>
+            <div class="decor-3d"></div>
+            <div class="decor-3d"></div>
+            
             <div class="container">
-                <h2>Spremni ste da započnete projekat?</h2>
-                <p>Kontaktirajte nas za besplatne konsultacije i procenu troškova vašeg projekta</p>
-                <a href="kontakti.html" class="btn">Kontaktirajte nas</a>
+                <h2>Od ideje — dо gоtоvоg 3D mоdelа ili delа</h2>
+                <p>Pоšаljite nаm pоdаtke о vаšem оbjektu. Mi ćemо ih аnаlizirаti i izаbrаti оptimаlnu tehnоlоgiju: 3D skenirаnje, mоdelоvаnje ili štаmpаnje.</p>
+                <a href="kontakti.html" class="cta-btn">▶️ Zаpоčnite prоjekаt<i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="main-footer">
+        <div class="decor-cube"></div>
+        <div class="decor-cube"></div>
+        
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>3DCraft</h3>
                     <p>Profesionalna 3D štampanje za poslovanje i privatne klijente. Pretvaramo vaše ideje u stvarnost.</p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://t.me/craft3d_chanel" target="_blank" aria-label="Telegram">
-                            <i class="fab fa-telegram-plane"></i>
-                        </a>
-                        <a href="https://share.google/lUP7ozNil4j3jXnT8" target="_blank" aria-label="Google">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" aria-label="Viber">
+                        <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" aria-label="Viber" rel="noopener noreferrer">
                             <i class="fab fa-viber"></i>
                         </a>
-                        <a href="https://wa.me/381637797857" target="_blank" aria-label="Whatsapp">
+                        <a href="https://share.google.com/lUP7ozNil4j3jXnT8" target="_blank" aria-label="Google" rel="noopener noreferrer">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="https://wa.me/381637797857" target="_blank" aria-label="Whatsapp" rel="noopener noreferrer">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -412,8 +661,8 @@
                     <h3>Kontaktirajte nas</h3>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Beograd, Zemun, Makedonska 1A</li>
-                        <li><i class="fas fa-phone"></i> 063 7797857</li>
-                        <li><i class="fas fa-envelope"></i> 3dcraft.rs@gmail.com</li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381637797857"> 063 7797857</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:3dcraft.rs@gmail.com"> 3dcraft.rs@gmail.com</a></li>
                         <li><i class="fas fa-clock"></i> Radno vreme: 09:00 - 21:00</li>
                     </ul>
                 </div>
@@ -421,7 +670,6 @@
                     <h3>Brzi linkovi</h3>
                     <ul class="footer-links">
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> Početna</a></li>
-                        <li><a href="index.html#features"><i class="fas fa-chevron-right"></i> Prednosti</a></li>
                         <li><a href="usluge.html"><i class="fas fa-chevron-right"></i> Usluge</a></li>
                         <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
                         <li><a href="modeliranje.html"><i class="fas fa-chevron-right"></i> 3D Modeliranje</a></li>
@@ -447,10 +695,13 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/381637797857" target="_blank" class="floating-whatsapp">
+    <a href="https://wa.me/381637797857?text=Zdravo! Interesuju me vaše usluge. Možete li mi dati više informacija?" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-float"
+       aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="magic.js"></script>
 </body>
 </html>

@@ -1,0 +1,590 @@
+/* Стили для Process секции */
+    .process-section {
+        width: 100%;
+        padding: 100px 0;
+        background: linear-gradient(135deg, 
+            #ffffff 0%, 
+            #f9fbfd 50%, 
+            #f2f7fc 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .process-section .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .process-section .section-title {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .process-section .section-title h2 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: #1a2a3a;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .process-section .section-title h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #27ae60, #2ecc71);
+        border-radius: 2px;
+    }
+
+    .process-section .section-title p {
+        font-size: 1.3rem;
+        color: #5a6c7d;
+        max-width: 700px;
+        margin: 25px auto 0;
+        line-height: 1.6;
+    }
+
+    .process-section .process-steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .process-section .process-step {
+        position: relative;
+        z-index: 2;
+    }
+
+    .process-section .step-card {
+        background: white;
+        border-radius: 20px;
+        padding: 40px 30px;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 
+            0 5px 20px rgba(0, 0, 0, 0.05),
+            0 1px 5px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .process-section .step-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #27ae60, #2ecc71);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+    }
+
+    .process-section .step-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.1),
+            0 8px 16px rgba(39, 174, 96, 0.1);
+    }
+
+    .process-section .step-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .process-section .step-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: rgba(39, 174, 96, 0.1);
+        line-height: 1;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .process-section .step-card:hover .step-number {
+        color: rgba(39, 174, 96, 0.2);
+        transform: scale(1.1);
+    }
+
+    .process-section .step-icon-container {
+        position: relative;
+        width: 90px;
+        height: 90px;
+        margin-bottom: 25px;
+    }
+
+    .process-section .step-icon-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        border-radius: 50%;
+        opacity: 0.1;
+        transition: all 0.4s ease;
+        transform: scale(0.8);
+    }
+
+    .process-section .step-card:hover .step-icon-bg {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+
+    .process-section .step-icon {
+        font-size: 2.8rem;
+        color: #27ae60;
+        position: relative;
+        z-index: 2;
+        line-height: 90px;
+        transition: all 0.3s ease;
+    }
+
+    .process-section .step-card:hover .step-icon {
+        color: #2ecc71;
+        transform: scale(1.1);
+    }
+
+    .process-section .step-card h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a2a3a;
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .process-section .step-card:hover h3 {
+        color: #27ae60;
+    }
+
+    .process-section .step-card > p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #5a6c7d;
+        margin-bottom: 25px;
+        flex-grow: 1;
+    }
+
+    .process-section .step-details {
+        width: 100%;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        text-align: left;
+    }
+
+    .process-section .step-details ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .process-section .step-details li {
+        font-size: 0.95rem;
+        color: #5a6c7d;
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .process-section .step-details li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #27ae60;
+        font-weight: bold;
+    }
+
+    .process-section .step-arrow {
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        z-index: 3;
+    }
+
+    .process-section .step-arrow i {
+        color: #27ae60;
+        font-size: 1.2rem;
+    }
+
+    .process-section .step-final {
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        z-index: 3;
+    }
+
+    .process-section .step-final i {
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .process-section .process-timeline {
+        position: relative;
+        height: 4px;
+        margin: 40px auto 80px;
+        max-width: 90%;
+    }
+
+    .process-section .timeline-line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        transform: translateY(-50%);
+    }
+
+    .process-section .timeline-dot {
+        position: absolute;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 8px rgba(39, 174, 96, 0.1);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.4);
+        }
+        70% {
+            box-shadow: 0 0 0 15px rgba(39, 174, 96, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(39, 174, 96, 0);
+        }
+    }
+
+    .process-section .process-cta {
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        border-radius: 25px;
+        padding: 50px;
+        margin-top: 40px;
+        box-shadow: 
+            0 15px 40px rgba(39, 174, 96, 0.3),
+            0 5px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .process-section .process-cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+        background-size: cover;
+    }
+
+    .process-section .cta-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+    }
+
+    .process-section .cta-icon {
+        width: 70px;
+        height: 70px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30px;
+        flex-shrink: 0;
+    }
+
+    .process-section .cta-icon i {
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .process-section .cta-text {
+        flex-grow: 1;
+        margin-right: 30px;
+    }
+
+    .process-section .cta-text h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .process-section .cta-text p {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+    }
+
+    .process-section .process-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: white;
+        color: #27ae60;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 16px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 
+            0 5px 20px rgba(0, 0, 0, 0.2);
+        flex-shrink: 0;
+    }
+
+    .process-section .process-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 
+            0 10px 30px rgba(0, 0, 0, 0.3);
+        background: #f8f9fa;
+    }
+
+    .process-section .process-btn i {
+        font-size: 1.1rem;
+        transition: transform 0.3s ease;
+    }
+
+    .process-section .process-btn:hover i {
+        transform: translateX(8px);
+    }
+
+    /* Декоративные элементы */
+    .process-section .process-decor {
+        position: absolute;
+        border-radius: 50%;
+        z-index: 1;
+        opacity: 0.1;
+    }
+
+    .process-section .process-decor-1 {
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, #27ae60 0%, transparent 70%);
+        top: 10%;
+        left: -100px;
+        animation: rotate 30s infinite linear;
+    }
+
+    .process-section .process-decor-2 {
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, #3498db 0%, transparent 70%);
+        bottom: 20%;
+        right: -75px;
+        animation: rotate 25s infinite linear reverse;
+    }
+
+    .process-section .process-decor-3 {
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(circle, #9b59b6 0%, transparent 70%);
+        top: 40%;
+        right: 15%;
+        animation: float 20s infinite ease-in-out;
+    }
+
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    /* Анимация появления элементов */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .process-section .step-card {
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+    }
+
+    .process-section .step-card:nth-child(1) { animation-delay: 0.1s; }
+    .process-section .step-card:nth-child(2) { animation-delay: 0.2s; }
+    .process-section .step-card:nth-child(3) { animation-delay: 0.3s; }
+    .process-section .step-card:nth-child(4) { animation-delay: 0.4s; }
+    .process-section .process-cta { animation: fadeInUp 0.8s ease 0.5s forwards; opacity: 0; }
+
+    /* Адаптивность */
+    @media (max-width: 1200px) {
+        .process-section .process-steps {
+            gap: 20px;
+        }
+        
+        .process-section .step-card {
+            padding: 30px 20px;
+        }
+        
+        .process-section .cta-content {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+        }
+        
+        .process-section .cta-icon {
+            margin-right: 0;
+        }
+        
+        .process-section .cta-text {
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .process-section {
+            padding: 80px 0;
+        }
+        
+        .process-section .section-title h2 {
+            font-size: 2.4rem;
+        }
+        
+        .process-section .section-title p {
+            font-size: 1.2rem;
+        }
+        
+        .process-section .process-steps {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .process-section .step-arrow,
+        .process-section .step-final {
+            display: none;
+        }
+        
+        .process-section .process-timeline {
+            display: none;
+        }
+        
+        .process-section .process-cta {
+            padding: 40px 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .process-section {
+            padding: 70px 0;
+        }
+        
+        .process-section .section-title h2 {
+            font-size: 2.2rem;
+        }
+        
+        .process-section .section-title p {
+            font-size: 1.1rem;
+        }
+        
+        .process-section .process-steps {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin: 0 auto 50px;
+        }
+        
+        .process-section .step-card {
+            padding: 35px 25px;
+        }
+        
+        .process-section .cta-text h3 {
+            font-size: 1.6rem;
+        }
+        
+        .process-section .process-decor {
+            display: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .process-section {
+            padding: 60px 0;
+        }
+        
+        .process-section .section-title h2 {
+            font-size: 2rem;
+        }
+        
+        .process-section .step-card {
+            padding: 30px 20px;
+        }
+        
+        .process-section .step-icon-container {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .process-section .step-icon {
+            font-size: 2.5rem;
+            line-height: 80px;
+        }
+        
+        .process-section .cta-text h3 {
+            font-size: 1.4rem;
+        }
+        
+        .process-section .cta-text p {
+            font-size: 1rem;
+        }
+        
+        .process-section .process-btn {
+            width: 100%;
+        }
+    }

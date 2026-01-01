@@ -1,0 +1,283 @@
+/* Стили только для CTA секции */
+        .cta-section {
+            width: 100%;
+            padding: 100px 0;
+            background: 
+                linear-gradient(135deg, rgba(26, 42, 58, 0.9) 0%, rgba(15, 32, 39, 0.95) 100%),
+                url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(39, 174, 96, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 70% 20%, rgba(52, 152, 219, 0.1) 0%, transparent 40%);
+            z-index: 1;
+        }
+
+        .cta-section .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            background: linear-gradient(90deg, #fff, #e0f7e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: #d1e0eb;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-section .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 5px 20px rgba(39, 174, 96, 0.3),
+                0 2px 5px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-section .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e8449 0%, #27ae60 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 50px;
+        }
+
+        .cta-section .cta-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 
+                0 10px 30px rgba(39, 174, 96, 0.4),
+                0 5px 10px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-section .cta-btn:hover::before {
+            opacity: 1;
+        }
+
+        .cta-section .cta-btn:active {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 
+                0 5px 15px rgba(39, 174, 96, 0.3),
+                0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-section .cta-btn i {
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-section .cta-btn:hover i {
+            transform: translateX(8px) rotate(5deg);
+        }
+
+        /* Декоративные элементы */
+        .cta-section .decor-shape {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0.1;
+        }
+
+        .cta-section .decor-shape-1 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #27ae60 0%, transparent 70%);
+            top: 10%;
+            left: 5%;
+            animation: float-cta 20s infinite ease-in-out;
+        }
+
+        .cta-section .decor-shape-2 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #3498db 0%, transparent 70%);
+            bottom: 15%;
+            right: 8%;
+            animation: float-cta 25s infinite ease-in-out reverse;
+        }
+
+        @keyframes float-cta {
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg); 
+            }
+            33% { 
+                transform: translateY(-20px) rotate(120deg); 
+            }
+            66% { 
+                transform: translateY(20px) rotate(240deg); 
+            }
+        }
+
+        /* 3D элементы */
+        .cta-section .decor-3d {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1;
+            transform: rotate(15deg);
+            animation: rotate-3d-cta 30s infinite linear;
+        }
+
+        .cta-section .decor-3d:nth-child(1) {
+            top: 20%;
+            right: 10%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+        }
+
+        .cta-section .decor-3d:nth-child(2) {
+            bottom: 25%;
+            left: 10%;
+            width: 70px;
+            height: 70px;
+            animation-delay: -15s;
+        }
+
+        @keyframes rotate-3d-cta {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.1); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .cta-section {
+                padding: 80px 0;
+                background-attachment: scroll;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.4rem;
+            }
+            
+            .cta-section p {
+                font-size: 1.2rem;
+            }
+            
+            .cta-section .cta-btn {
+                font-size: 1.1rem;
+                padding: 16px 35px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta-section {
+                padding: 70px 0;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.1rem;
+            }
+            
+            .cta-section p {
+                font-size: 1.1rem;
+                margin-bottom: 35px;
+            }
+            
+            .cta-section .cta-btn {
+                font-size: 1rem;
+                padding: 15px 30px;
+            }
+            
+            .cta-section .decor-3d {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cta-section {
+                padding: 60px 0;
+            }
+            
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-section p {
+                font-size: 1rem;
+            }
+            
+            .cta-section .cta-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .cta-section .decor-shape {
+                display: none;
+            }
+        }
+
+        /* Стили для демонстрационного контента (не входят в секцию) */
+        .demo-content {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-content h2 {
+            color: #1a2a3a;
+            margin-bottom: 20px;
+        }

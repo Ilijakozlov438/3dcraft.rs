@@ -1,0 +1,584 @@
+/* Стили только для Map секции */
+        .map-section {
+            width: 100%;
+            padding: 100px 0;
+            background: linear-gradient(135deg, 
+                #ffffff 0%, 
+                #f8f9fa 50%, 
+                #f1f5f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-section::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(39, 174, 96, 0.04) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            z-index: 1;
+        }
+
+        .map-section .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .map-section .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .map-section .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #1a2a3a;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .map-section .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #27ae60, #2ecc71);
+            border-radius: 2px;
+        }
+
+        .map-section .section-title p {
+            font-size: 1.3rem;
+            color: #5a6c7d;
+            max-width: 600px;
+            margin: 25px auto 0;
+            line-height: 1.6;
+        }
+
+        .map-section .map-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.08),
+                0 1px 8px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .map-section .map-info {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .map-section .map-icon {
+            font-size: 4rem;
+            color: #27ae60;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .map-section .map-info h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a2a3a;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .map-section .map-info p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #5a6c7d;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .map-section .map-details {
+            background: rgba(39, 174, 96, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .map-section .map-details p {
+            font-size: 1.1rem;
+            margin: 0;
+            color: #1a2a3a;
+            font-weight: 500;
+        }
+
+        .map-section .map-details i {
+            color: #27ae60;
+            margin-right: 10px;
+        }
+
+        .map-section .map-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 5px 15px rgba(39, 174, 96, 0.3),
+                0 2px 5px rgba(0, 0, 0, 0.1);
+            border: none;
+            cursor: pointer;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .map-section .map-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e8449 0%, #27ae60 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 50px;
+        }
+
+        .map-section .map-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 10px 25px rgba(39, 174, 96, 0.4),
+                0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-section .map-btn:hover::before {
+            opacity: 1;
+        }
+
+        .map-section .map-btn i {
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .map-section .map-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        .map-section .map-embed {
+            height: 100%;
+            min-height: 400px;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-section .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .map-section .map-placeholder i {
+            font-size: 5rem;
+            color: #27ae60;
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+
+        .map-section .map-placeholder h4 {
+            font-size: 1.5rem;
+            color: #1a2a3a;
+            margin-bottom: 15px;
+        }
+
+        .map-section .map-placeholder p {
+            font-size: 1.1rem;
+            color: #5a6c7d;
+            max-width: 300px;
+        }
+
+        /* Стили только для FAQ секции */
+        .faq-section {
+            width: 100%;
+            padding: 100px 0;
+            background: linear-gradient(135deg, 
+                #f8f9fa 0%, 
+                #f1f5f9 50%, 
+                #e9f2fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(39, 174, 96, 0.04) 0%, transparent 70%);
+            bottom: -250px;
+            left: -250px;
+            z-index: 1;
+        }
+
+        .faq-section .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .faq-section .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .faq-section .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #1a2a3a;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .faq-section .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #27ae60, #2ecc71);
+            border-radius: 2px;
+        }
+
+        .faq-section .section-title p {
+            font-size: 1.3rem;
+            color: #5a6c7d;
+            max-width: 700px;
+            margin: 25px auto 0;
+            line-height: 1.6;
+        }
+
+        .faq-section .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-section .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 
+                0 5px 15px rgba(0, 0, 0, 0.05),
+                0 1px 5px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .faq-section .faq-item:hover {
+            border-color: rgba(39, 174, 96, 0.2);
+            box-shadow: 
+                0 10px 25px rgba(0, 0, 0, 0.08),
+                0 3px 8px rgba(39, 174, 96, 0.1);
+        }
+
+        .faq-section .faq-item.active {
+            border-color: rgba(39, 174, 96, 0.3);
+            box-shadow: 
+                0 10px 25px rgba(0, 0, 0, 0.1),
+                0 5px 12px rgba(39, 174, 96, 0.15);
+        }
+
+        .faq-section .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-section .faq-item.active .faq-question {
+            background: rgba(39, 174, 96, 0.05);
+        }
+
+        .faq-section .faq-question h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a2a3a;
+            margin: 0;
+            flex: 1;
+            padding-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .faq-section .faq-item.active .faq-question h3 {
+            color: #27ae60;
+        }
+
+        .faq-section .faq-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(39, 174, 96, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #27ae60;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-section .faq-item.active .faq-icon {
+            background: rgba(39, 174, 96, 0.2);
+            transform: rotate(180deg);
+        }
+
+        .faq-section .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .faq-section .faq-item.active .faq-answer {
+            padding: 0 30px 30px;
+            max-height: 500px;
+        }
+
+        .faq-section .faq-answer p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #5a6c7d;
+            margin: 0;
+        }
+
+        .faq-section .faq-answer ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .faq-section .faq-answer li {
+            margin-bottom: 10px;
+            color: #5a6c7d;
+            line-height: 1.6;
+        }
+
+        /* Декоративные элементы */
+        .decor-element {
+            position: absolute;
+            opacity: 0.03;
+            color: #27ae60;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .map-section .decor-element {
+            font-size: 8rem;
+        }
+
+        .map-section .decor-1 {
+            top: 15%;
+            left: 5%;
+            animation: rotate-slow 30s infinite linear;
+        }
+
+        .faq-section .decor-element {
+            font-size: 7rem;
+        }
+
+        .faq-section .decor-2 {
+            top: 10%;
+            right: 5%;
+            animation: rotate-slow 25s infinite linear reverse;
+        }
+
+        @keyframes rotate-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .map-section, .faq-section {
+                padding: 80px 0;
+            }
+            
+            .map-section .section-title h2,
+            .faq-section .section-title h2 {
+                font-size: 2.4rem;
+            }
+            
+            .map-section .section-title p,
+            .faq-section .section-title p {
+                font-size: 1.2rem;
+            }
+            
+            .map-section .map-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-section .map-info {
+                padding: 40px 30px;
+            }
+            
+            .map-section .map-embed {
+                min-height: 350px;
+            }
+            
+            .faq-section .faq-question {
+                padding: 20px 25px;
+            }
+            
+            .faq-section .faq-question h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .map-section, .faq-section {
+                padding: 70px 0;
+            }
+            
+            .map-section .section-title h2,
+            .faq-section .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .map-section .section-title p,
+            .faq-section .section-title p {
+                font-size: 1.1rem;
+            }
+            
+            .map-section .map-info {
+                padding: 35px 25px;
+            }
+            
+            .map-section .map-icon {
+                font-size: 3.5rem;
+            }
+            
+            .map-section .map-info h3 {
+                font-size: 1.6rem;
+            }
+            
+            .map-section .map-info p {
+                font-size: 1.05rem;
+            }
+            
+            .faq-section .faq-question {
+                padding: 18px 20px;
+            }
+            
+            .faq-section .faq-question h3 {
+                font-size: 1.1rem;
+            }
+            
+            .faq-section .faq-answer p {
+                font-size: 1rem;
+            }
+            
+            .decor-element {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .map-section, .faq-section {
+                padding: 60px 0;
+            }
+            
+            .map-section .section-title h2,
+            .faq-section .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .map-section .map-info {
+                padding: 30px 20px;
+            }
+            
+            .map-section .map-details {
+                padding: 20px;
+            }
+            
+            .map-section .map-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .faq-section .faq-question {
+                padding: 16px 18px;
+            }
+            
+            .faq-section .faq-question h3 {
+                font-size: 1rem;
+                padding-right: 15px;
+            }
+            
+            .faq-section .faq-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .faq-section .faq-answer {
+                padding: 0 18px;
+            }
+            
+            .faq-section .faq-item.active .faq-answer {
+                padding: 0 18px 20px;
+            }
+        }
+
+        /* Стили для демонстрационного контента (не входят в секции) */
+        .demo-content {
+            padding: 60px 20px;
+            background-color: #1a2a3a;
+            color: white;
+        }
+        
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-content h2 {
+            margin-bottom: 20px;
+        }

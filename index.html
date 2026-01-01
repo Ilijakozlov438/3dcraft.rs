@@ -101,17 +101,37 @@
         <!-- Google Site Verification -->
     <meta name="google-site-verification" content="dmfNfQ1UC3axuBxFDXp42YPXIk1BVEnqMZJqJJiS6Xc" />
     
-        <!-- Connection to external stylesheets -->
+    <!-- Connection to external stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/style.css">
 
-    <link rel="stylesheet" href="styles/footer.css">
+    <!-- Styles по структуре сайта -->
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/whatsappCTA.css">
+    <link rel="stylesheet" href="styles/features.css">
+    <link rel="stylesheet" href="styles/advantages.css">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+    <link rel="stylesheet" href="styles/cta.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/whatsapp.css">
 
-    <link rel="stylesheet" href="styles/portfolio_part.css">
+    <!-- JavaScript по структуре сайта -->
+    <script src="js/header.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/whatsappCTA.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/advantages.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/whatsapp.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/CTA.js"></script>
+    <script src="js/contact.js"></script>
+
+    <link rel="stylesheet" href="styles/usluge/process.css">
+    <script src="js/usluge/process.js"></script>
 </head>
 <body>
     <header id="header">
@@ -120,7 +140,6 @@
                 <a href="index.html" class="logo"><i class="fas fa-cube"></i>3DCraft</a>
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Početna</a></li>
-                    <li><a href="index.html#features">Prednosti</a></li>
                     <li><a href="usluge.html">Usluge</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="modeliranje.html">3D Modeliranje</a></li>
@@ -133,28 +152,31 @@
             </nav>
         </div>
     </header>
-<main>
+
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero-block" id="home" aria-label="Hero section">
+        <!-- Декоративные CSS-элементы -->
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-wrapper">
                 <div class="hero-text">
-                    <h1>Kompletna 3D rešenja za vaše projekte</h1>
-                    <p>Od 3D modelovanja i skeniranja do precizne štampe. Digitalizujemo vaše ideje i pretvaramo ih u stvarnost — brzo, kvalitetno i pristupačno.</p>
-                    <div class="hero-social-links">
-                        <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" aria-label="Instagram">
+                    <h1 class="hero-title"><br>Kompletna 3D rešenja za vaše projekte</h1>
+                    <p class="hero-description">Od 3D modelovanja i skeniranja do precizne štampe. Digitalizujemo vaše ideje i pretvaramo ih u stvarnost — brzo, kvalitetno i pristupačno.</p>
+                    
+                    <div class="hero-social" aria-label="Social media links">
+                        <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://t.me/craft3d_chanel" target="_blank" aria-label="Telegram">
-                            <i class="fab fa-telegram-plane"></i>
-                        </a>
-                        <a href="https://share.google/lUP7ozNil4j3jXnT8" target="_blank" aria-label="Google">
+                        <a href="https://share.google.com/lUP7ozNil4j3jXnT8" target="_blank" rel="noopener noreferrer" aria-label="Google">
                             <i class="fab fa-google"></i>
                         </a>
-                        <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" aria-label="Viber">
+                        <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" rel="noopener noreferrer" aria-label="Viber">
                             <i class="fab fa-viber"></i>
                         </a>
-                        <a href="https://wa.me/381637797857" target="_blank" aria-label="Whatsapp">
+                        <a href="https://wa.me/381637797857" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                         <a href="tel:+381637797857" aria-label="Telefon" title="+381 63 7797857">
@@ -162,395 +184,548 @@
                         </a>
                     </div>
                 </div>
+                
                 <div class="hero-image">
-                    <img src="slike/3d-pecat_new.jpg" alt="3D štampa" fetchpriority="high">
+                    <div class="image-wrapper">
+                        <!-- Замените src на ваше изображение -->
+                        <img src="slike/3d-pecat_new.jpg" alt="3D печать и моделирование">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-</main>
 
-<!-- WhatsApp CTA Section -->
-<section class="whatsapp-cta-section">
-    <div class="container">
-        <div class="whatsapp-cta-content">
-            <div class="whatsapp-cta-text">
-                <h3>Interesuju vas naše usluge?</h3>
-                <p>Kontaktirajte nas na WhatsApp-u i saznajte više o svim mogućnostima koje nudimo</p>
-            </div>
-            <div class="whatsapp-cta-button">
-                <a href="https://wa.me/381637797857?text=Zdravo! Interesuju me vaše usluge. Možete li mi dati više informacija?" 
-                   class="whatsapp-cta-btn">
-                   <i class="fab fa-whatsapp"></i>
-                   Saznajte više
-                </a>
+    <!-- WhatsApp CTA Section -->
+    <section class="whatsapp-cta-section">
+        <div class="whatsapp-decor whatsapp-1">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="whatsapp-decor whatsapp-2">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        
+        <div class="container">
+            <div class="whatsapp-cta-content">
+                <div class="whatsapp-cta-text">
+                    <h3>Interesuju vas naše usluge?</h3>
+                    <p>Kontaktirajte nas na WhatsApp-u i saznajte više o svim mogućnostima koje nudimo</p>
+                </div>
+                <div class="whatsapp-cta-button">
+                    <a href="https://wa.me/381637797857?text=Zdravo! Interesuju me vaše usluge. Možete li mi dati više informacija?" 
+                       class="whatsapp-cta-btn" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                       <i class="fab fa-whatsapp"></i>
+                       Saznajte više
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Features -->
-<section class="features" id="features">
-    <div class="container">
-        <div class="section-title">
-            <h2>Kompletno 3D rešenje</h2>
-            <p>Od digitalizacije do fizičkog proizvoda - sve na jednom mestu</p>
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="decor-element decor-1">
+            <i class="fas fa-cube"></i>
         </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-camera"></i>
-                </div>
-                <h3>3D Skeniranje</h3>
-                <p>Digitalizujemo vaše predmete u precizne 3D modele. Skeniramo objekte do 30cm za reverzno inženjerstvo, arhivu ili reprodukciju.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <h3>3D Modeliranje</h3>
-                <p>Kreiramo precizne 3D modele od nule. Optimizujemo za 3D štampu ili CNC, sa fokusom na funkcionalnost i estetiku.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-print"></i>
-                </div>
-                <h3>3D Štampa FDM/SLA</h3>
-                <p>Od skeniranog ili modeliranog objekta do fizičkog proizvoda. Visoka preciznost, brza realizacija.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h3>Postprodukcija</h3>
-                <p>Dorada i završna obrada štampanih delova. Profesionalni finish za vaše proizvode.</p>
-            </div>
+        <div class="decor-element decor-2">
+            <i class="fas fa-print"></i>
         </div>
-    </div>
-</section>
-
-<!-- Naša prednost -->
-<section class="advantages" id="advantages">
-    <div class="container">
-        <div class="section-title">
-            <h2>Zašto nas biraju?</h2>
-            <p>Fokus na vašem uspehu – od ideje do gotovog proizvoda, podržavamo vas na svakom koraku</p>
-        </div>
-        <div class="advantages-content">
-            <div class="advantages-text">
-                <h3>Od ideje do realizacije na jednom mestu</h3>
-                <p>Kod nas dobijate <strong>kompletnu uslugu</strong>: od skeniranja i modeliranja do štampe i dorade. Štedite vreme i resurse jer sve radimo mi.</p>
-                <p>Razumemo da je svaki projektat jedinstven. Zato ne nudimo šablonska rešenja, već <strong>pristup prilagođen vašim ciljevima</strong> – bilo da je u pitanju jednokratni prototip ili serijska proizvodnja.</p>
-                <a href="kontakti.html" class="btn">Zakažite konsultaciju</a>
+        
+        <div class="container">
+            <div class="section-title">
+                <h2>Kompletno 3D rešenje</h2>
+                <p>Od digitalizacije do fizičkog proizvoda - sve na jednom mestu</p>
             </div>
-            <div class="advantages-list">
-                <div class="advantage-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Besplatna procena i stručni savet</span>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Visoka preciznost i kontrola kvaliteta</span>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Moderna opremljenost (FDM & SLA štampači)</span>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Pristupačne cene za sve vrste projekata</span>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Podrška i saradnja i posle završetka posla</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Services -->
-<section class="services" id="services">
-    <div class="container">
-        <div class="section-title">
-            <h2>Naše usluge</h2>
-            <p>Kompletan spektar 3D tehnologija za pojedince i kompanije</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="slike/3dscan.jpg" alt="3D Skeniranje" loading="eager">
-                </div>
-                <div class="service-content">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
                     <h3>3D Skeniranje</h3>
-                    <p>Precizno digitalizovanje postojećih objekata u 3D modele. Idealan za reverzno inženjerstvo, arhivu i reprodukciju.</p>
-                    <a href="skeniranje.html" class="btn" style="margin-top: 15px; padding: 8px 20px; font-size: 14px;">Saznaj više</a>
+                    <p>Digitalizujemo vaše predmete u precizne 3D modele. Skeniramo objekte do 30cm za reverzno inženjerstvo, arhivu ili reprodukciju.</p>
                 </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="slike/Lamp.png" alt="3D Modeliranje" loading="eager">
-                </div>
-                <div class="service-content">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
                     <h3>3D Modeliranje</h3>
-                    <p>Razvoj 3D modela prema vašim specifikacijama. Kreiranje optimizovanih i tehnički ispravnih modela spremnih za proizvodnju.</p>
-                    <a href="modeliranje.html" class="btn" style="margin-top: 15px; padding: 8px 20px; font-size: 14px;">Saznaj više</a>
+                    <p>Kreiramo precizne 3D modele od nule. Optimizujemo za 3D štampu ili CNC, sa fokusom na funkcionalnost i estetiku.</p>
                 </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="slikeWEBP/CEV_2.webp" alt="Prototipiranje" loading="eager">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3>3D Štampa FDM/SLA</h3>
+                    <p>Od skeniranog ili modeliranog objekta do fizičkog proizvoda. Visoka preciznost, brza realizacija.</p>
                 </div>
-                <div class="service-content">
-                    <h3>Prototipiranje</h3>
-                    <p>Brza izrada funkcionalnih prototipova za testiranje i verifikaciju dizajna pre serijske proizvodnje.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="slikeWEBP/SERIJSKA.webp" alt="Serijska proizvodnja" loading="eager">
-                </div>
-                <div class="service-content">
-                    <h3>Serijska proizvodnja</h3>
-                    <p>Štampanje manjih i srednjih serija proizvoda za poslovanje, startapove i proizvodne kompanije.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="slike/OBRADA.jpg" alt="Obrada" loading="eager">
-                </div>
-                <div class="service-content">
-                    <h3>Obrada</h3>
-                    <p>Brušenje, glačanje i završna obrada štampanih delova za profesionalni izgled i funkcionalnost.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="slike/KONSULTACIJE.jpg" alt="Konsultacije" loading="eager">
-                </div>
-                <div class="service-content">
-                    <h3>Konsultacije</h3>
-                    <p>Stručna podrška i savetovanje u vezi sa 3D tehnologijama, dizajnom i proizvodnjom.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Postprodukcija</h3>
+                    <p>Dorada i završna obrada štampanih delova. Profesionalni finish za vaše proizvode.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Portfolio Grid -->
-<section class="portfolio">
-    <div class="container">
-        <div class="section-title">
-            <h2>Naši radovi</h2>
-            <p>Primeri realizovanih projekata kroz 3D skeniranje, modeliranje i štampu</p>
+    <!-- Advantages Section -->
+    <section class="advantages-section" id="advantages">
+        <div class="decor-circle decor-circle-1"></div>
+        <div class="decor-circle decor-circle-2"></div>
+        
+        <div class="container">
+            <div class="section-title">
+                <h2>Zašto nas biraju?</h2>
+                <p>Fokus na vašem uspehu – od ideje do gotovog proizvoda, podržavamo vas na svakom koraku</p>
+            </div>
+            <div class="advantages-content">
+                <div class="advantages-text">
+                    <h3>Od ideje do realizacije na jednom mestu</h3>
+                    <p>Kod nas dobijate <strong>kompletnu uslugu</strong>: od skeniranja i modeliranja do štampe i dorade. Štedite vreme i resurse jer sve radimo mi.</p>
+                    <p>Razumemo da je svaki projektat jedinstven. Zato ne nudimo šablonska rešenja, već <strong>pristup prilagođen vašim ciljevima</strong> – bilo da je u pitanju jednokratni prototip ili serijska proizvodnja.</p>
+                    <a href="kontakti.html" class="advantages-btn">Zakažite konsultaciju <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="advantages-list">
+                    <div class="advantage-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Besplatna procena i stručni savet</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Visoka preciznost i kontrola kvaliteta</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Moderna opremljenost (FDM & SLA štampači)</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Pristupačne cene za sve vrste projekata</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Podrška i saradnja i posle završetka posla</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <div class="portfolio-badge">Skeniranje</div>
-                <div class="portfolio-image">
-                    <img src="slike/S.jpg" alt="3D Skeniranje primera" loading="lazy">
-                </div>
-                <div class="portfolio-content">
-                    <div class="portfolio-header">
-                        <h3>3D Skeniranje figure</h3>
-                        <div class="portfolio-price">3.500 RSD</div>
+    </section>
+
+    <!-- Services old version
+    <section class="services-section" id="services">
+        <div class="decor-3d decor-3d-1">
+            <i class="fas fa-cube"></i>
+        </div>
+        <div class="decor-3d decor-3d-2">
+            <i class="fas fa-print"></i>
+        </div>
+        
+        <div class="container">
+            <div class="section-title">
+                <h2>Naše usluge</h2>
+                <p>Kompletan spektar 3D tehnologija za pojedince i kompanije</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="3D Skeniranje" loading="lazy">
                     </div>
-                    <p class="portfolio-description">Digitalizacija umetničke figure za arhivu i buduću reprodukciju. Skenirano i optimizovano za štampu.</p>
-                    <div class="portfolio-details">
-                        <span class="detail-item"><i class="fas fa-camera"></i> Skeniranje</span>
-                        <span class="detail-item"><i class="fas fa-clock"></i> 2 dana</span>
+                    <div class="service-content">
+                        <h3>3D Skeniranje</h3>
+                        <p>Precizno digitalizovanje postojećih objekata u 3D modele. Idealan za reverzno inženjerstvo, arhivu i reprodukciju.</p>
+                        <a href="skeniranje.html" class="service-btn">Saznaj više <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="3D Modeliranje" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>3D Modeliranje</h3>
+                        <p>Razvoj 3D modela prema vašim specifikacijama. Kreiranje optimizovanih i tehnički ispravnih modela spremnih za proizvodnju.</p>
+                        <a href="modeliranje.html" class="service-btn">Saznaj više <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Prototipiranje" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Prototipiranje</h3>
+                        <p>Brza izrada funkcionalnih prototipova za testiranje i verifikaciju dizajna pre serijske proizvodnje.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Serijska proizvodnja" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Serijska proizvodnja</h3>
+                        <p>Štampanje manjih i srednjih serija proizvoda za poslovanje, startapove i proizvodne kompanije.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Obrada" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Obrada</h3>
+                        <p>Brušenje, glačanje i završna obrada štampanih delova za profesionalni izgled i funkcionalnost.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Konsultacije" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Konsultacije</h3>
+                        <p>Stručna podrška i savetovanje u vezi sa 3D tehnologijama, dizajnom i proizvodnjom.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="decor-shape decor-shape-1"></div>
+        <div class="decor-shape decor-shape-2"></div>
+        
+        <div class="container">
+            <div class="section-title">
+                <h2>Naš proces rada</h2>
+                <p>Kako funkcioniše saradnja sa nama</p>
             </div>
             
-            <div class="portfolio-card">
-                <div class="portfolio-image">
-                    <img src="slikeWEBP/TABLICA.webp" alt="Tablica" loading="lazy">
-                </div>
-                <div class="portfolio-content">
-                    <div class="portfolio-header">
-                        <h3>Tablica</h3>
-                        <div class="portfolio-price">2.500 RSD</div>
+            <div class="process-flow">
+                <div class="flow-line"></div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Konsultacije</h3>
+                        <p>Razgovaramo o vašim potrebama, analiziramo projekat i dajemo preporuke za optimalno rešenje.</p>
                     </div>
-                    <p class="portfolio-description">Detaljna tablica za kancelariju sa personalizovanim tekstom i dugotrajnim materijalom</p>
-                    <div class="portfolio-details">
-                        <span class="detail-item"><i class="fas fa-print"></i> PLA štampa</span>
-                        <span class="detail-item"><i class="fas fa-cube"></i> Modeliranje</span>
+                    
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Ponuda</h3>
+                        <p>Pripremamo detaljnu ponudu sa rokovima izrade, cenom i specifikacijama materijala.</p>
                     </div>
-                </div>
-            </div>
-            
-            <div class="portfolio-card">
-                <div class="portfolio-image">
-                    <img src="slikeWEBP/ZUBCANIK.webp" alt="Zubčanik" loading="lazy">
-                </div>
-                <div class="portfolio-content">
-                    <div class="portfolio-header">
-                        <h3>Zubčanik</h3>
-                        <div class="portfolio-price">1.500 RSD</div>
-                    </div>
-                    <p class="portfolio-description">Funkcionalni zubčanik za bicikl od otpornog PETG materijala</p>
-                    <div class="portfolio-details">
-                        <span class="detail-item"><i class="fas fa-print"></i> PETG štampa</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="portfolio-badge">Skeniranje + FDM Štampa</div>
-                <div class="portfolio-image">
-                    <img src="slike/reverse.jpg" alt="Skeniranje i štampa" loading="lazy">
-                </div>
-                <div class="portfolio-content">
-                    <div class="portfolio-header">
-                        <h3>Reverzno inženjerstvo</h3>
-                        <div class="portfolio-price">5.900 RSD</div>
-                    </div>
-                    <p class="portfolio-description">Skeniranje i reprodukcija industrijskog dela sa modifikacijama za poboljšanje funkcionalnosti.</p>
-                    <div class="portfolio-details">
-                        <span class="detail-item"><i class="fas fa-camera"></i> Skeniranje</span>
-                        <span class="detail-item"><i class="fas fa-print"></i> ASA štampa</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="portfolio-badge">SLA Štampa</div>
-                <div class="portfolio-image">
-                    <img src="slike/ZUBE.jpg" alt="3D štampa" loading="lazy">
-                </div>
-                <div class="portfolio-content">
-                    <div class="portfolio-header">
-                        <h3>Mold Zube</h3>
-                        <div class="portfolio-price">7.000 RSD</div>
-                    </div>
-                    <p class="portfolio-description">Izrada kalupa za zube pomoću SLA štampe.</p>
-                    <div class="portfolio-details">
-                        <span class="detail-item"><i class="fas fa-print"></i> SLA štampa</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="portfolio-badge">FDM Štampa</div>
-                <div class="portfolio-image">
-                    <img src="slike/PRIVEZAK.jpg" alt="3D štampa" loading="lazy">
-                </div>
-                <div class="portfolio-content">
-                    <div class="portfolio-header">
-                        <h3>Privezak</h3>
-                        <div class="portfolio-price">7.000 RSD</div>
-                    </div>
-                    <p class="portfolio-description">Serijska štampa privezaka pomoću FDM tehnologije. 100 komada.</p>
-                    <div class="portfolio-details">
-                        <span class="detail-item"><i class="fas fa-print"></i> Serijska štampa</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="portfolio.html" class="btn">Pogledajte sve radove</a>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-    <div class="container">
-        <h2>Spremni za digitalizaciju vašeg predmeta?</h2>
-        <p>Pošaljite nam slike vašeg objekta i mi ćemo vam reći da li je moguće 3D skeniranje</p>
-        <a href="#contact" class="btn">Zatražite procenu</a>
-    </div>
-</section>
-
-<!-- Contact -->
-<section class="contact" id="contact">
-    <div class="container">
-        <div class="section-title">
-            <h2>Kontaktirajte nas</h2>
-            <p>Besplatna procena za 3D skeniranje vašeg predmeta</p>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Za 3D skeniranje potrebno je:</h3>
-                <p>Da bismo vam dali najprecizniju procenu za 3D skeniranje, pošaljite nam:</p>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">
+                    
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
                             <i class="fas fa-cube"></i>
                         </div>
-                        <div>
-                            <h4>Slika predmeta</h4>
-                            <p>Fotografije iz više uglova</p>
+                        <h3>Priprema</h3>
+                        <p>Pripremamo 3D model za štampu, optimiziramo ga i postavljamo na štampač.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3>Štampanje</h3>
+                        <p>Izvodimo štampanje uz kontinuiranu kontrolu kvaliteta tokom celog procesa.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Kontrola Kvaliteta</h3>
+                        <p>Detaljno proveravamo svaki deo pre predaje, obezbeđujući visok kvalitet.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Isporuka</h3>
+                        <p>Bezbedno pakujemo i šaljemo vašu porudžbinu, ili je možete preuzeti lično.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="decor-cube"></div>
+        <div class="decor-cube"></div>
+        
+        <div class="container">
+            <div class="section-title">
+                <h2>Naši radovi</h2>
+                <p>Primeri realizovanih projekata kroz 3D skeniranje, modeliranje i štampu</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-badge">Skeniranje</div>
+                    <div class="portfolio-image">
+                        <img src="slike/S.jpg" alt="3D Skeniranje primera" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>3D Skeniranje figure</h3>
+                            <div class="portfolio-price">3.500 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Digitalizacija umetničke figure za arhivu i buduću reprodukciju. Skenirano i optimizovano za štampu.</p>
+                        <div class="portfolio-details">
+                            <span class="detail-item"><i class="fas fa-camera"></i> Skeniranje</span>
+                            <span class="detail-item"><i class="fas fa-clock"></i> 2 dana</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-ruler"></i>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-badge">Modeliranje</div>
+                    <div class="portfolio-image">
+                        <img src="slike/TABLICA.jpg" alt="Tablica" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Tablica</h3>
+                            <div class="portfolio-price">2.500 RSD</div>
                         </div>
-                        <div>
-                            <h4>Dimenzije</h4>
-                            <p>Približne veličine (dužina, širina, visina)</p>
+                        <p class="portfolio-description">Detaljna tablica za kancelariju sa personalizovanim tekstom i dugotrajnim materijalom</p>
+                        <div class="portfolio-details">
+                            <span class="detail-item"><i class="fas fa-print"></i> PLA štampa</span>
+                            <span class="detail-item"><i class="fas fa-cube"></i> Modeliranje</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-bullseye"></i>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-badge">FDM Štampa</div>
+                    <div class="portfolio-image">
+                        <img src="slike/ZUBCANIK.jpg" alt="Zubčanik" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Zubčanik</h3>
+                            <div class="portfolio-price">1.500 RSD</div>
                         </div>
-                        <div>
-                            <h4>Namena</h4>
-                            <p>Za šta će se koristiti skenirani model</p>
+                        <p class="portfolio-description">Funkcionalni zubčanik za bicikl od otpornog PETG materijala</p>
+                        <div class="portfolio-details">
+                            <span class="detail-item"><i class="fas fa-print"></i> PETG štampa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-badge">Skeniranje + FDM Štampa</div>
+                    <div class="portfolio-image">
+                        <img src="slike/reverse.jpg" alt="Skeniranje i štampa" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Reverzno inženjerstvo</h3>
+                            <div class="portfolio-price">5.900 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Skeniranje i reprodukcija industrijskog dela sa modifikacijama za poboljšanje funkcionalnosti.</p>
+                        <div class="portfolio-details">
+                            <span class="detail-item"><i class="fas fa-camera"></i> Skeniranje</span>
+                            <span class="detail-item"><i class="fas fa-print"></i> ASA štampa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-badge">SLA Štampa</div>
+                    <div class="portfolio-image">
+                        <img src="slike/ZUBE.jpg" alt="3D štampa" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Mold Zube<br>10 kom.</h3>
+                            <div class="portfolio-price">7.000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Izrada kalupa za zube pomoću SLA štampe.</p>
+                        <div class="portfolio-details">
+                            <span class="detail-item"><i class="fas fa-print"></i> SLA štampa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-badge">FDM Štampa</div>
+                    <div class="portfolio-image">
+                        <img src="slike/PRIVEZAK.jpg" alt="3D štampa" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Privezak</h3>
+                            <div class="portfolio-price">7.000 RSD</div>
+                        </div>
+                        <p class="portfolio-description">Serijska štampa privezaka pomoću FDM tehnologije. 100 komada.</p>
+                        <div class="portfolio-details">
+                            <span class="detail-item"><i class="fas fa-print"></i> Serijska štampa</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="contact-form">
-                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="67e61521-ab90-4917-a017-bfb080c92718">
-                    <input type="hidden" name="subject" value="Upit za 3D skeniranje - Glavna strana">
-                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                    <input type="checkbox" name="botcheck" id="botcheck" class="hidden" style="display: none;">
-                    
-                    <div class="form-group">
-                        <label for="name">Vaše ime</label>
-                        <input type="text" id="name" class="form-control" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefon</label>
-                        <input type="tel" id="phone" class="form-control" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Opišite predmet za skeniranje</label>
-                        <textarea id="message" class="form-control" name="message" placeholder="Dimenzije, materijal, namena predmeta..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Pošaljite upit za skeniranje</button>
-                </form>
+            <div class="text-center">
+                <a href="portfolio.html" class="portfolio-btn">Pogledajte sve radove <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="decor-shape decor-shape-1"></div>
+        <div class="decor-shape decor-shape-2"></div>
+        <div class="decor-3d"></div>
+        <div class="decor-3d"></div>
+        
+        <div class="container">
+            <h2>Od ideje — dо gоtоvоg 3D mоdelа ili delа</h2>
+            <p>Pоšаljite nаm pоdаtke о vаšem оbjektu. Mi ćemо ih аnаlizirаti i izаbrаti оptimаlnu tehnоlоgiju: 3D skenirаnje, mоdelоvаnje ili štаmpаnje.</p>
+            <a href="kontakti.html" class="cta-btn">▶️ Zаpоčnite prоjekаt<i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="decor-cube"></div>
+        <div class="decor-cube"></div>
+        
+        <div class="container">
+            <div class="section-title">
+                <h2>Kontaktirajte nas</h2>
+                <p>Besplatna procena za vaš 3D projekat</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Za procenu projekta potrebno je:</h3>
+                    <p>Da bismo vam dali najtačniju ponudu, pošaljite nam sledeće informacije:</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div>
+                                <h4>Opis projekta</h4>
+                                <p>Šta želite da uradimo (3D skeniranje, modelovanje ili 3D štampu)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-ruler"></i>
+                            </div>
+                            <div>
+                                <h4>Dimenzije i materijal</h4>
+                                <p>Približne veličine (dužina, širina, visina) i materijal (ako je poznat)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div>
+                                <h4>Namena i rokovi</h4>
+                                <p>Za šta će se koristiti model i rokovi (ako su važni)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Kontakt informacije</h3>
+                    <p>Možete nas kontaktirati putem sledećih kanala:</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Telefon / SMS / Viber</h4>
+                                <a href="tel:+381637797857">+381 63 7797857</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:3dcraft.rs@gmail.com">3dcraft.rs@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/381637797857" target="_blank" rel="noopener noreferrer">Kliknite ovde za WhatsApp</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-viber"></i>
+                            </div>
+                            <div>
+                                <h4>Viber</h4>
+                                <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" rel="noopener noreferrer">Kliknite ovde za Viber</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4>Instagram</h4>
+                                <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" rel="noopener noreferrer">@3dcraft.rs</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-tip">
+                        <p><strong>Preporučujemo:</strong> Pošaljite nam email sa detaljima projekta, slikama i dimenzijama za najbržu procenu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="main-footer">
+        <div class="decor-cube"></div>
+        <div class="decor-cube"></div>
+        
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>3DCraft</h3>
                     <p>Profesionalna 3D štampanje za poslovanje i privatne klijente. Pretvaramo vaše ideje u stvarnost.</p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://t.me/craft3d_chanel" target="_blank" aria-label="Telegram">
-                            <i class="fab fa-telegram-plane"></i>
-                        </a>
-                        <a href="https://share.google/lUP7ozNil4j3jXnT8" target="_blank" aria-label="Google">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" aria-label="Viber">
+                        <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" aria-label="Viber" rel="noopener noreferrer">
                             <i class="fab fa-viber"></i>
                         </a>
-                        <a href="https://wa.me/381637797857" target="_blank" aria-label="Whatsapp">
+                        <a href="https://share.google.com/lUP7ozNil4j3jXnT8" target="_blank" aria-label="Google" rel="noopener noreferrer">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="https://wa.me/381637797857" target="_blank" aria-label="Whatsapp" rel="noopener noreferrer">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -559,8 +734,8 @@
                     <h3>Kontaktirajte nas</h3>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Beograd, Zemun, Makedonska 1A</li>
-                        <li><i class="fas fa-phone"></i> 063 7797857</li>
-                        <li><i class="fas fa-envelope"></i> 3dcraft.rs@gmail.com</li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381637797857"> 063 7797857</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:3dcraft.rs@gmail.com"> 3dcraft.rs@gmail.com</a></li>
                         <li><i class="fas fa-clock"></i> Radno vreme: 09:00 - 21:00</li>
                     </ul>
                 </div>
@@ -568,7 +743,6 @@
                     <h3>Brzi linkovi</h3>
                     <ul class="footer-links">
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> Početna</a></li>
-                        <li><a href="index.html#features"><i class="fas fa-chevron-right"></i> Prednosti</a></li>
                         <li><a href="usluge.html"><i class="fas fa-chevron-right"></i> Usluge</a></li>
                         <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
                         <li><a href="modeliranje.html"><i class="fas fa-chevron-right"></i> 3D Modeliranje</a></li>
@@ -594,10 +768,13 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/381637797857" target="_blank" class="floating-whatsapp">
+    <a href="https://wa.me/381637797857?text=Zdravo! Interesuju me vaše usluge. Možete li mi dati više informacija?" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-float"
+       aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="magic.js"></script>
 </body>
 </html>

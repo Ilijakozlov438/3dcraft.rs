@@ -30,15 +30,37 @@
     
     <!-- Connection to external stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/style.css">
-    
-    <link rel="stylesheet" href="styles/footer.css">
+    <!-- Styles по структуре сайта -->
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/responsive.css"> 
-    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/whatsappCTA.css">
+    <link rel="stylesheet" href="styles/features.css">
+    <link rel="stylesheet" href="styles/advantages.css">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+    <link rel="stylesheet" href="styles/cta.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/whatsapp.css">
 
-    <link rel="stylesheet" href="styles/usluge.css">
+    <!-- JavaScript по структуре сайта -->
+    <script src="js/header.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/whatsappCTA.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/advantages.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/whatsapp.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/CTA.js"></script>
+    <script src="js/contact.js"></script>
+
+    <link rel="stylesheet" href="styles/usluge/process.css">
+    <link rel="stylesheet" href="styles/usluge/materials.css">
+    <link rel="stylesheet" href="styles/usluge/services.css">
+    <script src="js/usluge/process.js" defer></script>
+    <script src="js/usluge/materials.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -47,7 +69,6 @@
                 <a href="index.html" class="logo"><i class="fas fa-cube"></i>3DCraft</a>
                 <ul class="nav-links">
                     <li><a href="index.html">Početna</a></li>
-                    <li><a href="index.html#features">Prednosti</a></li>
                     <li><a href="usluge.html" class="active">Usluge</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="modeliranje.html">3D Modeliranje</a></li>
@@ -60,306 +81,404 @@
             </nav>
         </div>
     </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero usluge-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>Naše usluge 3D štampe</h1>
-                        <p>Kompletan spektar usluga 3D štampe za pojedince i kompanije. Od ideje do gotovog proizvoda.</p>
-                        <div class="hero-social-links">
-                            <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://t.me/craft3d_chanel" target="_blank" aria-label="Telegram">
-                                <i class="fab fa-telegram-plane"></i>
-                            </a>
-                            <a href="https://share.google/lUP7ozNil4j3jXnT8" target="_blank" aria-label="Google">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" aria-label="Viber">
-                                <i class="fab fa-viber"></i>
-                            </a>
-                            <a href="https://wa.me/381637797857" target="_blank" aria-label="Whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="tel:+381637797857" aria-label="Telefon" title="+381 63 7797857">
-                                <i class="fas fa-phone"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <img src="slike/3d-pecat_new.jpg" alt="3D štampa" fetchpriority="high">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- WhatsApp CTA Section -->
-        <section class="whatsapp-cta-section">
-            <div class="container">
-                <div class="whatsapp-cta-content">
-                    <div class="whatsapp-cta-text">
-                        <h3>Treba vam pomoć?</h3>
-                        <p>Mi smo spremni da odgovore na sva vaša pitanja na WhatsApp-u</p>
-                    </div>
-                    <div class="whatsapp-cta-button">
-                        <a href="https://wa.me/381637797857?text=Zdravo! Interesuju me vaše usluge. Možete li mi dati više informacija?" 
-                        class="whatsapp-cta-btn">
-                        <i class="fab fa-whatsapp"></i>
-                        Besplatna konsultacija
+    
+    <!-- Hero Section -->
+    <section class="hero-block" id="home" aria-label="Hero section">
+        <!-- Декоративные CSS-элементы -->
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-text">
+                    <h1 class="hero-title">Naše usluge</h1>
+                    <p class="hero-description">Od 3D modelovanja i skeniranja do precizne štampe. Digitalizujemo vaše ideje i pretvaramo ih u stvarnost — brzo, kvalitetno i pristupačno.</p>
+                    
+                    <div class="hero-social" aria-label="Social media links">
+                        <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://share.google.com/lUP7ozNil4j3jXnT8" target="_blank" rel="noopener noreferrer" aria-label="Google">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" rel="noopener noreferrer" aria-label="Viber">
+                            <i class="fab fa-viber"></i>
+                        </a>
+                        <a href="https://wa.me/381637797857" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+381637797857" aria-label="Telefon" title="+381 63 7797857">
+                            <i class="fas fa-phone"></i>
                         </a>
                     </div>
                 </div>
-            </div>
-        </section> 
-
-    <section class="features service-details-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Detaljne usluge</h2>
-                <p>Sve što vam je potrebno za realizaciju vaših projekata</p>
-            </div>
-            <div class="features-grid service-details-grid">
-                <!-- FDM 3D Štampanje -->
-                <div class="feature-card service-detail">
-                    <div class="service-badge">FDM</div>
-                    <div class="feature-icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <h3>FDM 3D Štampanje</h3>
-                    <p>Profesionalna FDM (Fused Deposition Modeling) 3D štampa sa visokom preciznošću do 0.1mm. Idealno za funkcionalne prototipove, mehaničke delove i veće modele.</p>
-                    <ul class="feature-list">
-                        <li><strong>Tehnologija:</strong> FDM/FFF</li>
-                        <li><strong>Preciznost:</strong> 0.08-0.3mm</li>
-                        <li><strong>Materijali:</strong> PLA, PETG, ASA, TPU, Najlon</li>
-                        <li><strong>Maksimalna veličina:</strong> 350×350×350mm</li>
-                        <li><strong>Vreme izrade:</strong> 1-7 dana</li>
-                    </ul>
-                </div>
                 
-                <!-- SLA 3D Štampanje -->
-                <div class="feature-card service-detail">
-                    <div class="service-badge">SLA</div>
-                    <div class="feature-icon">
-                        <i class="fas fa-vial"></i>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <!-- Замените src на ваше изображение -->
+                        <img src="slike/3d-pecat_new.jpg" alt="3D печать и моделирование">
                     </div>
-                    <h3>SLA 3D Štampanje</h3>
-                    <p>Visokorezolutivna SLA (Stereolithography) štampa za izuzetno detaljne modele. Savršeno za prototipove, nakite, dentalne modele i minijaturne delove.</p>
-                    <ul class="feature-list">
-                        <li><strong>Tehnologija:</strong> SLA/LCD</li>
-                        <li><strong>Preciznost:</strong> od 0.05 mm</li>
-                        <li><strong>Materijali:</strong> Fotopolimerne smole</li>
-                        <li><strong>Maksimalna veličina:</strong> 130×80×160mm</li>
-                        <li><strong>Vreme izrade:</strong> 1-5 dana</li>
-                    </ul>
-                </div>
-
-                <!-- 3D Modeliranje -->
-                <div class="feature-card service-detail">
-                    <div class="service-badge premium">Premium</div>
-                    <div class="feature-icon">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <h3>3D Modeliranje</h3>
-                    <p>Izrada digitalnih 3D modela po vašim specifikacijama. Pretvaramo vaše ideje, skice ili tehničke crteže u precizne i tehnički ispravne modele, spremne za dalju izradu — bilo putem 3D štampe, CNC obrade ili pripreme za serijsku proizvodnju.</p>
-                    <ul class="feature-list">
-                        <li><strong>Modeliranje od nule</strong> po vašim idejama</li>
-                        <li><strong>Optimizacija</strong> postojećih modela</li>
-                        <li><strong>Konverzija</strong> 2D u 3D</li>
-                        <li><strong>Tehnička dokumentacija</strong></li>
-                        <li><strong>Podrška za štampu</strong></li>
-                    </ul>
-                </div>
-
-                <!-- Prototipiranje -->
-                <div class="feature-card service-detail">
-                    <div class="service-badge">Prototip</div>
-                    <div class="feature-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3>Prototipiranje</h3>
-                    <p>Brza izrada funkcionalnih prototipova za testiranje i validaciju dizajna. Idealno za startupe, inovatore i proizvođače.</p>
-                    <ul class="feature-list">
-                        <li><strong>Brzi prototipovi</strong> u rekordnom vremenu</li>
-                        <li><strong>Funkcionalno testiranje</strong></li>
-                        <li><strong>Iterativni razvoj</strong></li>
-                        <li><strong>Konzultacije o dizajnu</strong></li>
-                        <li><strong>Multiple iteracije</strong></li>
-                    </ul>
-                </div>
-
-                <!-- Serijska Proizvodnja -->
-                <div class="feature-card service-detail">
-                    <div class="service-badge">Serija</div>
-                    <div class="feature-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>Serijska Proizvodnja</h3>
-                    <p>Mala i srednja serijska proizvodnja delova i proizvoda. Idealno za limitirane serije, zamenske delove ili testiranje tržišta.</p>
-                    <ul class="feature-list">
-                        <li><strong>Serije:</strong> 10-1000+ komada</li>
-                        <li><strong>Kontrola kvaliteta</strong> svakog dela</li>
-                        <li><strong>Pakovanje i isporuka</strong></li>
-                        <li><strong>Povoljnije cene</strong> za veće količine</li>
-                        <li><strong>Garantovan kvalitet</strong></li>
-                    </ul>
-                </div>
-
-                <!-- Post-Processing -->
-                <div class="feature-card service-detail">
-                    <div class="service-badge">Dorada</div>
-                    <div class="feature-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Post-Processing</h3>
-                    <p>Dorada i završna obrada štampanih delova za profesionalan izgled. Uključuje brušenje, glačanje, bojenje i montažu.</p>
-                    <ul class="feature-list">
-                        <li><strong>Brušenje i glačanje</strong> površina</li>
-                        <li><strong>Montaža i sklapanje</strong></li>
-                        <li><strong>Hemijsko glačanje</strong> (ABS/ASA)</li>
-                    </ul>
-                </div>
-
-                <!-- Konsultacije -->
-                <div class="feature-card service-detail">
-                    <div class="service-badge">Podrška</div>
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Konsultacije</h3>
-                    <p>Stručne konsultacije o 3D štampi, dizajnu i materijalima. Pomagamo vam da odaberete optimalno rešenje za vaš projekat.</p>
-                    <ul class="feature-list">
-                        <li><strong>Analiza projekta</strong></li>
-                        <li><strong>Preporuke materijala</strong></li>
-                        <li><strong>Optimizacija troškova</strong></li>
-                        <li><strong>Tehnička podrška</strong></li>
-                        <li><strong>Rešavanje problema</strong></li>
-                    </ul>
                 </div>
             </div>
         </div>
-    </section>  
+    </section>
 
-        <!-- Materials Section -->
-        <section class="services materials-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Materijali koje koristimo</h2>
-                    <p>Kvalitetni materijali za različite potrebe i primene</p>
+    <!-- WhatsApp CTA Section -->
+    <section class="whatsapp-cta-section">
+        <div class="whatsapp-decor whatsapp-1">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="whatsapp-decor whatsapp-2">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        
+        <div class="container">
+            <div class="whatsapp-cta-content">
+                <div class="whatsapp-cta-text">
+                    <h3>Interesuju vas naše usluge?</h3>
+                    <p>Kontaktirajte nas na WhatsApp-u i saznajte više o svim mogućnostima koje nudimo</p>
                 </div>
-                <div class="services-grid materials-grid">
-                    <div class="service-card material-card">
-                        <div class="material-badge">Najpopularniji</div>
-                        <div class="service-image">
-                            <img src="slikeWEBP/CEV_2.webp" alt="PLA Materijal" loading="eager">
-                        </div>
-                        <div class="service-content">
-                            <h3>PLA</h3>
-                            <p>Biodegradabilni materijal idealan za prototipove i dekorativne predmete. Lako se štampa, mirise prijatno tokom štampe.</p>
-                            <ul class="material-list">
-                                <li><strong>Primena:</strong> Prototipovi, modeli, dekoracija</li>
-                                <li><strong>Prednosti:</strong> Lako štampanje, ekološki</li>
-                                <li><strong>Mane:</strong> Niska otpornost na toplotu</li>
-                            </ul>
-                        </div>
+                <div class="whatsapp-cta-button">
+                    <a href="https://wa.me/381637797857?text=Zdravo! Interesuju me vaše usluge. Možete li mi dati više informacija?" 
+                       class="whatsapp-cta-btn" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                       <i class="fab fa-whatsapp"></i>
+                       Saznajte više
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Detaljne usluge</h2>
+            <p>Sve što vam je potrebno za realizaciju vaših projekata</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- FDM 3D Štampanje -->
+            <div class="service-card">
+                <div class="service-badge">FDM</div>
+                <div class="service-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3>FDM 3D Štampanje</h3>
+                <p>Profesionalna FDM (Fused Deposition Modeling) 3D štampa sa visokom preciznošću do 0.08mm.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-microscope"></i> <strong>Tehnologija:</strong> FDM/FFF</li>
+                    <li><i class="fas fa-ruler-combined"></i> <strong>Preciznost:</strong> 0.08-0.3mm</li>
+                    <li><i class="fas fa-boxes"></i> <strong>Materijali:</strong> PLA, PETG, ASA, TPU</li>
+                    <li><i class="fas fa-expand-arrows-alt"></i> <strong>Maks. veličina:</strong> 350×350×350mm</li>
+                    <li><i class="far fa-clock"></i> <strong>Vreme izrade:</strong> 1-7 dana</li>
+                </ul>
+                <div class="service-footer">
+                    <a href="kontakti.html" class="service-btn">Zatraži ponudu</a>
+                </div>
+            </div>
+            
+            <!-- SLA 3D Štampanje -->
+            <div class="service-card">
+                <div class="service-badge">SLA</div>
+                <div class="service-icon">
+                    <i class="fas fa-vial"></i>
+                </div>
+                <h3>SLA 3D Štampanje</h3>
+                <p>Visokorezolutivna SLA štampa za detalne modele i prototipove.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-microscope"></i> <strong>Tehnologija:</strong> SLA/LCD</li>
+                    <li><i class="fas fa-ruler-combined"></i> <strong>Preciznost:</strong> od 0.02mm</li>
+                    <li><i class="fas fa-boxes"></i> <strong>Materijali:</strong> Fotopolimerne smole</li>
+                    <li><i class="fas fa-expand-arrows-alt"></i> <strong>Maks. veličina:</strong> 130×80×160mm</li>
+                    <li><i class="far fa-clock"></i> <strong>Vreme izrade:</strong> 1-5 dana</li>
+                </ul>
+                <div class="service-footer">
+                    <a href="kontakti.html" class="service-btn">Zatraži ponudu</a>
+                </div>
+            </div>
+
+            <!-- 3D Modeliranje -->
+            <div class="service-card premium">
+                <div class="service-badge premium">Premium</div>
+                <div class="service-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <h3>3D Modeliranje</h3>
+                <p>Pretvaramo vaše ideje i skice u precizne 3D modele spremne za proizvodnju.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-magic"></i> Modeliranje od nule</li>
+                    <li><i class="fas fa-sync-alt"></i> Optimizacija modela</li>
+                    <li><i class="fas fa-exchange-alt"></i> Konverzija 2D u 3D</li>
+                    <li><i class="fas fa-file-alt"></i> Tehnička dokumentacija</li>
+                    <li><i class="fas fa-print"></i> Podrška za štampu</li>
+                </ul>
+                <div class="service-footer">
+                    <a href="modeliranje.html" class="service-btn premium">Zatraži ponudu</a>
+                </div>
+            </div>
+
+            <!-- Prototipiranje -->
+            <div class="service-card">
+                <div class="service-badge">Prototip</div>
+                <div class="service-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3>Prototipiranje</h3>
+                <p>Brza izrada funkcionalnih prototipova za testiranje i validaciju dizajna.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-bolt"></i> Brzi prototipovi</li>
+                    <li><i class="fas fa-check-circle"></i> Funkcionalno testiranje</li>
+                    <li><i class="fas fa-redo"></i> Iterativni razvoj</li>
+                    <li><i class="fas fa-comments"></i> Konzultacije o dizajnu</li>
+                    <li><i class="fas fa-code-branch"></i> Multiple iteracije</li>
+                </ul>
+                <div class="service-footer">
+                    <a href="kontakti.html" class="service-btn">Zatraži ponudu</a>
+                </div>
+            </div>
+
+            <!-- Serijska Proizvodnja -->
+            <div class="service-card">
+                <div class="service-badge">Serija</div>
+                <div class="service-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3>Serijska Proizvodnja</h3>
+                <p>Mala i srednja serijska proizvodnja delova i proizvoda.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-box"></i> Serije: 10-1000+ komada</li>
+                    <li><i class="fas fa-check-double"></i> Kontrola kvaliteta</li>
+                    <li><i class="fas fa-shipping-fast"></i> Pakovanje i isporuka</li>
+                    <li><i class="fas fa-tags"></i> Povoljne cene za veće količine</li>
+                    <li><i class="fas fa-award"></i> Garantovan kvalitet</li>
+                </ul>
+                <div class="service-footer">
+                    <a href="kontakti.html" class="service-btn">Zatraži ponudu</a>
+                </div>
+            </div>
+
+            <!-- Post-Processing -->
+            <div class="service-card">
+                <div class="service-badge">Dorada</div>
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Post-Processing</h3>
+                <p>Dorada i završna obrada štampanih delova za profesionalan izgled.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-paint-roller"></i> Brušenje i glačanje</li>
+                    <li><i class="fas fa-puzzle-piece"></i> Montaža i sklapanje</li>
+                    <li><i class="fas fa-flask"></i> Hemijsko glačanje (ABS/ASA)</li>
+                    <li><i class="fas fa-tape"></i> Spajanje i popravke</li>
+                </ul>
+                <div class="service-footer">
+                    <a href="kontakti.html" class="service-btn">Zatraži ponudu</a>
+                </div>
+            </div>
+
+            <!-- Konsultacije -->
+            <div class="service-card">
+                <div class="service-badge">Podrška</div>
+                <div class="service-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Konsultacije</h3>
+                <p>Stručne konsultacije o 3D štampi, dizajnu i materijalima.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-search"></i> Analiza projekta</li>
+                    <li><i class="fas fa-box-open"></i> Preporuke materijala</li>
+                    <li><i class="fas fa-chart-line"></i> Optimizacija troškova</li>
+                    <li><i class="fas fa-life-ring"></i> Tehnička podrška</li>
+                    <li><i class="fas fa-cogs"></i> Rešavanje problema</li>
+                </ul>
+                <div class="service-footer">
+                    <a href="kontakti.html" class="service-btn">Zatraži konsultacije</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section class="materials-section">
+        <div class="decor-sphere decor-sphere-1"></div>
+        <div class="decor-sphere decor-sphere-2"></div>
+        
+        <div class="container">
+            <div class="section-title">
+                <h2>Materijali koje koristimo</h2>
+                <p>Kvalitetni materijali za različite potrebe i primene</p>
+            </div>
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="material-badge">Najpopularniji</div>
+                    <div class="material-image">
+                        <img src="slike/Materijali/PLA.webp" alt="PLA Materijal" loading="lazy">
                     </div>
-                    <div class="service-card material-card">
-                        <div class="material-badge">Visoka čvrstina</div>
-                        <div class="service-image">
-                            <img src="slikeWEBP/BENU.webp" alt="PETG Materijal" loading="eager">
-                        </div>
-                        <div class="service-content">
-                            <h3>PETG</h3>
-                            <p>Izuzetno čvrst i otporan materijal, kombinuje prednosti PLA i ABS. Otporan na udarce i hemikalije.</p>
-                            <ul class="material-list">
-                                <li><strong>Primena:</strong> Funkcionalni delovi, kućišta</li>
-                                <li><strong>Prednosti:</strong> Čvrstina, otpornost</li>
-                                <li><strong>Mane:</strong> Zahteva više iskustva u štampi</li>
-                            </ul>
-                        </div>
+                    <div class="material-content">
+                        <h3>PLA</h3>
+                        <p>Biodegradabilni materijal idealan za prototipove i dekorativne predmete. Lako se štampa, mirise prijatno tokom štampe.</p>
+                        <ul class="material-list">
+                            <li><strong>Primena:</strong> Prototipovi, modeli, dekoracija</li>
+                            <li><strong>Prednosti:</strong> Lako štampanje, ekološki</li>
+                            <li><strong>Mane:</strong> Niska otpornost na toplotu</li>
+                        </ul>
                     </div>
-                    <div class="service-card material-card">
-                        <div class="material-badge">Industrijski</div>
-                        <div class="service-image">
-                            <img src="slikeWEBP/SERIJSKA.webp" alt="ASA Materijal" loading="eager">
-                        </div>
-                        <div class="service-content">
-                            <h3>ASA</h3>
-                            <p>Čvrst i otporan materijal sa dobrom otpornošću na toplotu. Koristi se za funkcionalne delove koji treba da izdrže opterećenje.</p>
-                            <ul class="material-list">
-                                <li><strong>Primena:</strong> Funkcionalni delovi, automobilska industrija</li>
-                                <li><strong>Prednosti:</strong> Čvrstina, otpornost na toplotu</li>
-                                <li><strong>Mane:</strong> Zahteva radnu ploču sa grejanjem</li>
-                            </ul>
-                        </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-badge">Visoka čvrstina</div>
+                    <div class="material-image">
+                        <img src="slike/Materijali/PETG.webp" alt="PETG Materijal" loading="lazy">
                     </div>
-                    <div class="service-card material-card">
-                        <div class="material-badge">Industrijski</div>
-                        <div class="service-image">
-                            <img src="slike/NYLON.jpg" alt="Nylon Materijal" loading="eager">
-                        </div>
-                        <div class="service-content">
-                            <h3>Nylon</h3>
-                            <p>Veoma čvrst i elastičan materijal sa izuzetnom otpornošću na habanje i udarce. Idealan za delove koji moraju biti fleksibilni i izdržljivi tokom dugotrajne upotrebe.</p>
-                            <ul class="material-list">
-                                <li><strong>Primena:</strong> Mehanički delovi, spojnice, pokretni elementi, ambalaža</li>
-                                <li><strong>Prednosti:</strong> Elastičnost, visoka čvrstina, otpornost na trenje</li>
-                                <li><strong>Mane:</strong> Teži za štampu, higroskopan (upija vlagu)</li>
-                            </ul>
-                        </div>
+                    <div class="material-content">
+                        <h3>PETG</h3>
+                        <p>Izuzetno čvrst i otporan materijal, kombinuje prednosti PLA i ABS. Otporan na udarce i hemikalije.</p>
+                        <ul class="material-list">
+                            <li><strong>Primena:</strong> Funkcionalni delovi, kućišta</li>
+                            <li><strong>Prednosti:</strong> Čvrstina, otpornost</li>
+                            <li><strong>Mane:</strong> Zahteva više iskustva u štampi</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-badge">Industrijski</div>
+                    <div class="material-image">
+                        <img src="slike/Materijali/ASA.jpg" alt="ASA Materijal" loading="lazy">
+                    </div>
+                    <div class="material-content">
+                        <h3>ASA</h3>
+                        <p>Čvrst i otporan materijal sa dobrom otpornošću na toplotu. Koristi se za funkcionalne delove koji treba da izdrže opterećenje.</p>
+                        <ul class="material-list">
+                            <li><strong>Primena:</strong> Funkcionalni delovi, automobilska industrija</li>
+                            <li><strong>Prednosti:</strong> Čvrstina, otpornost na toplotu</li>
+                            <li><strong>Mane:</strong> Zahteva radnu ploču sa grejanjem</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-badge">Industrijski</div>
+                    <div class="material-image">
+                        <img src="slike/Materijali/PA.webp" alt="Nylon Materijal" loading="lazy">
+                    </div>
+                    <div class="material-content">
+                        <h3>Nylon</h3>
+                        <p>Veoma čvrst i elastičan materijal sa izuzetnom otpornošću na habanje i udarce. Idealan za delove koji moraju biti fleksibilni i izdržljivi tokom dugotrajne upotrebe.</p>
+                        <ul class="material-list">
+                            <li><strong>Primena:</strong> Mehanički delovi, spojnice, pokretni elementi, ambalaža</li>
+                            <li><strong>Prednosti:</strong> Elastičnost, visoka čvrstina, otpornost na trenje</li>
+                            <li><strong>Mane:</strong> Teži za štampu, higroskopan (upija vlagu)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Новая карточка: Resin (SLA) -->
+                <div class="material-card">
+                    <div class="material-badge">Visoka preciznost</div>
+                    <div class="material-image">
+                        <img src="slike/Materijali/RESIN.jpg" alt="Resin Materijal" loading="lazy">
+                    </div>
+                    <div class="material-content">
+                        <h3>Resin (SLA)</h3>
+                        <p>Fotopolimerne smole za SLA štampanje. Idealne za detaljne modele, minijature, dentalne i bižuterijske proizvode. Visoka preciznost i glatka površina.</p>
+                        <ul class="material-list">
+                            <li><strong>Primena:</strong> Minijature, bižuterija, dentalni modeli, prototipovi</li>
+                            <li><strong>Prednosti:</strong> Izuzetna preciznost, glatka površina, brza štampa</li>
+                            <li><strong>Mane:</strong> Postprocesiranje (pranje, UV sušenje), ograničena čvrstina</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Новая карточка: Другие материалы -->
+                <div class="material-card custom-material">
+                    <div class="material-badge">Po potrebi</div>
+                    <div class="material-image">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="material-content">
+                        <h3>Drugi materijali</h3>
+                        <p>Radimo sa različitim specijalnim materijalima prema zahtevima projekta. Kontaktirajte nas sa specifičnim potrebama za vaš projekat.</p>
+                        <ul class="material-list">
+                            <li><strong>TPU/FLEX:</strong> Fleksibilni, gumeni materijali</li>
+                            <li><strong>Wood/PLA:</strong> Drveni filament sa prirodnim izgledom</li>
+                            <li><strong>Metal/PLA:</strong> Metalni filament za metalni izgled</li>
+                            <li><strong>Specijalne smole:</strong> Za specifične primene</li>
+                        </ul>
+                        <a href="#contact" class="material-request-btn">Zatražite ponudu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Process Section -->
-        <section class="portfolio">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Naš proces rada</h2>
-                    <p>Kako funkcioniše saradnja sa nama</p>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-card process-step">
-                        <div class="feature-icon">
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="decor-shape decor-shape-1"></div>
+        <div class="decor-shape decor-shape-2"></div>
+        
+        <div class="container">
+            <div class="section-title">
+                <h2>Naš proces rada</h2>
+                <p>Kako funkcioniše saradnja sa nama</p>
+            </div>
+            
+            <div class="process-flow">
+                <div class="flow-line"></div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
                             <i class="fas fa-comments"></i>
                         </div>
                         <h3>Konsultacije</h3>
                         <p>Razgovaramo o vašim potrebama, analiziramo projekat i dajemo preporuke za optimalno rešenje.</p>
                     </div>
-                    <div class="feature-card process-step">
-                        <div class="feature-icon">
+                    
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
                             <i class="fas fa-file-alt"></i>
                         </div>
                         <h3>Ponuda</h3>
                         <p>Pripremamo detaljnu ponudu sa rokovima izrade, cenom i specifikacijama materijala.</p>
                     </div>
-                    <div class="feature-card process-step">
-                        <div class="feature-icon">
+                    
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
                             <i class="fas fa-cube"></i>
                         </div>
                         <h3>Priprema</h3>
                         <p>Pripremamo 3D model za štampu, optimiziramo ga i postavljamo na štampač.</p>
                     </div>
-                    <div class="feature-card process-step">
-                        <div class="feature-icon">
+                    
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
                             <i class="fas fa-print"></i>
                         </div>
                         <h3>Štampanje</h3>
                         <p>Izvodimo štampanje uz kontinuiranu kontrolu kvaliteta tokom celog procesa.</p>
                     </div>
-                    <div class="feature-card process-step">
-                        <div class="feature-icon">
+                    
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
                             <i class="fas fa-check-circle"></i>
                         </div>
                         <h3>Kontrola Kvaliteta</h3>
                         <p>Detaljno proveravamo svaki deo pre predaje, obezbeđujući visok kvalitet.</p>
                     </div>
-                    <div class="feature-card process-step">
-                        <div class="feature-icon">
+                    
+                    <div class="process-step">
+                        <div class="step-corner"></div>
+                        <div class="step-icon">
                             <i class="fas fa-shipping-fast"></i>
                         </div>
                         <h3>Isporuka</h3>
@@ -367,39 +486,44 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTA -->
-        <section class="cta usluge-cta">
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="decor-shape decor-shape-1"></div>
+            <div class="decor-shape decor-shape-2"></div>
+            <div class="decor-3d"></div>
+            <div class="decor-3d"></div>
+            
             <div class="container">
-                <h2>Spremni za saradnju?</h2>
-                <p>Pošaljite nam detalje vašeg projekta i dobijte besplatnu procenu</p>
-                <a href="kontakti.html" class="btn">Zatražite ponudu</a>
+                <h2>Od ideje — dо gоtоvоg 3D mоdelа ili delа</h2>
+                <p>Pоšаljite nаm pоdаtke о vаšem оbjektu. Mi ćemо ih аnаlizirаti i izаbrаti оptimаlnu tehnоlоgiju: 3D skenirаnje, mоdelоvаnje ili štаmpаnje.</p>
+                <a href="kontakti.html" class="cta-btn">▶️ Zаpоčnite prоjekаt<i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
-    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="main-footer">
+        <div class="decor-cube"></div>
+        <div class="decor-cube"></div>
+        
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>3DCraft</h3>
                     <p>Profesionalna 3D štampanje za poslovanje i privatne klijente. Pretvaramo vaše ideje u stvarnost.</p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/3dcraft.rs/" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://t.me/craft3d_chanel" target="_blank" aria-label="Telegram">
-                            <i class="fab fa-telegram-plane"></i>
-                        </a>
-                        <a href="https://share.google/lUP7ozNil4j3jXnT8" target="_blank" aria-label="Google">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" aria-label="Viber">
+                        <a href="https://connect.viber.com/business/12ac4904-b624-11ef-a6f8-16a66f780fba" target="_blank" aria-label="Viber" rel="noopener noreferrer">
                             <i class="fab fa-viber"></i>
                         </a>
-                        <a href="https://wa.me/381637797857" target="_blank" aria-label="Whatsapp">
+                        <a href="https://share.google.com/lUP7ozNil4j3jXnT8" target="_blank" aria-label="Google" rel="noopener noreferrer">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="https://wa.me/381637797857" target="_blank" aria-label="Whatsapp" rel="noopener noreferrer">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -408,8 +532,8 @@
                     <h3>Kontaktirajte nas</h3>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Beograd, Zemun, Makedonska 1A</li>
-                        <li><i class="fas fa-phone"></i> 063 7797857</li>
-                        <li><i class="fas fa-envelope"></i> 3dcraft.rs@gmail.com</li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381637797857"> 063 7797857</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:3dcraft.rs@gmail.com"> 3dcraft.rs@gmail.com</a></li>
                         <li><i class="fas fa-clock"></i> Radno vreme: 09:00 - 21:00</li>
                     </ul>
                 </div>
@@ -417,7 +541,6 @@
                     <h3>Brzi linkovi</h3>
                     <ul class="footer-links">
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> Početna</a></li>
-                        <li><a href="index.html#features"><i class="fas fa-chevron-right"></i> Prednosti</a></li>
                         <li><a href="usluge.html"><i class="fas fa-chevron-right"></i> Usluge</a></li>
                         <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
                         <li><a href="modeliranje.html"><i class="fas fa-chevron-right"></i> 3D Modeliranje</a></li>
@@ -443,10 +566,13 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/381637797857" target="_blank" class="floating-whatsapp">
+    <a href="https://wa.me/381637797857?text=Zdravo! Interesuju me vaše usluge. Možete li mi dati više informacija?" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-float"
+       aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="magic.js"></script>
 </body>
 </html>

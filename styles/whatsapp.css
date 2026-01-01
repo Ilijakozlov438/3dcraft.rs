@@ -1,73 +1,152 @@
-/* whatsapp-button.css - Minimal Floating WhatsApp Button */
+/* Стили только для плавающей кнопки WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 
+                0 5px 15px rgba(37, 211, 102, 0.3),
+                0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: float-pulse 3s ease-in-out infinite;
+            border: 3px solid white;
+        }
 
-.floating-whatsapp {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-size: 28px;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-    transition: all 0.3s ease;
-    z-index: 10000;
-    border: 2px solid white;
-}
+        .whatsapp-float:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 
+                0 10px 25px rgba(37, 211, 102, 0.4),
+                0 5px 10px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+        }
 
-.floating-whatsapp:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
-    color: white;
-}
+        .whatsapp-float:active {
+            transform: scale(0.95);
+            box-shadow: 
+                0 3px 10px rgba(37, 211, 102, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.2);
+        }
 
-/* Simple pulse animation */
-@keyframes subtle-pulse {
-    0%, 100% {
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-    }
-    50% {
-        box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5);
-    }
-}
+        /* Текстовая подсказка при наведении */
+        .whatsapp-float::after {
+            content: 'Pišite nam na WhatsApp';
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            font-weight: 500;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
 
-.floating-whatsapp {
-    animation: subtle-pulse 3s infinite;
-}
+        .whatsapp-float:hover::after {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .floating-whatsapp {
-        width: 55px;
-        height: 55px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 26px;
-    }
-}
+        /* Анимация пульсации */
+        @keyframes float-pulse {
+            0%, 100% {
+                transform: translateY(0);
+                box-shadow: 
+                    0 5px 15px rgba(37, 211, 102, 0.3),
+                    0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                transform: translateY(-10px);
+                box-shadow: 
+                    0 10px 25px rgba(37, 211, 102, 0.4),
+                    0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+        }
 
-@media (max-width: 480px) {
-    .floating-whatsapp {
-        width: 50px;
-        height: 50px;
-        bottom: 15px;
-        right: 15px;
-        font-size: 24px;
-    }
-}
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 1.8rem;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-float::after {
+                font-size: 0.8rem;
+                padding: 7px 12px;
+                right: 65px;
+            }
+            
+            .whatsapp-float:hover::after {
+                right: 70px;
+            }
+        }
 
-/* Reduced motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-    .floating-whatsapp {
-        animation: none;
-    }
-    
-    .floating-whatsapp:hover {
-        transform: none;
-    }
-}
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.6rem;
+                bottom: 15px;
+                right: 15px;
+                border-width: 2px;
+            }
+            
+            .whatsapp-float::after {
+                display: none; /* На очень маленьких экранах скрываем текст */
+            }
+            
+            .whatsapp-float:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Стили для демонстрационного контента */
+        .demo-content {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+        }
+        
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-content h1 {
+            color: #1a2a3a;
+            margin-bottom: 20px;
+        }
+        
+        .demo-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .demo-box {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }

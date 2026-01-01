@@ -1,0 +1,983 @@
+/* Общие стили для всех секций */
+    .scanning-pricing-section,
+    .scanning-applications-section,
+    .scanning-objects-section {
+        width: 100%;
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .scanning-pricing-section .container,
+    .scanning-applications-section .container,
+    .scanning-objects-section .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .scanning-pricing-section .section-title,
+    .scanning-applications-section .section-title,
+    .scanning-objects-section .section-title {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .scanning-pricing-section .section-title h2,
+    .scanning-applications-section .section-title h2,
+    .scanning-objects-section .section-title h2 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: #1a2a3a;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .scanning-applications-section .section-title h2 {
+        color: white;
+    }
+
+    .scanning-pricing-section .section-title h2::after,
+    .scanning-applications-section .section-title h2::after,
+    .scanning-objects-section .section-title h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #27ae60, #2ecc71);
+        border-radius: 2px;
+    }
+
+    .scanning-applications-section .section-title h2::after {
+        background: linear-gradient(90deg, #ffffff, rgba(255,255,255,0.7));
+    }
+
+    .scanning-pricing-section .section-title p,
+    .scanning-applications-section .section-title p,
+    .scanning-objects-section .section-title p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 25px auto 0;
+        line-height: 1.6;
+    }
+
+    .scanning-pricing-section .section-title p {
+        color: #5a6c7d;
+    }
+
+    .scanning-applications-section .section-title p {
+        color: rgba(255,255,255,0.9);
+    }
+
+    .scanning-objects-section .section-title p {
+        color: #5a6c7d;
+    }
+
+    /* Стили для секции Pricing */
+    .scanning-pricing-section {
+        background: linear-gradient(135deg, 
+            #ffffff 0%, 
+            #f9fbfd 50%, 
+            #f2f7fc 100%);
+    }
+
+    .scanning-pricing-section .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    @media (max-width: 768px) {
+        .scanning-pricing-section .pricing-grid {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin: 0 auto 40px;
+        }
+    }
+
+    .scanning-pricing-section .pricing-card {
+        background: white;
+        border-radius: 25px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 
+            0 5px 20px rgba(0, 0, 0, 0.05),
+            0 1px 5px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        position: relative;
+        z-index: 1;
+    }
+
+    .scanning-pricing-section .pricing-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 
+            0 25px 50px rgba(0, 0, 0, 0.12),
+            0 10px 20px rgba(39, 174, 96, 0.15);
+    }
+
+    .scanning-pricing-section .pricing-card.featured {
+        border: 2px solid rgba(39, 174, 96, 0.3);
+        box-shadow: 
+            0 10px 30px rgba(39, 174, 96, 0.15),
+            0 5px 15px rgba(0, 0, 0, 0.05);
+        transform: scale(1.02);
+    }
+
+    .scanning-pricing-section .pricing-card.featured:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 
+            0 30px 60px rgba(39, 174, 96, 0.2),
+            0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .scanning-pricing-section .pricing-badge {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 8px 20px;
+        border-radius: 50px;
+        z-index: 3;
+        box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    }
+
+    .scanning-pricing-section .pricing-badge.featured {
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    }
+
+    .scanning-pricing-section .pricing-image {
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .scanning-pricing-section .pricing-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    .scanning-pricing-section .pricing-card:hover .pricing-image img {
+        transform: scale(1.08);
+    }
+
+    .scanning-pricing-section .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3));
+        z-index: 2;
+    }
+
+    .scanning-pricing-section .pricing-content {
+        padding: 35px 30px;
+    }
+
+    .scanning-pricing-section .pricing-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .scanning-pricing-section .pricing-header h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #1a2a3a;
+        flex: 1;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .scanning-pricing-section .pricing-card:hover .pricing-header h3 {
+        color: #27ae60;
+    }
+
+    .scanning-pricing-section .pricing-card.featured .pricing-header h3 {
+        color: #27ae60;
+    }
+
+    .scanning-pricing-section .pricing-price {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .scanning-pricing-section .pricing-price .price {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #27ae60;
+        line-height: 1;
+    }
+
+    .scanning-pricing-section .pricing-card.featured .pricing-price .price {
+        color: #2ecc71;
+    }
+
+    .scanning-pricing-section .pricing-price .currency {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #5a6c7d;
+        margin-top: 5px;
+    }
+
+    .scanning-pricing-section .pricing-description {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #5a6c7d;
+        margin-bottom: 25px;
+    }
+
+    .scanning-pricing-section .pricing-features {
+        margin-bottom: 25px;
+    }
+
+    .scanning-pricing-section .feature {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .scanning-pricing-section .feature:last-child {
+        margin-bottom: 0;
+    }
+
+    .scanning-pricing-section .feature i {
+        color: #27ae60;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+
+    .scanning-pricing-section .pricing-card.featured .feature i {
+        color: #2ecc71;
+    }
+
+    .scanning-pricing-section .feature span {
+        font-size: 1rem;
+        color: #5a6c7d;
+    }
+
+    .scanning-pricing-section .pricing-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .scanning-pricing-section .detail-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+        color: #5a6c7d;
+        background: rgba(0, 0, 0, 0.03);
+        padding: 8px 15px;
+        border-radius: 8px;
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .scanning-pricing-section .detail-item i {
+        color: #27ae60;
+        font-size: 0.9rem;
+    }
+
+    .scanning-pricing-section .pricing-card.featured .detail-item i {
+        color: #2ecc71;
+    }
+
+    .scanning-pricing-section .pricing-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 16px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 
+            0 5px 15px rgba(39, 174, 96, 0.3),
+            0 2px 5px rgba(0, 0, 0, 0.1);
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .scanning-pricing-section .pricing-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1e8449 0%, #27ae60 100%);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 50px;
+    }
+
+    .scanning-pricing-section .pricing-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 
+            0 10px 25px rgba(39, 174, 96, 0.4),
+            0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .scanning-pricing-section .pricing-btn:hover::before {
+        opacity: 1;
+    }
+
+    .scanning-pricing-section .pricing-btn.featured {
+        background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+        box-shadow: 
+            0 5px 15px rgba(46, 204, 113, 0.4),
+            0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .scanning-pricing-section .pricing-btn.featured::before {
+        background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    }
+
+    .scanning-pricing-section .pricing-btn i {
+        font-size: 1.1rem;
+        transition: transform 0.3s ease;
+    }
+
+    .scanning-pricing-section .pricing-btn:hover i {
+        transform: translateX(5px);
+    }
+
+    .scanning-pricing-section .pricing-note {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 
+            0 10px 30px rgba(0, 0, 0, 0.05),
+            0 1px 8px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .scanning-pricing-section .note-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .scanning-pricing-section .note-content i {
+        color: #27ae60;
+        font-size: 1.5rem;
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+
+    .scanning-pricing-section .note-content p {
+        font-size: 1.05rem;
+        color: #5a6c7d;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .scanning-pricing-section .note-content strong {
+        color: #1a2a3a;
+    }
+
+    /* Декоративные элементы для pricing */
+    .scanning-pricing-section .scan-price-decor {
+        position: absolute;
+        border-radius: 50%;
+        z-index: 1;
+        opacity: 0.1;
+    }
+
+    .scanning-pricing-section .decor-1 {
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, #27ae60 0%, transparent 70%);
+        top: 10%;
+        left: -100px;
+        animation: rotate 30s infinite linear;
+    }
+
+    .scanning-pricing-section .decor-2 {
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, #3498db 0%, transparent 70%);
+        bottom: 20%;
+        right: -75px;
+        animation: rotate 25s infinite linear reverse;
+    }
+
+    /* Стили для Applications Section */
+    .scanning-applications-section {
+        background: linear-gradient(135deg, #25D366, #128C7E);
+        color: white;
+        position: relative;
+    }
+
+    .scanning-applications-section .applications-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 992px) {
+        .scanning-applications-section .applications-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .scanning-applications-section .applications-grid {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin: 0 auto 40px;
+        }
+    }
+
+    .scanning-applications-section .application-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px 30px;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .scanning-applications-section .application-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .scanning-applications-section .application-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #ffffff, rgba(255,255,255,0.5));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+    }
+
+    .scanning-applications-section .application-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .scanning-applications-section .application-icon {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 25px;
+    }
+
+    .scanning-applications-section .application-icon i {
+        font-size: 2.5rem;
+        color: white;
+        position: relative;
+        z-index: 2;
+        line-height: 80px;
+    }
+
+    .scanning-applications-section .icon-pulse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+    }
+
+    .scanning-applications-section .application-card h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    .scanning-applications-section .application-card p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 25px;
+    }
+
+    .scanning-applications-section .application-examples {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .scanning-applications-section .example-tag {
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 6px 15px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .scanning-applications-section .application-card:hover .example-tag {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-3px);
+    }
+
+    .scanning-applications-section .application-benefits {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .scanning-applications-section .benefit {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .scanning-applications-section .benefit i {
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    .scanning-applications-section .benefit span {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .scanning-applications-section .applications-cta {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 25px;
+        padding: 50px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .scanning-applications-section .cta-content h4 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    .scanning-applications-section .cta-content p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .scanning-applications-section .applications-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: white;
+        color: #25D366;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 16px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .scanning-applications-section .applications-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        background: #f8f9fa;
+    }
+
+    .scanning-applications-section .applications-btn i {
+        font-size: 1.1rem;
+        transition: transform 0.3s ease;
+    }
+
+    .scanning-applications-section .applications-btn:hover i {
+        transform: translateX(8px);
+    }
+
+    /* Анимированный фон для Applications */
+    .scanning-applications-section .applications-bg-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(circle at 20% 80%, rgba(255,255,255,0.05) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+        z-index: 1;
+    }
+
+    /* Стили для Objects Section */
+    .scanning-objects-section {
+        background: linear-gradient(135deg, 
+            #ffffff 0%, 
+            #f9fbfd 50%, 
+            #f2f7fc 100%);
+    }
+
+    .scanning-objects-section .objects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 992px) {
+        .scanning-objects-section .objects-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .scanning-objects-section .objects-grid {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin: 0 auto 40px;
+        }
+    }
+
+    .scanning-objects-section .object-card {
+        background: white;
+        border-radius: 25px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 
+            0 5px 20px rgba(0, 0, 0, 0.05),
+            0 1px 5px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        height: 100%;
+    }
+
+    .scanning-objects-section .object-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 
+            0 25px 50px rgba(0, 0, 0, 0.12),
+            0 10px 20px rgba(39, 174, 96, 0.15);
+        border-color: rgba(39, 174, 96, 0.2);
+    }
+
+    .scanning-objects-section .object-image {
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .scanning-objects-section .object-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    .scanning-objects-section .object-card:hover .object-image img {
+        transform: scale(1.1);
+    }
+
+    .scanning-objects-section .object-category {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 6px 15px;
+        border-radius: 50px;
+        z-index: 2;
+        box-shadow: 0 3px 10px rgba(39, 174, 96, 0.3);
+    }
+
+    .scanning-objects-section .object-content {
+        padding: 30px;
+    }
+
+    .scanning-objects-section .object-content h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a2a3a;
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .scanning-objects-section .object-card:hover .object-content h3 {
+        color: #27ae60;
+    }
+
+    .scanning-objects-section .object-content p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #5a6c7d;
+        margin-bottom: 25px;
+    }
+
+    .scanning-objects-section .object-features {
+        margin-bottom: 25px;
+    }
+
+    .scanning-objects-section .object-features .feature {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .scanning-objects-section .object-features .feature:last-child {
+        margin-bottom: 0;
+    }
+
+    .scanning-objects-section .object-features .feature i {
+        color: #27ae60;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .scanning-objects-section .object-features .feature div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .scanning-objects-section .object-features .feature strong {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #1a2a3a;
+        margin-bottom: 2px;
+    }
+
+    .scanning-objects-section .object-features .feature span {
+        font-size: 0.85rem;
+        color: #5a6c7d;
+    }
+
+    .scanning-objects-section .object-materials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .scanning-objects-section .material-tag {
+        background: rgba(52, 152, 219, 0.1);
+        color: #3498db;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 5px 12px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .scanning-objects-section .object-card:hover .material-tag {
+        background: rgba(52, 152, 219, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .scanning-objects-section .objects-disclaimer {
+        background: rgba(243, 156, 18, 0.1);
+        border-radius: 20px;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        border: 1px solid rgba(243, 156, 18, 0.2);
+    }
+
+    .scanning-objects-section .disclaimer-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(243, 156, 18, 0.2);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .scanning-objects-section .disclaimer-icon i {
+        color: #f39c12;
+        font-size: 1.5rem;
+    }
+
+    .scanning-objects-section .disclaimer-content h5 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #1a2a3a;
+        margin-bottom: 8px;
+    }
+
+    .scanning-objects-section .disclaimer-content p {
+        font-size: 1.05rem;
+        color: #5a6c7d;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* Анимации */
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(0.9); opacity: 1; }
+        50% { transform: scale(1.1); opacity: 0.7; }
+        100% { transform: scale(0.9); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Анимация появления элементов */
+    .scanning-pricing-section .pricing-card,
+    .scanning-applications-section .application-card,
+    .scanning-objects-section .object-card {
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+    }
+
+    .scanning-pricing-section .pricing-card:nth-child(1) { animation-delay: 0.1s; }
+    .scanning-pricing-section .pricing-card:nth-child(2) { animation-delay: 0.2s; }
+    .scanning-pricing-section .pricing-note { animation-delay: 0.3s; }
+
+    .scanning-applications-section .application-card:nth-child(1) { animation-delay: 0.1s; }
+    .scanning-applications-section .application-card:nth-child(2) { animation-delay: 0.2s; }
+    .scanning-applications-section .application-card:nth-child(3) { animation-delay: 0.3s; }
+    .scanning-applications-section .applications-cta { animation-delay: 0.4s; }
+
+    .scanning-objects-section .object-card:nth-child(1) { animation-delay: 0.1s; }
+    .scanning-objects-section .object-card:nth-child(2) { animation-delay: 0.2s; }
+    .scanning-objects-section .object-card:nth-child(3) { animation-delay: 0.3s; }
+    .scanning-objects-section .objects-disclaimer { animation-delay: 0.4s; }
+
+    /* Адаптивность */
+    @media (max-width: 1200px) {
+        .scanning-pricing-section,
+        .scanning-applications-section,
+        .scanning-objects-section {
+            padding: 80px 0;
+        }
+        
+        .scanning-pricing-section .section-title h2,
+        .scanning-applications-section .section-title h2,
+        .scanning-objects-section .section-title h2 {
+            font-size: 2.4rem;
+        }
+        
+        .scanning-pricing-section .section-title p,
+        .scanning-applications-section .section-title p,
+        .scanning-objects-section .section-title p {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .scanning-pricing-section,
+        .scanning-applications-section,
+        .scanning-objects-section {
+            padding: 70px 0;
+        }
+        
+        .scanning-pricing-section .section-title h2,
+        .scanning-applications-section .section-title h2,
+        .scanning-objects-section .section-title h2 {
+            font-size: 2.2rem;
+        }
+        
+        .scanning-pricing-section .section-title p,
+        .scanning-applications-section .section-title p,
+        .scanning-objects-section .section-title p {
+            font-size: 1.1rem;
+        }
+        
+        .scanning-pricing-section .pricing-content,
+        .scanning-applications-section .application-card,
+        .scanning-objects-section .object-content {
+            padding: 25px 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .scanning-pricing-section,
+        .scanning-applications-section,
+        .scanning-objects-section {
+            padding: 60px 0;
+        }
+        
+        .scanning-pricing-section .section-title h2,
+        .scanning-applications-section .section-title h2,
+        .scanning-objects-section .section-title h2 {
+            font-size: 2rem;
+        }
+        
+        .scanning-applications-section .applications-cta {
+            padding: 30px 20px;
+        }
+        
+        .scanning-applications-section .cta-content h4 {
+            font-size: 1.6rem;
+        }
+        
+        .scanning-objects-section .objects-disclaimer {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+        }
+    }
