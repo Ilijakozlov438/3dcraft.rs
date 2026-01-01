@@ -16,7 +16,10 @@
     <meta property="og:description" content="Profesionalna 3D štampa u Beogradu. Prototipiranje, modeliranje, serijska proizvodnja. Pretvaramo vaše ideje u stvarnost.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://3dcraft.rs/">
-    <!-- <meta property="og:image" content="slike/OpenGraphImage.jpg"> -->
+    <meta property="og:image" content="https://3dcraft.rs/slike/OpenGraphImage.jpg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:alt" content="3DCraft - Profesionalna 3D štampa i modeliranje">
     <meta property="og:locale" content="sr_RS">
     <meta property="og:site_name" content="3DCraft">
 
@@ -24,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="3DCraft - Profesionalna 3D Štampa i Modeliranje">
     <meta name="twitter:description" content="Profesionalna 3D štampa u Beogradu. Prototipiranje, modeliranje, serijska proizvodnja.">
-    <!-- <meta name="twitter:image" content="https://3dcraft.rs/images/twitter-image.jpg"> -->
+    <meta name="twitter:image" content="https://3dcraft.rs/slike/OpenGraphImage.jpg">
 
         <!-- Canonical URL -->
     <link rel="canonical" href="https://3dcraft.rs/">
@@ -47,7 +50,7 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "3DCraft",
-        "description": "Profesionalna 3D štampa i modeliranje u Beogradu",
+        "description": "Profesionalna 3D štampa, skeniranje i modeliranje u Beogradu",
         "url": "https://3dcraft.rs/",
         "telephone": "+381-63-7797857",
         "email": "3dcraft.rs@gmail.com",
@@ -64,41 +67,35 @@
             "latitude": 44.8463,
             "longitude": 20.4010
         },
-        "openingHours": "Mo-Fr 09:00-17:00",
+        "openingHours": "Mo-Fr 09:00-21:00",
         "areaServed": "Beograd, Srbija",
-        "serviceType": ["3D printing", "3D modeling", "Prototyping"]
+        "serviceType": ["3D printing", "3D modeling", "scanning services", "prototyping"]
     }
     </script>
 
-        <!-- Google tag (gtag.js) -->
+        <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+        img-src 'self' data: https:;
+        font-src 'self' https://cdnjs.cloudflare.com;
+        connect-src 'self' https://www.google-analytics.com;
+    ">
+
+        <!-- Google Analytics & Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW1CXMP24K"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
+    
+    // Конфигурация обоих ID
     gtag('config', 'G-KW1CXMP24K');
-    </script>
-
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17674171292">
-    </script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
     gtag('config', 'AW-17674171292');
     </script>
 
-        <!-- Google tag (gtag.js) event -->
-    <script>
-    gtag('event', 'page_view', {
-        // <event_parameters>
-    });
-    </script>
-
-        <!-- Google Site Verification -->
+    <!-- Google Site Verification -->
     <meta name="google-site-verification" content="dmfNfQ1UC3axuBxFDXp42YPXIk1BVEnqMZJqJJiS6Xc" />
     
     <!-- Connection to external stylesheets -->
@@ -120,18 +117,18 @@
     <!-- JavaScript по структуре сайта -->
     <script src="js/header.js"></script>
     <script src="js/hero.js"></script>
-    <script src="js/whatsappCTA.js"></script>
-    <script src="js/features.js"></script>
-    <script src="js/advantages.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/whatsapp.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/portfolio.js"></script>
-    <script src="js/CTA.js"></script>
-    <script src="js/contact.js"></script>
+    <script src="js/whatsappCTA.js" async></script>
+    <script src="js/features.js" defer></script>
+    <script src="js/advantages.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/whatsapp.js" defer></script>
+    <script src="js/services.js" defer></script>
+    <script src="js/portfolio.js" defer></script>
+    <script src="js/CTA.js" defer></script>
+    <script src="js/contact.js" defer></script>
 
     <link rel="stylesheet" href="styles/usluge/process.css">
-    <script src="js/usluge/process.js"></script>
+    <script src="js/usluge/process.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -762,7 +759,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 3DCraft. Sva prava zadržana.</p>
+                <p>&copy; 2026 3DCraft. Sva prava zadržana.</p>
             </div>
         </div>
     </footer>

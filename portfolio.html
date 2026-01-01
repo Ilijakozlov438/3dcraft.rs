@@ -15,8 +15,18 @@
     <meta property="og:description" content="Pogledajte primere naših najboljih radova u 3D štampi - od prototipova do serijske proizvodnje.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://3dcraft.rs/portfolio.html">
+    <meta property="og:image" content="slike/OpenGraphImage.jpg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:alt" content="logo 3DCraft">
     <meta property="og:locale" content="sr_RS">
     <meta property="og:site_name" content="3DCraft">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="3D Portfolio - 3DCraft Beograd">
+    <meta name="twitter:description" content="Pogledajte naše najbolje radove u 3D štampi - prototipovi, funkcionalni delovi, dekorativni predmeti i još mnogo toga.">
+    <meta name="twitter:image" content="https://3dcraft.rs/slike/OpenGraphImage.jpg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://3dcraft.rs/portfolio.html">
@@ -27,16 +37,36 @@
     <link rel="icon" type="image/png" sizes="32x32" href="slike/favicon_32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="slike/favicon_16x16.png">
     <link rel="icon" type="image/x-icon" href="slike/favicon.ico">
+
+        <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+        img-src 'self' data: https:;
+        font-src 'self' https://cdnjs.cloudflare.com;
+        connect-src 'self' https://www.google-analytics.com;
+        ">
+
+        <!-- Google Analytics & Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW1CXMP24K"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    // Конфигурация обоих ID
+    gtag('config', 'G-KW1CXMP24K');
+    gtag('config', 'AW-17674171292');
+    </script>
     
     <!-- Connection to external stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Styles по структуре сайта -->
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/hero.css">
     <link rel="stylesheet" href="styles/whatsappCTA.css">
-    <link rel="stylesheet" href="styles/features.css">
-    <link rel="stylesheet" href="styles/advantages.css">
-    <link rel="stylesheet" href="styles/services.css">
     <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="styles/cta.css">
     <link rel="stylesheet" href="styles/contact.css">
@@ -46,15 +76,13 @@
     <!-- JavaScript по структуре сайта -->
     <script src="js/header.js"></script>
     <script src="js/hero.js"></script>
-    <script src="js/whatsappCTA.js"></script>
-    <script src="js/features.js"></script>
-    <script src="js/advantages.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/whatsapp.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/portfolio.js"></script>
-    <script src="js/CTA.js"></script>
-    <script src="js/contact.js"></script>
+    <script src="js/whatsappCTA.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/whatsapp.js" defer></script>
+    <script src="js/CTA.js" defer></script>
+    <script src="js/contact.js" defer></script>
+    <script src="js/portfolio.js" defer></script>
+
 
     <link rel="stylesheet" href="styles/portfolio/add_works.css">
 </head>
@@ -689,7 +717,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 3DCraft. Sva prava zadržana.</p>
+                <p>&copy; 2026 3DCraft. Sva prava zadržana.</p>
             </div>
         </div>
     </footer>

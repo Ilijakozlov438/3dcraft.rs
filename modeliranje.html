@@ -28,14 +28,18 @@
     <meta property="og:description" content="Profesionalno 3D modeliranje u Beogradu. Kreiranje digitalnih modela za štampu iz crteža, skica i fotografija.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://3dcraft.rs/modeliranje.html">
-    <!-- <meta property="og:image" content="https://3dcraft.rs/images/3d-modeliranje-og-image.jpg"> -->
+    <meta property="og:image" content="https://3dcraft.rs/images/OpenGraphImage.jpg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:alt" content="logo 3DCraft">
     <meta property="og:locale" content="sr_RS">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="3D Modeliranje Usluge - 3DCraft Beograd">
     <meta name="twitter:description" content="Profesionalno 3D modeliranje za štampu. Kreiranje modela iz crteža i skica.">
-    
+    <meta name="twitter:image" content="https://3dcraft.rs/slike/OpenGraphImage.jpg">
+
     <!-- Structured Data for Service Page -->
     <script type="application/ld+json">
     {
@@ -93,14 +97,26 @@
     }
     </script>
 
-        <!-- Google tag (gtag.js) -->
+       <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+        img-src 'self' data: https:;
+        font-src 'self' https://cdnjs.cloudflare.com;
+        connect-src 'self' https://www.google-analytics.com;
+    ">
+
+        <!-- Google Analytics & Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW1CXMP24K"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
+    
+    // Конфигурация обоих ID
     gtag('config', 'G-KW1CXMP24K');
+    gtag('config', 'AW-17674171292');
     </script>
 
     <!-- Connection to external stylesheets -->
@@ -109,10 +125,6 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/hero.css">
     <link rel="stylesheet" href="styles/whatsappCTA.css">
-    <link rel="stylesheet" href="styles/features.css">
-    <link rel="stylesheet" href="styles/advantages.css">
-    <link rel="stylesheet" href="styles/services.css">
-    <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="styles/cta.css">
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -121,15 +133,11 @@
     <!-- JavaScript по структуре сайта -->
     <script src="js/header.js"></script>
     <script src="js/hero.js"></script>
-    <script src="js/whatsappCTA.js"></script>
-    <script src="js/features.js"></script>
-    <script src="js/advantages.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/whatsapp.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/portfolio.js"></script>
-    <script src="js/CTA.js"></script>
-    <script src="js/contact.js"></script>
+    <script src="js/whatsappCTA.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/whatsapp.js" defer></script>
+    <script src="js/CTA.js" defer></script>
+    <script src="js/contact.js" defer></script>
 
     <link rel="stylesheet" href="styles/modeliranje/process.css">
     <link rel="stylesheet" href="styles/modeliranje/pricing.css">
@@ -890,7 +898,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 3DCraft. Sva prava zadržana.</p>
+                <p>&copy; 2026 3DCraft. Sva prava zadržana.</p>
             </div>
         </div>
     </footer>

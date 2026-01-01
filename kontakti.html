@@ -30,13 +30,20 @@
     <meta property="og:description" content="Kontaktirajte nas za 3D štampu u Beogradu. 📍 Zemun, Makedonska 1A 📞 +381 63 7797857. Besplatne konsultacije.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://3dcraft.rs/kontakti.html">
-    <!-- <meta property="og:image" content="https://3dcraft.rs/images/kontakt-og-image.jpg"> -->
+    <meta property="og:image" content="https://3dcraft.rs/slike/OpenGraphImage.jpg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:alt" content="3DCraft - Profesionalna 3D štampa i modeliranje">
     <meta property="og:locale" content="sr_RS">
+    <meta property="og:site_name" content="3DCraft">
+
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Kontakt - 3DCraft 3D Štampa Beograd">
     <meta name="twitter:description" content="Kontaktirajte nas za 3D štampu. 📞 +381 63 7797857 📍 Zemun, Beograd">
+    <meta name="twitter:image" content="https://3dcraft.rs/slike/OpenGraphImage.jpg">
+
     
     <!-- Structured Data for Contact Page -->
     <script type="application/ld+json">
@@ -80,26 +87,35 @@
     }
     </script>
 
-        <!-- Google tag (gtag.js) -->
+        <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+        img-src 'self' data: https:;
+        font-src 'self' https://cdnjs.cloudflare.com;
+        connect-src 'self' https://www.google-analytics.com;
+    ">
+
+        <!-- Google Analytics & Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW1CXMP24K"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
+    
+    // Конфигурация обоих ID
     gtag('config', 'G-KW1CXMP24K');
+    gtag('config', 'AW-17674171292');
     </script>
 
     <!-- Connection to external stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Styles по структуре сайта -->
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/hero.css">
     <link rel="stylesheet" href="styles/whatsappCTA.css">
-    <link rel="stylesheet" href="styles/features.css">
-    <link rel="stylesheet" href="styles/advantages.css">
-    <link rel="stylesheet" href="styles/services.css">
-    <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="styles/cta.css">
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -108,15 +124,11 @@
     <!-- JavaScript по структуре сайта -->
     <script src="js/header.js"></script>
     <script src="js/hero.js"></script>
-    <script src="js/whatsappCTA.js"></script>
-    <script src="js/features.js"></script>
-    <script src="js/advantages.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/whatsapp.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/portfolio.js"></script>
-    <script src="js/CTA.js"></script>
-    <script src="js/contact.js"></script>
+    <script src="js/whatsappCTA.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/whatsapp.js" defer></script>
+    <script src="js/CTA.js" defer></script>
+    <script src="js/contact.js" defer></script>
 
     <!-- specific map + faq -->
     <link rel="stylesheet" href="styles/kontakti_page.css">
@@ -559,7 +571,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 3DCraft. Sva prava zadržana.</p>
+                <p>&copy; 2026 3DCraft. Sva prava zadržana.</p>
             </div>
         </div>
     </footer>
