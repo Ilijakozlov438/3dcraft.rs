@@ -38,6 +38,35 @@
     <link rel="icon" type="image/png" sizes="16x16" href="slike/favicon_16x16.png">
     <link rel="icon" type="image/x-icon" href="slike/favicon.ico">
     
+        <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "3DCraft",
+        "description": "Profesionalna 3D štampa, skeniranje i modeliranje u Beogradu",
+        "url": "https://3dcraft.rs/",
+        "telephone": "+381-63-7797857",
+        "email": "3dcraft.rs@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Makedonska 1A",
+            "addressLocality": "Beograd",
+            "addressRegion": "Beograd",
+            "postalCode": "11080",
+            "addressCountry": "RS"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.8463,
+            "longitude": 20.4010
+        },
+        "openingHours": "Mo-Fr 09:00-21:00",
+        "areaServed": "Beograd, Srbija",
+        "serviceType": ["3D printing", "3D modeling", "scanning services", "prototyping"]
+    }
+    </script>
+
             <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
@@ -60,32 +89,35 @@
     gtag('config', 'AW-17674171292');
     </script>
 
-    <!-- Connection to external stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.onload=null;this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Styles по структуре сайта -->
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/whatsappCTA.css">
-    <link rel="stylesheet" href="styles/cta.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/whatsapp.css">
+    <link rel="stylesheet" href="styles/f+h+h.css">
 
-    <!-- JavaScript по структуре сайта -->
-    <script src="js/header.js"></script>
-    <script src="js/hero.js"></script>  
-    <script src="js/whatsappCTA.js" defer></script>
-    <script src="js/footer.js" defer></script>
-    <script src="js/whatsapp.js" defer></script>
-    <script src="js/CTA.js" defer></script>
-    <script src="js/contact.js" defer></script>
+     <!-- объединенный всего -->
+    <link rel="stylesheet" href="styles/dom.css">
+
+    <!-- Объединенный файл footer + header + hero -->
+    <script src="js/f+h+h.js"></script> 
+
+    <!-- объединенный всего -->
+    <script src="js/DOM.js" defer></script>
 
     <link rel="stylesheet" href="styles/usluge/process.css">
     <link rel="stylesheet" href="styles/usluge/materials.css">
     <link rel="stylesheet" href="styles/usluge/services.css">
     <script src="js/usluge/process.js" defer></script>
     <script src="js/usluge/materials.js" defer></script>
+
+    <!-- Предзагрузить hero изображение -->
+    <link rel="preload" href="slikeWEBP/3d-pecat_new.webp" as="image" type="image/webp">
+    
+    <!-- Предзагрузить основные шрифты -->
+    <link rel="preload" href="fonts/your-font.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
     <header id="header">
@@ -108,7 +140,7 @@
     </header>
     
     <!-- Hero Section -->
-    <section class="hero-block" id="home" aria-label="Hero section">
+    <section class="hero-block" id="home" aria-label="Hero section">    
         <!-- Декоративные CSS-элементы -->
         <div class="cube"></div>
         <div class="cube"></div>
@@ -141,8 +173,11 @@
                 
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <!-- Замените src на ваше изображение -->
-                        <img src="slike/3d-pecat_new.jpg" alt="3D печать и моделирование">
+                        <img src="slikeWEBP/3d-pecat_new.webp" 
+                            alt="3D Stampa, Modeliranje i Skeniranje - 3DCraft" 
+                            width="800" 
+                            height="600" 
+                            loading="eager">
                     </div>
                 </div>
             </div>
@@ -342,7 +377,7 @@
                 <div class="material-card">
                     <div class="material-badge">Najpopularniji</div>
                     <div class="material-image">
-                        <img src="slike/Materijali/PLA.webp" alt="PLA Materijal" loading="lazy">
+                        <img src="slikeWEBP/Materials/PLA.webp" alt="PLA Materijal" loading="lazy">
                     </div>
                     <div class="material-content">
                         <h3>PLA</h3>
@@ -358,7 +393,7 @@
                 <div class="material-card">
                     <div class="material-badge">Visoka čvrstina</div>
                     <div class="material-image">
-                        <img src="slike/Materijali/PETG.webp" alt="PETG Materijal" loading="lazy">
+                        <img src="slikeWEBP/Materials/PETG.webp" alt="PETG Materijal" loading="lazy">
                     </div>
                     <div class="material-content">
                         <h3>PETG</h3>
@@ -374,7 +409,7 @@
                 <div class="material-card">
                     <div class="material-badge">Industrijski</div>
                     <div class="material-image">
-                        <img src="slike/Materijali/ASA.jpg" alt="ASA Materijal" loading="lazy">
+                        <img src="slikeWEBP/Materials/ASA.webp" alt="ASA Materijal" loading="lazy">
                     </div>
                     <div class="material-content">
                         <h3>ASA</h3>
@@ -390,7 +425,7 @@
                 <div class="material-card">
                     <div class="material-badge">Industrijski</div>
                     <div class="material-image">
-                        <img src="slike/Materijali/PA.webp" alt="Nylon Materijal" loading="lazy">
+                        <img src="slikeWEBP/Materials/PA.webp" alt="Nylon Materijal" loading="lazy">
                     </div>
                     <div class="material-content">
                         <h3>Nylon</h3>
@@ -407,7 +442,7 @@
                 <div class="material-card">
                     <div class="material-badge">Visoka preciznost</div>
                     <div class="material-image">
-                        <img src="slike/Materijali/RESIN.jpg" alt="Resin Materijal" loading="lazy">
+                        <img src="slikeWEBP/Materials/RESIN.webp" alt="Resin Materijal" loading="lazy">
                     </div>
                     <div class="material-content">
                         <h3>Resin (SLA)</h3>
@@ -435,7 +470,7 @@
                             <li><strong>Metal/PLA:</strong> Metalni filament za metalni izgled</li>
                             <li><strong>Specijalne smole:</strong> Za specifične primene</li>
                         </ul>
-                        <a href="#contact" class="material-request-btn">Zatražite ponudu <i class="fas fa-arrow-right"></i></a>
+                        <a href="kontakti.html" class="material-request-btn">Zatražite ponudu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>

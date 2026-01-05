@@ -60,31 +60,30 @@
     gtag('config', 'AW-17674171292');
     </script>
     
-    <!-- Connection to external stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.onload=null;this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Styles по структуре сайта -->
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/whatsappCTA.css">
-    <link rel="stylesheet" href="styles/portfolio.css">
-    <link rel="stylesheet" href="styles/cta.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/whatsapp.css">
+    <link rel="stylesheet" href="styles/f+h+h.css">
 
-    <!-- JavaScript по структуре сайта -->
-    <script src="js/header.js"></script>
-    <script src="js/hero.js"></script>
-    <script src="js/whatsappCTA.js" defer></script>
-    <script src="js/footer.js" defer></script>
-    <script src="js/whatsapp.js" defer></script>
-    <script src="js/CTA.js" defer></script>
-    <script src="js/contact.js" defer></script>
-    <script src="js/portfolio.js" defer></script>
+     <!-- объединенный всего -->
+    <link rel="stylesheet" href="styles/dom.css">
 
+    <!-- Объединенный файл footer + header + hero -->
+    <script src="js/f+h+h.js" defer></script> 
+
+    <!-- объединенный всего -->
+    <script src="js/DOM.js" defer></script>
 
     <link rel="stylesheet" href="styles/portfolio/add_works.css">
+
+    <!-- Предзагрузить hero изображение -->
+    <link rel="preload" href="slikeWEBP/3d-pecat_new.webp" as="image" type="image/webp">
+    
+    <!-- Предзагрузить основные шрифты -->
+    <link rel="preload" href="fonts/your-font.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
     <header id="header">
@@ -140,8 +139,11 @@
                 
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <!-- Замените src на ваше изображение -->
-                        <img src="slike/3d-pecat_new.jpg" alt="3D печать и моделирование">
+                        <img src="slikeWEBP/3d-pecat_new.webp" 
+                            alt="3D Stampa, Modeliranje i Skeniranje - 3DCraft" 
+                            width="800" 
+                            height="600" 
+                            loading="eager">
                     </div>
                 </div>
             </div>
@@ -177,7 +179,7 @@
     </section>
 
     <main>
-        <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
     <section class="portfolio-section">
         <!-- Декоративные элементы -->
         <div class="decor-cube"></div>
@@ -306,9 +308,10 @@
                     </div>
                 </div>
 
+                <!-- Rezervni Deo za štampač -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/deo_za_stampac.jpg" alt="Deo za štampač" loading="lazy">
+                        <img src="slikeWEBP/deo_za_stampac.webp" alt="Deo za štampač" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -319,9 +322,10 @@
                     </div>
                 </div>
 
+                <!-- Rezervni Osigurač za automobil -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/MERE2.jpg" alt="Osigurač" loading="lazy">
+                        <img src="slikeWEBP/MERE2.webp" alt="Osigurač" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -332,9 +336,10 @@
                     </div>
                 </div>
 
+                <!-- Ortodont Zube -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/ZUBE.jpg" alt="Ortodont Zube" loading="lazy">
+                        <img src="slikeWEBP/ZUBE.webp" alt="Ortodont Zube" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -345,9 +350,10 @@
                     </div>
                 </div>
 
+                <!-- Pudge hook -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/HOOK.jpg" alt="Hook iz igracke" loading="lazy">
+                        <img src="slikeWEBP/HOOK.webp" alt="Hook iz igracke" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -361,7 +367,7 @@
                 <!-- Medved iz neuronske mreže -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/panda.jpg" alt="3D štampa medveda iz neuronske mreže" loading="lazy">
+                        <img src="slikeWEBP/panda.webp" alt="3D štampa medveda iz neuronske mreže" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -375,7 +381,7 @@
                 <!-- Svetiljka-manastir Gračanica -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/gracanica.jpg" alt="Svetiljka manastir Gračanica" loading="lazy">
+                        <img src="slikeWEBP/gracanica.webp" alt="Svetiljka manastir Gračanica" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -389,7 +395,7 @@
                 <!-- Kutijica od figurice -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/cat.jpg" alt="Kutijica od 3D štampane figurice" loading="lazy">
+                        <img src="slikeWEBP/cat.webp" alt="Kutijica od 3D štampane figurice" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -403,7 +409,7 @@
                 <!-- Zupčanici za satove -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/sati.jpg" alt="Mikro 3D štampa zupčanika za satove" loading="lazy">
+                        <img src="slikeWEBP/sati.webp" alt="Mikro 3D štampa zupčanika za satove" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -417,7 +423,7 @@
                 <!-- Podstavak za kafemašinu -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/kafa.jpg" alt="Prilagođeni podstavak za kafemašinu" loading="lazy">
+                        <img src="slikeWEBP/kafa.webp" alt="Prilagođeni podstavak za kafemašinu" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -431,7 +437,7 @@
                 <!-- Replika podloške -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/lezaj.jpg" alt="Replika podloške od PA Bridge" loading="lazy">
+                        <img src="slikeWEBP/lezaj.webp" alt="Replika podloške od PA Bridge" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -445,7 +451,7 @@
                 <!-- Minijaturni stolovi i stolice -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/wwh.jpg" alt="Minijaturni stolovi i stolice" loading="lazy">
+                        <img src="slikeWEBP/wwh.webp" alt="Minijaturni stolovi i stolice" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">
@@ -459,7 +465,7 @@
                 <!-- Modeli manastira -->
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="slike/tumane.jpg" alt="3D modeli manastira" loading="lazy">
+                        <img src="slikeWEBP/tumane.webp" alt="3D modeli manastira" loading="lazy">
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-header">

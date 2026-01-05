@@ -46,7 +46,7 @@
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "3D Modeliranje i Dizajn",
-        "description": "Profesionalne usluge 3D modeliranja za 3D štampu u Beogradu",
+        "description": "Profesionalne usluge 3D modeliranja za 3D štampu ili CNC u Beogradu",
         "provider": {
             "@type": "LocalBusiness",
             "name": "3DCraft",
@@ -119,31 +119,35 @@
     gtag('config', 'AW-17674171292');
     </script>
 
-    <!-- Connection to external stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.onload=null;this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
     <!-- Styles по структуре сайта -->
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/whatsappCTA.css">
-    <link rel="stylesheet" href="styles/cta.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/whatsapp.css">
+    <link rel="stylesheet" href="styles/f+h+h.css">
 
-    <!-- JavaScript по структуре сайта -->
-    <script src="js/header.js"></script>
-    <script src="js/hero.js"></script>
-    <script src="js/whatsappCTA.js" defer></script>
-    <script src="js/footer.js" defer></script>
-    <script src="js/whatsapp.js" defer></script>
-    <script src="js/CTA.js" defer></script>
-    <script src="js/contact.js" defer></script>
+     <!-- объединенный всего -->
+    <link rel="stylesheet" href="styles/dom.css">
+
+    <!-- Объединенный файл footer + header + hero -->
+    <script src="js/f+h+h.js" defer></script> 
+
+    <!-- объединенный всего -->
+    <script src="js/DOM.js" defer></script>
 
     <link rel="stylesheet" href="styles/modeliranje/process.css">
     <link rel="stylesheet" href="styles/modeliranje/pricing.css">
     <link rel="stylesheet" href="styles/modeliranje/requirements.css">
 
-    <script src="js/modeliranje/requirements.js"></script>
+    <script src="js/modeliranje/requirements.js" defer></script>
+
+    <!-- Предзагрузить hero изображение -->
+    <link rel="preload" href="slikeWEBP/3d-pecat_new.webp" as="image" type="image/webp">
+    
+    <!-- Предзагрузить основные шрифты -->
+    <link rel="preload" href="fonts/your-font.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
     <header id="header">
@@ -199,8 +203,11 @@
                 
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <!-- Замените src на ваше изображение -->
-                        <img src="slike/3d-pecat_new.jpg" alt="3D печать и моделирование">
+                        <img src="slikeWEBP/3d-pecat_new.webp" 
+                            alt="3D Stampa, Modeliranje i Skeniranje - 3DCraft" 
+                            width="800" 
+                            height="600" 
+                            loading="eager">
                     </div>
                 </div>
             </div>
@@ -376,7 +383,7 @@
             <div class="pricing-card">
                 <div class="pricing-badge">Najtraženije</div>
                 <div class="pricing-image">
-                    <img src="slike/Card_GODEX.png" alt="Osnovno modeliranje" loading="lazy">
+                    <img src="slikeWEBP/Card_GODEX.webp" alt="Osnovno modeliranje" loading="lazy">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="pricing-content">
@@ -421,7 +428,7 @@
             <div class="pricing-card featured">
                 <div class="pricing-badge featured">Preporučujemo</div>
                 <div class="pricing-image">
-                    <img src="slike/REISI_RENDER.jpg" alt="Napredno modeliranje" loading="lazy">
+                    <img src="slikeWEBP/REISI_RENDER.webp" alt="Napredno modeliranje" loading="lazy">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="pricing-content">
@@ -474,7 +481,7 @@
             <div class="pricing-card">
                 <div class="pricing-badge">Premium</div>
                 <div class="pricing-image">
-                    <img src="slike/CRKVA.jpg" alt="Kompletan paket" loading="lazy">
+                    <img src="slikeWEBP/CRKVA.webp" alt="Kompletan paket" loading="lazy">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="pricing-content">
@@ -600,7 +607,7 @@
                 <div class="requirement-card">
                     <div class="requirement-number">02</div>
                     <div class="requirement-image">
-                        <img src="slike/MERE2.jpg" alt="Reference slike" loading="lazy">
+                        <img src="slikeWEBP/MERE2.webp" alt="Reference slike" loading="lazy">
                         <div class="image-overlay"></div>
                     </div>
                     <div class="requirement-content">

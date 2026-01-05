@@ -119,40 +119,37 @@
     gtag('config', 'AW-17674171292');
     </script>
 
-    <!-- Connection to external stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.onload=null;this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Styles по структуре сайта -->
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/whatsappCTA.css">
-    <link rel="stylesheet" href="styles/cta.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/whatsapp.css">
+    <link rel="stylesheet" href="styles/f+h+h.css">
 
-    <!-- JavaScript по структуре сайта -->
-    <script src="js/header.js"></script>
-    <script src="js/hero.js"></script>
-    <script src="js/whatsappCTA.js" defer></script>
-    <script src="js/footer.js" defer></script>
-    <script src="js/whatsapp.js" defer></script>
-    <script src="js/CTA.js" defer></script>
-    <script src="js/contact.js" defer></script>
+     <!-- объединенный всего -->
+    <link rel="stylesheet" href="styles/dom.css">
+
+    <!-- Объединенный файл footer + header + hero -->
+    <script src="js/f+h+h.js" defer></script> 
+
+    <!-- объединенный всего -->
+    <script src="js/DOM.js" defer></script>
 
     <link rel="stylesheet" href="styles/skeniranje/formats.css">
     <link rel="stylesheet" href="styles/skeniranje/process.css">
-    <!-- стили ниже включеный в requirements.css -->
-    <!-- <link rel="stylesheet" href="styles/skeniranje/pricing.css">
-    <link rel="stylesheet" href="styles/skeniranje/applications.css"> -->
     <link rel="stylesheet" href="styles/skeniranje/requirements.css">
 
     <script src="js/skeniranje/process.js" defer></script>
     <script src="js/skeniranje/formats.js" defer></script>
-    <!-- стили ниже включеный в requirements.js -->
-    <!-- <script src="js/skeniranje/pricing.js" defer></script>
-    <script src="js/skeniranje/applications.js" defer></script> -->
     <script src="js/skeniranje/requirements.js" defer></script>
+
+    <!-- Предзагрузить hero изображение -->
+    <link rel="preload" href="slikeWEBP/3d-pecat_new.webp" as="image" type="image/webp">
+    
+    <!-- Предзагрузить основные шрифты -->
+    <link rel="preload" href="fonts/your-font.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
     <header id="header">
@@ -208,8 +205,11 @@
                 
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <!-- Замените src на ваше изображение -->
-                        <img src="slike/3d-pecat_new.jpg" alt="3D печать и моделирование">
+                        <img src="slikeWEBP/3d-pecat_new.webp" 
+                            alt="3D Stampa, Modeliranje i Skeniranje - 3DCraft" 
+                            width="800" 
+                            height="600" 
+                            loading="eager">
                     </div>
                 </div>
             </div>
@@ -384,7 +384,7 @@
             <div class="pricing-card">
                 <div class="pricing-badge">Popularno</div>
                 <div class="pricing-image">
-                    <img src="slike/S.jpg" alt="Mali objekti" loading="lazy">
+                    <img src="slikeWEBP/S.webp" alt="Mali objekti" loading="lazy">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="pricing-content">
@@ -426,8 +426,7 @@
                             <span>Mali predmeti</span>
                         </div>
                     </div>
-                    
-                    <a href="#contact" class="pricing-btn">
+                    <a href="kontakti.html" class="pricing-btn">
                         <i class="fas fa-camera"></i>
                         <span>Zakažite skeniranje</span>
                     </a>
@@ -437,7 +436,7 @@
             <div class="pricing-card featured">
                 <div class="pricing-badge featured">Najčešće</div>
                 <div class="pricing-image">
-                    <img src="slike/M.png" alt="Srednji objekti" loading="lazy">
+                    <img src="slikeWEBP/M.webp" alt="Srednji objekti" loading="lazy">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="pricing-content">
@@ -484,7 +483,7 @@
                         </div>
                     </div>
                     
-                    <a href="#contact" class="pricing-btn featured">
+                    <a href="kontakti.html" class="pricing-btn featured">
                         <i class="fas fa-star"></i>
                         <span>Najbolji izbor</span>
                     </a>
@@ -620,7 +619,7 @@
         <div class="objects-grid">
             <div class="object-card">
                 <div class="object-image">
-                    <img src="slike/val.jpg" alt="Tehnički objekti" loading="lazy">
+                    <img src="slikeWEBP/val.webp" alt="Tehnički objekti" loading="lazy">
                     <div class="object-category">Industrija</div>
                 </div>
                 <div class="object-content">
@@ -654,7 +653,7 @@
             
             <div class="object-card">
                 <div class="object-image">
-                    <img src="slike/statue.jpg" alt="Umetnička dela" loading="lazy">
+                    <img src="slikeWEBP/statue.webp" alt="Umetnička dela" loading="lazy">
                     <div class="object-category">Kultura</div>
                 </div>
                 <div class="object-content">
@@ -688,7 +687,7 @@
             
             <div class="object-card">
                 <div class="object-image">
-                    <img src="slike/arch.jpg" alt="Arhitektonski elementi" loading="lazy">
+                    <img src="slikeWEBP/arch.webp" alt="Arhitektonski elementi" loading="lazy">
                     <div class="object-category">Arhitektura</div>
                 </div>
                 <div class="object-content">

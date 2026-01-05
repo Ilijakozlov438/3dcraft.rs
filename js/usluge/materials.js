@@ -44,12 +44,6 @@
                         icon.style.transform = 'translateX(0)';
                     }
                 });
-                
-                materialRequestBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    // В реальном проекте здесь будет переход к контактной форме
-                    alert('В реальном проекте здесь будет переход к форме запроса материалов');
-                });
             }
             
             // Параллакс эффект для декоративных сфер при скролле
