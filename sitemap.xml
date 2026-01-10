@@ -6,49 +6,43 @@
     
     <url>
         <loc>https://3dcraft.rs/index.html</loc>
-        <lastmod>2026-01-10</lastmod>
+        <lastmod>2026-10-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
     <url>
         <loc>https://3dcraft.rs/modeliranje.html</loc>
-        <lastmod>2026-01-10</lastmod>
+        <lastmod>2026-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://3dcraft.rs/usluge.html</loc>
-        <lastmod>2026-01-10</lastmod>
+        <lastmod>2026-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://3dcraft.rs/portfolio.html</loc>
-        <lastmod>2026-01-10</lastmod>
+        <lastmod>2026-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://3dcraft.rs/kontakti.html</loc>
-        <lastmod>2026-01-10</lastmod>
+        <lastmod>2026-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://3dcraft.rs/skeniranje.html</loc>
-        <lastmod>2026-01-10</lastmod>
+        <lastmod>2026-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-     
-    <url>
-        <loc>https://3dcraft.rs/404.html</loc>
-        <lastmod>2026-01-10</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
 </urlset>
