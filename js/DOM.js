@@ -102,52 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ========== FAQ И MAP СЕКЦИИ (kontakti_page.js) ==========
-    const faqItems = document.querySelectorAll('.faq-section .faq-item');
-    
-    if (faqItems.length > 0) {
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            if (question) {
-                question.addEventListener('click', function() {
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item && otherItem.classList.contains('active')) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    item.classList.toggle('active');
-                });
-            }
-        });
-    }
-    
-    const mapBtn = document.querySelector('.map-section .map-btn');
-    if (mapBtn) {
-        mapBtn.addEventListener('mouseenter', function() {
-            const icon = this.querySelector('i');
-            if (icon) icon.style.transform = 'translateX(5px)';
-        });
-        
-        mapBtn.addEventListener('mouseleave', function() {
-            const icon = this.querySelector('i');
-            if (icon) icon.style.transform = 'translateX(0)';
-        });
-    }
-    
-    const contactPageSections = document.querySelectorAll('.map-section, .faq-section');
-    if (contactPageSections.length > 0) {
-        contactPageSections.forEach((section, index) => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            
-            setTimeout(() => {
-                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                section.style.opacity = '1';
-                section.style.transform = 'translateY(0)';
-            }, 300 + index * 200);
-        });
-    }
-    
     // ========== PORTFOLIO СЕКЦИЯ ==========
     const portfolioCards = document.querySelectorAll('.portfolio-section .portfolio-card');
     const portfolioBtn = document.querySelector('.portfolio-section .portfolio-btn');
