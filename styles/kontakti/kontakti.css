@@ -334,6 +334,10 @@
             transition: all 0.3s ease;
         }
 
+        .faq-section .faq-question:hover {
+            background: rgba(39, 174, 96, 0.03);
+        }
+
         .faq-section .faq-item.active .faq-question {
             background: rgba(39, 174, 96, 0.05);
         }
