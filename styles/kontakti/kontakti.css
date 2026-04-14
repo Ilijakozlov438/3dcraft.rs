@@ -187,11 +187,14 @@
         }
 
         .map-section .map-embed {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
+            height: 100%;
+            min-height: 400px;
             background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .map-section .map-embed iframe {
@@ -467,6 +470,16 @@
             
             .map-section .map-info {
                 padding: 40px 30px;
+            }
+            
+            .map-section .map-embed {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                display: block;
+                align-items: unset;
+                justify-content: unset;
             }
             
             .faq-section .faq-question {
