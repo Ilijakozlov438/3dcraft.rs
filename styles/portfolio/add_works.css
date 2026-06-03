@@ -251,6 +251,93 @@
         border-top: 1px solid rgba(0, 0, 0, 0.08);
     }
 
+    .clients-section {
+        width: 100%;
+        padding: 90px 0 60px;
+        background: #ffffff;
+    }
+
+    .clients-section .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .clients-section .section-title h2 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: #1a2a3a;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .clients-section .section-title p {
+        font-size: 1.2rem;
+        color: #5a6c7d;
+        max-width: 720px;
+        margin: 20px auto 0;
+        line-height: 1.7;
+    }
+
+    .clients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 24px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .client-logo {
+        width: 100%;
+        max-width: 220px;
+        padding: 26px;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(39, 174, 96, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        min-height: 150px;
+    }
+
+    .client-logo img {
+        max-width: 100%;
+        max-height: 110px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        filter: grayscale(40%);
+        opacity: 0.96;
+        transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .client-logo.small-logo img {
+        max-height: 140px;
+    }
+
+    .client-logo.dark-logo {
+        background: rgba(20, 32, 54, 0.92);
+        border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .client-logo.dark-logo img {
+        filter: none;
+        opacity: 1;
+    }
+
+    .client-logo:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 32px rgba(39, 174, 96, 0.14);
+    }
+
+    .client-logo:hover img {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+        opacity: 1;
+    }
+
     .additional-works-section .capabilities-header {
         display: flex;
         align-items: center;
