@@ -197,6 +197,25 @@ document.addEventListener('DOMContentLoaded', function() {
             whatsappCtaSection.style.transform = 'translateY(0)';
         }, 300);
     }
+
+    // ========== ROUTE CHECK FOR INVALID PATHS ==========
+    const validPaths = [
+        '/',
+        '/index.html',
+        '/usluge.html',
+        '/portfolio.html',
+        '/modeliranje.html',
+        '/skeniranje.html',
+        '/kontakti.html',
+        '/404.html'
+    ];
+
+    const currentPath = window.location.pathname.replace(/\/+$/g, '');
+    const normalizedPath = currentPath === '' ? '/' : currentPath;
+
+    if (!validPaths.includes(normalizedPath) && !window.location.pathname.startsWith('/404')) {
+        window.location.replace('/404.html');
+    }
     
     // ========== ОБЩИЕ ПАРАЛЛАКС ЭФФЕКТЫ ==========
     function isMobileDevice() {
